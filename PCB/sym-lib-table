@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name el-0631)(type Legacy)(uri ${KIPRJMOD}/el-0631.lib)(options "")(descr ""))
+  (lib (name TLE5012B)(type Legacy)(uri ${KIPRJMOD}/TLE5012B.lib)(options "")(descr ""))
+  (lib (name BNOR11)(type Legacy)(uri ${KIPRJMOD}/BNOR11.lib)(options "")(descr ""))
+  (lib (name StepperServo-rescue)(type Legacy)(uri ${KIPRJMOD}/StepperServo-rescue.lib)(options "")(descr ""))
+)

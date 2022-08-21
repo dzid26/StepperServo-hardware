@@ -256,11 +256,11 @@ X Pin_8 8 -200 -400 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# StepperServo-rescue_Crystal-Device-BTTS57Bv2-rescue
+# StepperServo-rescue_Crystal-Device
 #
-DEF StepperServo-rescue_Crystal-Device-BTTS57Bv2-rescue Y 0 40 N N 1 F N
+DEF StepperServo-rescue_Crystal-Device Y 0 40 N N 1 F N
 F0 "Y" 0 150 50 H V C CNN
-F1 "StepperServo-rescue_Crystal-Device-BTTS57Bv2-rescue" 0 -150 50 H V C CNN
+F1 "StepperServo-rescue_Crystal-Device" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -329,11 +329,11 @@ X 2 2 250 0 50 L 30 30 1 1 I
 ENDDRAW
 ENDDEF
 #
-# StepperServo-rescue_LD1117S33CTR-dk_PMIC-Voltage-Regulators-Linear-BTTS57Bv2-rescue
+# StepperServo-rescue_LD1117S33CTR-dk_PMIC-Voltage-Regulators-Linear
 #
-DEF StepperServo-rescue_LD1117S33CTR-dk_PMIC-Voltage-Regulators-Linear-BTTS57Bv2-rescue U 0 20 Y Y 1 F N
+DEF StepperServo-rescue_LD1117S33CTR-dk_PMIC-Voltage-Regulators-Linear U 0 20 Y Y 1 F N
 F0 "U" 50 150 60 H V C CNN
-F1 "StepperServo-rescue_LD1117S33CTR-dk_PMIC-Voltage-Regulators-Linear-BTTS57Bv2-rescue" 50 250 60 H V C CNN
+F1 "StepperServo-rescue_LD1117S33CTR-dk_PMIC-Voltage-Regulators-Linear" 50 250 60 H V C CNN
 F2 "digikey-footprints:SOT-223" 200 200 60 H I L CNN
 F3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" 200 300 60 H I L CNN
 F4 "497-1241-1-ND" 200 400 60 H I L CNN "Digi-Key_PN"

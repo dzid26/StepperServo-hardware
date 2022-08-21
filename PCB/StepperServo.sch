@@ -42,12 +42,6 @@ Text GLabel 7300 4100 0    50   Input ~ 0
 MICROSTEP2_SW
 Text GLabel 7300 4000 0    50   Input ~ 0
 MICROSTEP1_SW
-Text GLabel 10750 2450 2    50   Input ~ 0
-STP_IN
-Text GLabel 10750 2600 2    50   Input ~ 0
-DIR_IN
-Text GLabel 10300 3400 2    50   Input ~ 0
-EN_IN
 Text GLabel 7300 4200 0    50   Output ~ 0
 OLED_CS
 Text GLabel 7300 4300 0    50   Input ~ 0
@@ -207,31 +201,6 @@ Text GLabel 7300 3700 0    50   Input ~ 0
 motordriverU4#2
 Text GLabel 7300 3600 0    50   Input ~ 0
 motordriverU4#3
-$Comp
-L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R5
-U 1 1 60AA734D
-P 9500 3050
-F 0 "R5" V 9600 3050 50  0000 C CNN
-F 1 "?R" V 9500 3050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9430 3050 50  0001 C CNN
-F 3 "~" H 9500 3050 50  0001 C CNN
-	1    9500 3050
-	-1   0    0    1   
-$EndComp
-$Comp
-L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R12
-U 1 1 60AC6CB6
-P 10150 3400
-F 0 "R12" V 10250 3400 50  0000 C CNN
-F 1 "?R" V 10150 3400 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 10080 3400 50  0001 C CNN
-F 3 "~" H 10150 3400 50  0001 C CNN
-	1    10150 3400
-	0    -1   -1   0   
-$EndComp
-Connection ~ 9500 3200
-Wire Wire Line
-	9500 3200 9600 3200
 Text GLabel 8050 1550 1    50   Input ~ 0
 VDD
 Wire Wire Line
@@ -240,8 +209,6 @@ Wire Wire Line
 	7800 1650 7900 1650
 Wire Wire Line
 	8100 1650 8100 1700
-Wire Wire Line
-	8600 3200 9500 3200
 Wire Wire Line
 	8050 1650 8050 1550
 Connection ~ 8050 1650
@@ -257,48 +224,11 @@ Wire Wire Line
 Connection ~ 7900 1650
 Wire Wire Line
 	7900 1650 8000 1650
-Text GLabel 9500 2900 1    50   Input ~ 0
-VDD
-Text GLabel 9600 3400 0    50   Input ~ 0
-VSS
 Wire Wire Line
 	8100 1650 8200 1650
 Wire Wire Line
 	8200 1650 8200 1700
 Connection ~ 8100 1650
-$Comp
-L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R9
-U 1 1 60ACF7F8
-P 10600 2600
-F 0 "R9" V 10700 2600 50  0000 C CNN
-F 1 "?R" V 10600 2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 10530 2600 50  0001 C CNN
-F 3 "~" H 10600 2600 50  0001 C CNN
-	1    10600 2600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R3
-U 1 1 60AD1627
-P 10600 2450
-F 0 "R3" V 10700 2450 50  0000 C CNN
-F 1 "?R" V 10600 2500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 10530 2450 50  0001 C CNN
-F 3 "~" H 10600 2450 50  0001 C CNN
-	1    10600 2450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R8
-U 1 1 60AEAB54
-P 9600 2200
-F 0 "R8" V 9700 2200 50  0000 C CNN
-F 1 "?R" V 9600 2200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9530 2200 50  0001 C CNN
-F 3 "~" H 9600 2200 50  0001 C CNN
-	1    9600 2200
-	-1   0    0    1   
-$EndComp
 $Comp
 L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R15
 U 1 1 60AEB061
@@ -312,10 +242,6 @@ F 3 "~" H 9350 2200 50  0001 C CNN
 $EndComp
 Text GLabel 9350 2050 1    50   Input ~ 0
 VDD
-Text GLabel 9600 2050 1    50   Input ~ 0
-VDD
-Text GLabel 9900 2250 0    50   Input ~ 0
-VSS
 $Comp
 L StepperServo-rescue:LED-Device-BTTS57Bv2-rescue D4
 U 1 1 60AF1192
@@ -575,32 +501,8 @@ F 3 "~" H 4100 1100 50  0001 C CNN
 	1    4100 1100
 	1    0    0    -1  
 $EndComp
-$Comp
-L el-0631:EL-0631 U3
-U 1 1 60A729DF
-P 10350 3050
-F 0 "U3" H 10525 4075 50  0000 C CNN
-F 1 "EL-0631" H 10525 3984 50  0000 C CNN
-F 2 "Package_SO:SOP-8_3.9x4.9mm_P1.27mm" H 9990 2730 50  0001 C CNN
-F 3 "" H 9990 2730 50  0001 C CNN
-	1    10350 3050
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	9350 2350 9350 2450
-$Comp
-L el-0631:EL357NC U6
-U 1 1 60AC06ED
-P 9850 3550
-F 0 "U6" H 9900 4125 50  0000 C CNN
-F 1 "EL357NC" H 9900 4034 50  0000 C CNN
-F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 9850 3550 50  0001 C CNN
-F 3 "" H 9850 3550 50  0001 C CNN
-	1    9850 3550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	9600 2350 9600 2600
 $Comp
 L StepperServo-rescue:C-Device-BTTS57Bv2-rescue C3
 U 1 1 60AD4FCE
@@ -872,12 +774,12 @@ F 3 "~" H 4700 2150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L StepperServo-rescue:Crystal-Device-BTTS57Bv2-rescue Y1
+L StepperServo-rescue:Crystal-Device Y1
 U 1 1 60B8D3A3
 P 5000 2350
 F 0 "Y1" H 5000 2618 50  0000 C CNN
 F 1 "Crystal" H 5000 2527 50  0000 C CNN
-F 2 "" H 5000 2350 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_EuroQuartz_MT-4Pin_3.2x2.5mm_HandSoldering" H 5000 2350 50  0001 C CNN
 F 3 "~" H 5000 2350 50  0001 C CNN
 	1    5000 2350
 	0    1    1    0   
@@ -960,12 +862,12 @@ F 3 "~" H 3150 7100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L StepperServo-rescue:LD1117S33CTR-dk_PMIC-Voltage-Regulators-Linear-BTTS57Bv2-rescue U8
+L StepperServo-rescue:LD1117S33CTR-dk_PMIC-Voltage-Regulators-Linear U8
 U 1 1 60BA0B17
 P 1500 4100
 F 0 "U8" H 1550 4387 60  0000 C CNN
 F 1 "LD1117S33CTR" H 1550 4281 60  0000 C CNN
-F 2 "digikey-footprints:SOT-223" H 1700 4300 60  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 1700 4300 60  0000 L CNN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" H 1700 4400 60  0001 L CNN
 F 4 "497-1241-1-ND" H 1700 4500 60  0001 L CNN "Digi-Key_PN"
 F 5 "LD1117S33CTR" H 1700 4600 60  0001 L CNN "MPN"
@@ -1156,7 +1058,7 @@ U 1 1 60C34435
 P 2450 5450
 F 0 "U1" H 2500 6025 50  0000 C CNN
 F 1 "BNOR11" H 2500 5934 50  0000 C CNN
-F 2 "" H 2450 5450 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2450 5450 50  0001 C CNN
 F 3 "" H 2450 5450 50  0001 C CNN
 	1    2450 5450
 	1    0    0    -1  
@@ -1552,15 +1454,7 @@ Wire Wire Line
 Wire Wire Line
 	9150 2450 9350 2450
 Wire Wire Line
-	9350 2450 9900 2450
-Connection ~ 9350 2450
-Wire Wire Line
 	9300 3100 9300 2600
-Wire Wire Line
-	9300 2600 9600 2600
-Wire Wire Line
-	9600 2600 9900 2600
-Connection ~ 9600 2600
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 60C9CCC5
@@ -1669,18 +1563,124 @@ Text GLabel 2300 5900 2    50   Input ~ 0
 VDD
 Wire Wire Line
 	2300 5900 2300 6050
-Text GLabel 9900 2800 0    50   Input ~ 0
-VDD
 Text GLabel 7500 6200 0    50   Input ~ 0
-com
-Text GLabel 10000 3200 2    50   Input ~ 0
-com
-Text GLabel 10450 2250 2    50   Input ~ 0
-com
-Text GLabel 10450 2800 2    50   Input ~ 0
 com
 Wire Wire Line
 	8600 3000 9150 3000
 Wire Wire Line
 	8600 3100 9300 3100
+Connection ~ 9350 2450
+Text GLabel 10450 2800 2    50   Input ~ 0
+com
+Text GLabel 10450 2250 2    50   Input ~ 0
+com
+Text GLabel 10000 3200 2    50   Input ~ 0
+com
+Text GLabel 9900 2800 0    50   Input ~ 0
+VDD
+Connection ~ 9600 2600
+Wire Wire Line
+	9600 2600 9900 2600
+Wire Wire Line
+	9300 2600 9600 2600
+Wire Wire Line
+	9350 2450 9900 2450
+Wire Wire Line
+	9600 2350 9600 2600
+$Comp
+L el-0631:EL357NC U6
+U 1 1 60AC06ED
+P 9850 3550
+F 0 "U6" H 9900 4125 50  0000 C CNN
+F 1 "EL357NC" H 9900 4034 50  0000 C CNN
+F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 9850 3550 50  0001 C CNN
+F 3 "" H 9850 3550 50  0001 C CNN
+	1    9850 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L el-0631:EL-0631 U3
+U 1 1 60A729DF
+P 10350 3050
+F 0 "U3" H 10525 4075 50  0000 C CNN
+F 1 "EL-0631" H 10525 3984 50  0000 C CNN
+F 2 "Package_SO:SOP-8_3.9x4.9mm_P1.27mm" H 9990 2730 50  0001 C CNN
+F 3 "" H 9990 2730 50  0001 C CNN
+	1    10350 3050
+	-1   0    0    -1  
+$EndComp
+Text GLabel 9900 2250 0    50   Input ~ 0
+VSS
+Text GLabel 9600 2050 1    50   Input ~ 0
+VDD
+$Comp
+L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R8
+U 1 1 60AEAB54
+P 9600 2200
+F 0 "R8" V 9700 2200 50  0000 C CNN
+F 1 "?R" V 9600 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9530 2200 50  0001 C CNN
+F 3 "~" H 9600 2200 50  0001 C CNN
+	1    9600 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R3
+U 1 1 60AD1627
+P 10600 2450
+F 0 "R3" V 10700 2450 50  0000 C CNN
+F 1 "?R" V 10600 2500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10530 2450 50  0001 C CNN
+F 3 "~" H 10600 2450 50  0001 C CNN
+	1    10600 2450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R9
+U 1 1 60ACF7F8
+P 10600 2600
+F 0 "R9" V 10700 2600 50  0000 C CNN
+F 1 "?R" V 10600 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10530 2600 50  0001 C CNN
+F 3 "~" H 10600 2600 50  0001 C CNN
+	1    10600 2600
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9600 3400 0    50   Input ~ 0
+VSS
+Text GLabel 9500 2900 1    50   Input ~ 0
+VDD
+Wire Wire Line
+	8600 3200 9500 3200
+Wire Wire Line
+	9500 3200 9600 3200
+Connection ~ 9500 3200
+$Comp
+L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R12
+U 1 1 60AC6CB6
+P 10150 3400
+F 0 "R12" V 10250 3400 50  0000 C CNN
+F 1 "?R" V 10150 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10080 3400 50  0001 C CNN
+F 3 "~" H 10150 3400 50  0001 C CNN
+	1    10150 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R5
+U 1 1 60AA734D
+P 9500 3050
+F 0 "R5" V 9600 3050 50  0000 C CNN
+F 1 "?R" V 9500 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9430 3050 50  0001 C CNN
+F 3 "~" H 9500 3050 50  0001 C CNN
+	1    9500 3050
+	-1   0    0    1   
+$EndComp
+Text GLabel 10300 3400 2    50   Input ~ 0
+EN_IN
+Text GLabel 10750 2600 2    50   Input ~ 0
+DIR_IN
+Text GLabel 10750 2450 2    50   Input ~ 0
+STP_IN
 $EndSCHEMATC

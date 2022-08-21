@@ -34,14 +34,6 @@ Text GLabel 8600 4400 2    50   Input ~ 0
 SWCLK
 Text GLabel 4750 3400 0    50   Output ~ 0
 motordriverU2#PWM
-Text GLabel 5100 6050 2    50   Input ~ 0
-CALIB_SWITCH
-Text GLabel 5100 5950 2    50   Input ~ 0
-CLOSED_LOOP_SW
-Text GLabel 7300 4100 0    50   Input ~ 0
-MICROSTEP2_SW
-Text GLabel 7300 4000 0    50   Input ~ 0
-MICROSTEP1_SW
 Text GLabel 7300 4200 0    50   Output ~ 0
 OLED_CS
 Text GLabel 7300 4300 0    50   Input ~ 0
@@ -163,17 +155,6 @@ Text GLabel 8600 3900 2    50   Output ~ 0
 TX1
 Text GLabel 8600 4000 2    50   Input ~ 0
 RX1
-$Comp
-L StepperServo-rescue:SW_DIP_x04-Switch-BTTS57Bv2-rescue S1
-U 1 1 60A6B868
-P 4800 5950
-F 0 "S1" H 4800 6417 50  0000 C CNN
-F 1 "SW_DIP_x04" H 4800 6326 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_DIP_SPSTx04_Slide_KingTek_DSHP04TS_W7.62mm_P1.27mm" H 4800 5950 50  0001 C CNN
-F 3 "~" H 4800 5950 50  0001 C CNN
-	1    4800 5950
-	-1   0    0    -1  
-$EndComp
 Text GLabel 7900 4800 3    50   Input ~ 0
 VSS
 Text GLabel 8100 4700 3    50   Input ~ 0
@@ -189,10 +170,6 @@ Wire Wire Line
 Connection ~ 7900 4800
 Wire Wire Line
 	7900 4800 8000 4800
-Text GLabel 5100 5750 2    50   Input ~ 0
-MICROSTEP1_SW
-Text GLabel 5100 5850 2    50   Input ~ 0
-MICROSTEP2_SW
 Text GLabel 7300 3900 0    50   Input ~ 0
 motordriverU2#2
 Text GLabel 7300 3800 0    50   Input ~ 0
@@ -493,38 +470,11 @@ F 3 "~" H 3800 1100 50  0001 C CNN
 	1    3800 1100
 	1    0    0    -1  
 $EndComp
-Text GLabel 8600 4500 2    50   Input ~ 0
-CALIB_SWITCH
-Text GLabel 7300 3300 0    50   Input ~ 0
-CLOSED_LOOP_SW
 Wire Wire Line
 	6900 2500 7000 2500
 Wire Wire Line
 	7000 2500 7000 2600
 Connection ~ 7000 2600
-Text GLabel 4400 5900 0    50   Input ~ 0
-VSS
-Wire Wire Line
-	4500 5750 4450 5750
-Wire Wire Line
-	4450 5750 4450 5850
-Wire Wire Line
-	4450 5900 4400 5900
-Wire Wire Line
-	4500 5850 4450 5850
-Connection ~ 4450 5850
-Wire Wire Line
-	4450 5850 4450 5900
-Wire Wire Line
-	4500 5950 4450 5950
-Wire Wire Line
-	4450 5950 4450 5900
-Connection ~ 4450 5900
-Wire Wire Line
-	4500 6050 4450 6050
-Wire Wire Line
-	4450 6050 4450 5950
-Connection ~ 4450 5950
 $Comp
 L TLE5012B:TLE5012B U5
 U 1 1 60B101B5
@@ -1262,25 +1212,11 @@ Wire Notes Line
 Wire Notes Line
 	600  6400 2750 6400
 Wire Notes Line
-	2850 6400 5800 6400
-Wire Notes Line
-	5800 6400 5800 7650
-Wire Notes Line
 	5800 7650 2850 7650
 Wire Notes Line
 	2850 7650 2850 6400
 Text Notes 5550 6550 0    50   ~ 0
 CAN
-Text Notes 5400 5550 0    50   ~ 0
-DIP Switches
-Wire Notes Line
-	4100 6300 4100 5400
-Wire Notes Line
-	4100 5400 5950 5400
-Wire Notes Line
-	5950 5400 5950 6300
-Wire Notes Line
-	5950 6300 4100 6300
 Text Notes 7750 5600 0    50   ~ 0
 connectors
 Wire Wire Line
@@ -1530,4 +1466,8 @@ Wire Wire Line
 	2300 5900 2300 6050
 Wire Wire Line
 	8200 1650 8750 1650
+Wire Notes Line
+	5800 6400 5800 7650
+Wire Notes Line
+	2850 6400 5800 6400
 $EndSCHEMATC

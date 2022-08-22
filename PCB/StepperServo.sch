@@ -218,17 +218,6 @@ F 3 "~" H 6850 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R17
-U 1 1 60AF1C31
-P 7150 2600
-F 0 "R17" V 7250 2600 50  0000 C CNN
-F 1 "?R" V 7150 2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7080 2600 50  0001 C CNN
-F 3 "~" H 7150 2600 50  0001 C CNN
-	1    7150 2600
-	0    -1   -1   0   
-$EndComp
-$Comp
 L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R6
 U 1 1 60AF26DA
 P 6400 6900
@@ -256,8 +245,6 @@ Text GLabel 6400 7350 3    50   Input ~ 0
 VSS
 Text GLabel 6400 7050 0    50   Input ~ 0
 power
-Text GLabel 6900 2500 0    50   Input ~ 0
-error
 Text GLabel 6700 2600 0    50   Input ~ 0
 VSS
 $Comp
@@ -470,11 +457,6 @@ F 3 "~" H 3800 1100 50  0001 C CNN
 	1    3800 1100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6900 2500 7000 2500
-Wire Wire Line
-	7000 2500 7000 2600
-Connection ~ 7000 2600
 $Comp
 L TLE5012B:TLE5012B U5
 U 1 1 60B101B5
@@ -670,22 +652,11 @@ F 3 "~" H 8750 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L StepperServo-rescue:C-Device-BTTS57Bv2-rescue C15
-U 1 1 60B85066
-P 6850 2100
-F 0 "C15" H 6900 2200 50  0000 L CNN
-F 1 "C" H 6700 2100 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6888 1950 50  0001 C CNN
-F 3 "~" H 6850 2100 50  0001 C CNN
-	1    6850 2100
-	0    -1   -1   0   
-$EndComp
-$Comp
 L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R22
 U 1 1 60B85EFC
 P 7150 2100
-F 0 "R22" V 7250 2100 50  0000 C CNN
-F 1 "?R" V 7200 2100 50  0000 C CNN
+F 0 "R22" V 7050 2100 50  0000 C CNN
+F 1 "10k" V 7150 2100 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 7080 2100 50  0001 C CNN
 F 3 "~" H 7150 2100 50  0001 C CNN
 	1    7150 2100
@@ -986,7 +957,7 @@ L BNOR11:BNOR11 U1
 U 1 1 60C34435
 P 2450 5450
 F 0 "U1" H 2500 6025 50  0000 C CNN
-F 1 "BNOR11" H 2500 5934 50  0000 C CNN
+F 1 "AOZ1282CI" H 2500 5934 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2450 5450 50  0001 C CNN
 F 3 "" H 2450 5450 50  0001 C CNN
 	1    2450 5450
@@ -1167,17 +1138,6 @@ Wire Wire Line
 Wire Wire Line
 	3800 1250 4100 1250
 Connection ~ 3800 1250
-$Comp
-L StepperServo-rescue:+3.3V-power-BTTS57Bv2-rescue #PWR0109
-U 1 1 60F08C2A
-P 6700 2100
-F 0 "#PWR0109" H 6700 1950 50  0001 C CNN
-F 1 "+3.3V" H 6700 2300 50  0000 C CNN
-F 2 "" H 6700 2100 50  0001 C CNN
-F 3 "" H 6700 2100 50  0001 C CNN
-	1    6700 2100
-	0    -1   -1   0   
-$EndComp
 Connection ~ 6000 1900
 Wire Wire Line
 	6000 1550 6000 1600
@@ -1470,4 +1430,19 @@ Wire Notes Line
 	5800 6400 5800 7650
 Wire Notes Line
 	2850 6400 5800 6400
+Wire Wire Line
+	9950 5650 10350 5650
+Text GLabel 7000 2100 0    50   Input ~ 0
+VSS
+$Comp
+L StepperServo-rescue:R-Device-BTTS57Bv2-rescue R17
+U 1 1 60AF1C31
+P 7150 2600
+F 0 "R17" V 7250 2600 50  0000 C CNN
+F 1 "?R" V 7150 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7080 2600 50  0001 C CNN
+F 3 "~" H 7150 2600 50  0001 C CNN
+	1    7150 2600
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

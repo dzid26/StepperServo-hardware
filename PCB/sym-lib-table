@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "tle5012")(type "Legacy")(uri "${KIPRJMOD}/TLE5012/TLE5012.lib")(options "")(descr ""))
+)

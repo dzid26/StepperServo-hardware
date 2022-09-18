@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TLE5012
+D TLE5012
+F http://www.infineon.com/dgdl/TLE5012_FDS_V_1.0.pdf?folderId=db3a304313d846880113dd9752130268&fileId=db3a30431ed1d7b2011f46f9ec2156c5
+$ENDCMP
+# end doc library

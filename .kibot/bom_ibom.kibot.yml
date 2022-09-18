@@ -42,7 +42,7 @@ outputs:
       layer_view: 'FB'
       # [string='ibom'] Output file name format supports substitutions:
       # %f : original pcb file name without extension.
-      # %p : pcb/project title from pcb metadata.
+      # %p : PCB/project title from pcb metadata.
       # %c : company from pcb metadata.
       # %r : revision from pcb metadata.
       # %d : pcb date from metadata if available, file modification date otherwise.

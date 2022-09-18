@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 0,
+    "active_layer": 37,
     "active_layer_preset": "All Layers",
     "auto_track_width": false,
     "hidden_nets": [],
@@ -70,6 +70,19 @@
     "version": 3
   },
   "project": {
-    "files": []
+    "files": [
+      {
+        "name": "StepperServo.kicad_pcb",
+        "open": false,
+        "window": {
+          "display": 2,
+          "maximized": false,
+          "pos_x": 4760,
+          "pos_y": 1076,
+          "size_x": 891,
+          "size_y": 893
+        }
+      }
+    ]
   }
 }

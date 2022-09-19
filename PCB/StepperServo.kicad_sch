@@ -3187,7 +3187,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060a5d4f4)
     (property "Reference" "R2" (id 0) (at 91.44 33.02 90))
-    (property "Value" "0.1R" (id 1) (at 88.9 33.02 90))
+    (property "Value" "0.2R" (id 1) (at 88.9 33.02 90))
     (property "Footprint" "Resistor_SMD:R_2512_6332Metric" (id 2) (at 87.122 33.02 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3202,7 +3202,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060a5ded0)
     (property "Reference" "R1" (id 0) (at 91.44 62.23 90))
-    (property "Value" "0.1R" (id 1) (at 88.9 62.23 90))
+    (property "Value" "0.2R" (id 1) (at 88.9 62.23 90))
     (property "Footprint" "Resistor_SMD:R_2512_6332Metric" (id 2) (at 87.122 62.23 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4481,10 +4481,10 @@
       (reference "P4") (unit 1) (value "Conn_01x08") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical")
     )
     (path "/00000000-0000-0000-0000-000060a5ded0"
-      (reference "R1") (unit 1) (value "0.1R") (footprint "Resistor_SMD:R_2512_6332Metric")
+      (reference "R1") (unit 1) (value "0.2R") (footprint "Resistor_SMD:R_2512_6332Metric")
     )
     (path "/00000000-0000-0000-0000-000060a5d4f4"
-      (reference "R2") (unit 1) (value "0.1R") (footprint "Resistor_SMD:R_2512_6332Metric")
+      (reference "R2") (unit 1) (value "0.2R") (footprint "Resistor_SMD:R_2512_6332Metric")
     )
     (path "/00000000-0000-0000-0000-000060af26da"
       (reference "R6") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")

@@ -1,0 +1,57 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# JST S4B-XH-SM4-TB
+#
+DEF S4B-XH-SM4-TB J 0 0 Y Y 1 L N
+F0 "J" 0 300 50 H V L CNN 
+F1 "S4B-XH-SM4-TB(LF)(SN)" 0 400 50 H V L CNN 
+F2 "JST-S4B-XH-SM4-TBLFSN-*" 0 500 50 H I L CNN 
+F3 "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf" 0 600 50 H I L CNN 
+F4 "No" 0 700 50 H I L CNN "automotive"
+F5 "Conn" 0 800 50 H I L CNN "category"
+F6 "Tin" 0 900 50 H I L CNN "contact material"
+F7 "3A" 0 1000 50 H I L CNN "current rating"
+F8 "Connectors" 0 1100 50 H I L CNN "device class L1"
+F9 "Headers and Wire Housings" 0 1200 50 H I L CNN "device class L2"
+F10 "unset" 0 1300 50 H I L CNN "device class L3"
+F11 "CONN HEADER SMD R/A 4POS 2.5MM" 0 1400 50 H I L CNN "digikey description"
+F12 "455-2262-1-ND" 0 1500 50 H I L CNN "digikey part number"
+F13 "6mm" 0 1600 50 H I L CNN "height"
+F14 "yes" 0 1700 50 H I L CNN "is connector"
+F15 "yes" 0 1800 50 H I L CNN "is male"
+F16 "Yes" 0 1900 50 H I L CNN "lead free"
+F17 "b3624f6d184729c7" 0 2000 50 H I L CNN "library id"
+F18 "JST" 0 2100 50 H I L CNN "manufacturer"
+F19 "4" 0 2200 50 H I L CNN "number of contacts"
+F20 "1" 0 2300 50 H I L CNN "number of rows"
+F21 "HDR4" 0 2400 50 H I L CNN "package"
+F22 "2.5mm" 0 2500 50 H I L CNN "pitch"
+F23 "Yes" 0 2600 50 H I L CNN "rohs"
+F24 "+85°C" 0 2700 50 H I L CNN "temperature range high"
+F25 "-25°C" 0 2800 50 H I L CNN "temperature range low"
+F26 "250V" 0 2900 50 H I L CNN "voltage rating"
+DRAW
+X 1 1 -100 0 100 L 40 40 1 1 P 
+X 2 2 -100 -200 100 L 40 40 1 1 P 
+X 3 3 -100 -400 100 L 40 40 1 1 P 
+X 4 4 -100 -600 100 L 40 40 1 1 P 
+X MNT_1 5 -100 -900 100 L 40 40 1 1 P 
+X MNT_2 6 -100 -1100 100 L 40 40 1 1 P 
+S -700 200 -200 -1200 1 1 0 f
+S -500 20 -330 -20 1 1 0 F
+P 2 1 1 0 -420 0 -200 0 N
+S -500 -180 -330 -220 1 1 0 F
+P 2 1 1 0 -420 -200 -200 -200 N
+S -500 -380 -330 -420 1 1 0 F
+P 2 1 1 0 -420 -400 -200 -400 N
+S -500 -580 -330 -620 1 1 0 F
+P 2 1 1 0 -420 -600 -200 -600 N
+S -500 -880 -330 -920 1 1 0 F
+P 2 1 1 0 -420 -900 -200 -900 N
+S -500 -1080 -330 -1120 1 1 0 F
+P 2 1 1 0 -420 -1100 -200 -1100 N
+ENDDRAW
+ENDDEF
+#
+# End Library

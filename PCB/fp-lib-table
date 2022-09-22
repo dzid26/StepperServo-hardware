@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name "tle_foot")(type "KiCad")(uri "${KIPRJMOD}/TLE5012/TLE5012.footprints")(options "")(descr ""))
+  (lib (name "Connector_JST_SMD")(type "KiCad")(uri "${KIPRJMOD}/Connector_JST/Connector_JST.pretty")(options "")(descr ""))
 )

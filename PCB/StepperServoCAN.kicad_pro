@@ -135,6 +135,10 @@
         {
           "diameter": 0.5,
           "drill": 0.3
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.4
         }
       ],
       "zones_allow_external_fillets": false,
@@ -340,10 +344,10 @@
       "net_not_bus_member": "warning",
       "no_connect_connected": "warning",
       "no_connect_dangling": "warning",
-      "pin_not_connected": "error",
+      "pin_not_connected": "warning",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
-      "power_pin_not_driven": "error",
+      "pin_to_pin": "error",
+      "power_pin_not_driven": "ignore",
       "similar_labels": "warning",
       "unannotated": "error",
       "unit_value_mismatch": "error",
@@ -480,7 +484,7 @@
       "intersheets_ref_short": false,
       "intersheets_ref_show": false,
       "intersheets_ref_suffix": "",
-      "junction_size_choice": 3,
+      "junction_size_choice": 2,
       "label_size_ratio": 0.375,
       "pin_symbol_size": 25.0,
       "text_offset_ratio": 0.15

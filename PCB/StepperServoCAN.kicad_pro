@@ -477,8 +477,7 @@
           "Motor_A1",
           "Motor_A2",
           "Motor_B1",
-          "Motor_B2",
-          "VMOT"
+          "Motor_B2"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",

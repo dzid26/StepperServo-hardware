@@ -2164,7 +2164,6 @@
     )
   )
 
-
   (junction (at 217.805 25.4) (diameter 0) (color 0 0 0 0)
     (uuid 034ce4d5-a7d1-4a9e-b16b-6dea1ed15a94)
   )
@@ -5281,7 +5280,7 @@
     (property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf" (id 3) (at 88.392 71.12 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "LSCS" "C20917" (id 4) (at 88.392 71.12 0)
+    (property "LSCS" "" (id 4) (at 88.392 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "LCSC" "C20917" (id 5) (at 94.488 69.8499 0)
@@ -5518,7 +5517,7 @@
     (property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf" (id 3) (at 88.392 60.96 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "LSCS" "C20917" (id 4) (at 88.392 60.96 0)
+    (property "LSCS" "" (id 4) (at 88.392 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "LCSC" "C20917" (id 5) (at 94.488 59.6899 0)
@@ -5659,7 +5658,7 @@
     (property "Part" "" (id 4) (at 201.295 58.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Todo" "Or 8pF 0603CG8R2C500NT" (id 5) (at 201.295 58.42 90)
+    (property "Todo" "" (id 5) (at 201.295 58.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "LCSC" "C32949" (id 6) (at 198.755 60.325 0)
@@ -5950,8 +5949,8 @@
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 279.654 87.884 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 9a3367fd-f09c-4a1b-bd37-a9590881d87e)
-    (property "Reference" "JP2" (id 0) (at 281.432 86.106 0))
-    (property "Value" "ID0" (id 1) (at 276.86 86.36 0))
+    (property "Reference" "JP3" (id 0) (at 281.432 86.106 0))
+    (property "Value" "ID3" (id 1) (at 276.86 86.36 0))
     (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" (id 2) (at 279.654 87.884 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -6162,7 +6161,7 @@
     (property "Part" "" (id 4) (at 201.295 50.8 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Todo" "Or 8pF 0603CG8R2C500NT" (id 5) (at 201.295 50.8 90)
+    (property "Todo" "" (id 5) (at 201.295 50.8 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "LCSC" "C32949" (id 6) (at 198.755 52.705 0)
@@ -6726,8 +6725,8 @@
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 279.654 83.058 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d3f11ac5-d3a0-4701-8fcd-8f26e47f2c5c)
-    (property "Reference" "JP1" (id 0) (at 281.432 81.28 0))
-    (property "Value" "ID1" (id 1) (at 276.86 81.534 0))
+    (property "Reference" "JP2" (id 0) (at 281.432 81.28 0))
+    (property "Value" "ID2" (id 1) (at 276.86 81.534 0))
     (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" (id 2) (at 279.654 83.058 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -7398,8 +7397,8 @@
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 279.654 77.724 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid fc654452-d6d1-490a-98f3-c018498870b3)
-    (property "Reference" "JP3" (id 0) (at 282.194 76.454 0))
-    (property "Value" "ID3" (id 1) (at 276.86 76.2 0))
+    (property "Reference" "JP1" (id 0) (at 282.194 76.454 0))
+    (property "Value" "ID1" (id 1) (at 276.86 76.2 0))
     (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" (id 2) (at 279.654 77.724 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -7832,13 +7831,13 @@
     (path "/dc413c13-750b-44bb-a9d6-b11822daa9cf"
       (reference "J4") (unit 1) (value "Sensor out") (footprint "Connector_JST:JST_PH_B4B-PH-SM4-TB_1x04-1MP_P2.00mm_Vertical")
     )
-    (path "/d3f11ac5-d3a0-4701-8fcd-8f26e47f2c5c"
+    (path "/fc654452-d6d1-490a-98f3-c018498870b3"
       (reference "JP1") (unit 1) (value "ID1") (footprint "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm")
     )
-    (path "/9a3367fd-f09c-4a1b-bd37-a9590881d87e"
-      (reference "JP2") (unit 1) (value "ID0") (footprint "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm")
+    (path "/d3f11ac5-d3a0-4701-8fcd-8f26e47f2c5c"
+      (reference "JP2") (unit 1) (value "ID2") (footprint "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm")
     )
-    (path "/fc654452-d6d1-490a-98f3-c018498870b3"
+    (path "/9a3367fd-f09c-4a1b-bd37-a9590881d87e"
       (reference "JP3") (unit 1) (value "ID3") (footprint "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm")
     )
     (path "/52bfbb10-9256-4869-a73f-6bd79a7f1ff6"

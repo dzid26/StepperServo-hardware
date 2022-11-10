@@ -1,7 +1,10 @@
 # StepperServo-hardware
 Kicad PCB design
 
-Assembly of the board and geared steppe
+## StepperServoCAN Firmware
+https://github.com/dzid26/StepperServoCAN/tree/retropilot_S42B/firmware
+
+Assembly of the board and geared stepper
 ![image](Motor_assembly.png)
 
 ## Tips

@@ -451,8 +451,6 @@
         "name": "Narrow",
         "nets": [
           "/TLE_DATA_R",
-          "/Vref_A",
-          "/Vref_B",
           "/boot0",
           "A4950_A_IN1",
           "A4950_A_IN2",

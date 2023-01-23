@@ -34,8 +34,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 3.9,
-          "width": 1.8
+          "height": 2.0,
+          "width": 5.0
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -462,7 +462,6 @@
           "NRST",
           "SWCLK",
           "SWDIO",
-          "TLE_CLK",
           "TLE_CSQ",
           "TLE_DATA",
           "TLE_IFA",

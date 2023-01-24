@@ -34,8 +34,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 2.0,
-          "width": 5.0
+          "height": 1.8,
+          "width": 1.15
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -459,7 +459,6 @@
           "CAN_RS",
           "CAN_RXD",
           "CAN_TXD",
-          "NRST",
           "SWCLK",
           "SWDIO",
           "TLE_CSQ",

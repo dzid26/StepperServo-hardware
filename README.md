@@ -3,12 +3,13 @@ https://github.com/dzid26/StepperServoCAN/tree/retropilot_S42B/firmware
 
 # StepperServo-hardware
 ## Schematic
-<img src="https://cdn.discordapp.com/attachments/697072551792345099/1031269076129042513/Screenshot_20221016_185853.png"/>
+![image](https://user-images.githubusercontent.com/841061/215362745-ed1322c2-be20-4ad4-be81-bb878e06834c.png)
 
 ## PCB
 - single sided PCB for direct mounting on the motor and efficient assembly
 
-    <img src="https://cdn.discordapp.com/attachments/697072551792345099/1031269077852885144/Screenshot_20221016_190445.png" width="400" />
+    
+![PCB](https://user-images.githubusercontent.com/841061/215363469-b34c391d-9c2a-4242-88af-c807af3979e5.png)
 
 
 ## Motor

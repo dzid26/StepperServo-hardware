@@ -8,8 +8,9 @@ Limits:
 
 Features:
 - The board can be used to drive one stepper motor or two DC motors
-- CANbus transciver
+- High impedance freewheeling with overvoltage protection
 - Magnetic angle sensor
+- CANbus transciver
 - Debug port for flashing and configuration with ESD protection
 - Optional Enable port with Brake interrupt capability
 - Low-side current, V_mot and V_Bat, PCB temperature measurments

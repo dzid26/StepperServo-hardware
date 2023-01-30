@@ -12,8 +12,9 @@ Features:
 - Magnetic angle sensor
 - Debug port for flashing and configuration with ESD protection
 - Optional Enable port with Brake interrupt capability
-- Low-side current, V_mot and V_Bat measurments
+- Low-side current, V_mot and V_Bat, PCB temperature measurments
 - Reverse polarity protection and swapped connectors protection
+- Optional solder jumper pads, e.g. for motor identification
 
 
 ## Schematic
@@ -28,7 +29,7 @@ Features:
 
 ## Motor
 - Recommended motor is [this](https://www.aliexpress.com/item/4001349087963.html) with 1.8° step angle with relatively high torque per amp ratio. Best coupled with 5:1 gearbox to provide enough toruqe for steering aplications, and still relatively low friction and noise.
-- Assembly of the board and geared stepper:
+- Assembled board with the geared stepper motor:
 
     <img src="https://cdn.discordapp.com/attachments/697072551792345099/1040094846616092722/rn_image_picker_lib_temp_50f777a1-98be-4415-b568-f546d33a9265.jpg" width="400" />
 

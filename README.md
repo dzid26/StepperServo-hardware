@@ -2,6 +2,20 @@
 https://github.com/dzid26/StepperServoCAN/tree/retropilot_S42B/firmware
 
 # StepperServo-hardware
+Limits:
+- 4.5 RMS combined motor current
+- 30V supply voltage (suitable for 12V and 24V systems)
+
+Features:
+- The board can be used to drive one stepper motor or two DC motors
+- CANbus transciver
+- Magnetic angle sensor
+- Debug port for flashing and configuration with ESD protection
+- Optional Enable port with Brake interrupt capability
+- Low-side current, V_mot and V_Bat measurments
+- Reverse polarity protection and swapped connectors protection
+
+
 ## Schematic
 ![image](https://user-images.githubusercontent.com/841061/215362745-ed1322c2-be20-4ad4-be81-bb878e06834c.png)
 

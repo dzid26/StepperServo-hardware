@@ -1,5 +1,5 @@
 ## StepperServoCAN Firmware
-https://github.com/dzid26/StepperServoCAN/tree/retropilot_S42B/firmware
+https://github.com/dzid26/StepperServoCAN
 
 # StepperServo-hardware
 Limits:

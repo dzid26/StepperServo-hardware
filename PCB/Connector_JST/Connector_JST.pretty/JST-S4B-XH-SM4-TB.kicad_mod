@@ -53,7 +53,7 @@
   (pad "5" smd roundrect (at -6.7 3.3) (size 1.8 3.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.4) (tstamp 3a9cb862-dd31-46f1-b23e-f53c8d42573f))
   (pad "6" smd roundrect (at 6.75 3.3) (size 1.8 3.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.4) (tstamp 57deb4e7-8221-4675-8f52-374a5cf96ff7))
   (model "${KIPRJMOD}/Connector_JST/Connector_JST.models/S4B-XH-SM4-TB.step"
-    (offset (xyz 0 -1.15 0))
+    (offset (xyz 0 -1.25 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )

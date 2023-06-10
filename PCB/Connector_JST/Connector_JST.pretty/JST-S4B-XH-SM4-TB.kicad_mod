@@ -50,8 +50,8 @@
   (pad "2" smd roundrect (at -1.25 -3.55) (size 1.2 4.5) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.1923076923) (tstamp 25b38bba-06d6-42de-9a9a-76ef515667e6))
   (pad "3" smd roundrect (at 1.25 -3.55) (size 1.2 4.5) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.1923076923) (tstamp 41001ab6-2f1d-42f9-8cc8-bbe12758b83b))
   (pad "4" smd roundrect (at 3.75 -3.55) (size 1.2 4.5) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.1923076923) (tstamp 9b020645-ce8a-4af7-b593-85a5a2f403e0))
-  (pad "5" smd roundrect (at -6.95 3.25) (size 1.8 3.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.1388888889) (tstamp 3a9cb862-dd31-46f1-b23e-f53c8d42573f))
-  (pad "6" smd roundrect (at 6.95 3.25) (size 1.8 3.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.1388888889) (tstamp 57deb4e7-8221-4675-8f52-374a5cf96ff7))
+  (pad "5" smd roundrect (at -6.8 3.25) (size 1.8 3.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.1388888889) (tstamp 3a9cb862-dd31-46f1-b23e-f53c8d42573f))
+  (pad "6" smd roundrect (at 6.85 3.25) (size 1.8 3.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.1388888889) (tstamp 57deb4e7-8221-4675-8f52-374a5cf96ff7))
   (model "${KIPRJMOD}/Connector_JST/Connector_JST.models/S4B-XH-SM4-TB.step"
     (offset (xyz 0 -1.15 0))
     (scale (xyz 1 1 1))

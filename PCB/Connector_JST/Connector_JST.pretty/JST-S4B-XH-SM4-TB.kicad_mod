@@ -1,7 +1,7 @@
 (footprint "JST-S4B-XH-SM4-TB" (version 20221018) (generator pcbnew)
   (layer "F.Cu")
   (zone_connect 2)
-  (attr through_hole)
+  (attr smd)
   (fp_text reference "REF**" (at -8.5 -7.5) (layer "F.SilkS")
       (effects (font (size 1 1) (thickness 0.15)) (justify left))
     (tstamp 486cd722-59d1-4e35-bb4b-21da60efc4e0)

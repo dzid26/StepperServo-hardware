@@ -5806,6 +5806,31 @@
     )
   )
 
+  (symbol (lib_id "power:+3.3V") (at 148.844 56.134 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 3e3c94f1-94d4-40c9-afae-2841dfbcbdf3)
+    (property "Reference" "#PWR090" (at 148.844 59.944 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 148.5959 51.9261 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 148.844 56.134 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 148.844 56.134 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 710c559c-b7a6-487c-9e06-8d9a81b538b8))
+    (instances
+      (project "StepperServoCAN"
+        (path "/92dad13e-412a-43d4-9260-9087579302b1"
+          (reference "#PWR090") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 218.948 88.138 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3e48ab5b-0dfc-489d-94fb-797d6a5bd928)
@@ -9126,6 +9151,35 @@
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
           (reference "C29") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Diode:1N5819") (at 148.844 59.944 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid cd48d9dd-7e14-4eb1-a67c-ed116149a619)
+    (property "Reference" "D14" (at 152.4 58.42 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "1N5819WS" (at 155.448 60.452 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Diode_SMD:D_SOD-323" (at 144.399 59.944 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf" (at 148.844 59.944 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C191023" (at 141.859 59.6265 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b29362cc-36b3-4d1a-906d-5beb103ba29c))
+    (pin "2" (uuid 8dcff0cc-a3ec-4f08-a8d8-36d5f82a0a65))
+    (instances
+      (project "StepperServoCAN"
+        (path "/92dad13e-412a-43d4-9260-9087579302b1"
+          (reference "D14") (unit 1)
         )
       )
     )

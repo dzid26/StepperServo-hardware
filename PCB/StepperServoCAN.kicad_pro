@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.5,
-          "width": 3.5
+          "height": 0.6,
+          "width": 1.325
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -46,7 +46,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.0
+          "min_clearance": 0.15
         }
       },
       "diff_pair_dimensions": [
@@ -662,6 +662,10 @@
     [
       "92dad13e-412a-43d4-9260-9087579302b1",
       ""
+    ],
+    [
+      "82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7",
+      "DCDC 3.3V"
     ]
   ],
   "text_variables": {}

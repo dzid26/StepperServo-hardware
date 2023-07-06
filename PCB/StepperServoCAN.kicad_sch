@@ -2314,9 +2314,6 @@
   (junction (at 199.644 36.068) (diameter 0) (color 0 0 0 0)
     (uuid 87a7052b-8083-4b7e-b30a-78be94642e8d)
   )
-  (junction (at 45.974 30.226) (diameter 0) (color 0 0 0 0)
-    (uuid 8a8e50a0-6d51-47a7-a115-91e59056f979)
-  )
   (junction (at 116.84 164.592) (diameter 0) (color 0 0 0 0)
     (uuid 8ccd3820-8b55-47c2-a16d-43cd2bea806d)
   )
@@ -2397,6 +2394,9 @@
   )
   (junction (at 103.886 102.616) (diameter 0) (color 0 0 0 0)
     (uuid db070c30-bcb1-4bce-babe-8024fbd9111a)
+  )
+  (junction (at 48.514 30.226) (diameter 0) (color 0 0 0 0)
+    (uuid db745f0f-9309-4a4f-b80f-b000fdb8bb60)
   )
   (junction (at 167.894 63.754) (diameter 0) (color 0 0 0 0)
     (uuid dc158075-25e1-46e5-b31f-e844b52a9f7d)
@@ -2679,7 +2679,7 @@
     (stroke (width 0) (type default))
     (uuid 42dc6a2b-78bb-4b89-b097-58fae99109d4)
   )
-  (wire (pts (xy 29.21 30.226) (xy 34.29 30.226))
+  (wire (pts (xy 29.21 30.226) (xy 31.496 30.226))
     (stroke (width 0) (type default))
     (uuid 43612e82-5211-4535-b08e-1ca604b24b96)
   )
@@ -2887,10 +2887,6 @@
     (stroke (width 0) (type default))
     (uuid 708ef56e-4d93-4ff0-b18c-ef08a885dfa3)
   )
-  (wire (pts (xy 41.91 30.226) (xy 45.974 30.226))
-    (stroke (width 0) (type default))
-    (uuid 70dc5774-cdfd-411c-aced-52e982af4398)
-  )
   (wire (pts (xy 266.446 80.518) (xy 265.43 80.518))
     (stroke (width 0) (type default))
     (uuid 70fa3192-60f8-4d97-97a0-9d598f3764ff)
@@ -2948,7 +2944,7 @@
     (stroke (width 0) (type default))
     (uuid 7d3b1d10-6bc9-44cf-a39f-0102625efba1)
   )
-  (wire (pts (xy 45.974 30.226) (xy 58.166 30.226))
+  (wire (pts (xy 45.466 30.226) (xy 48.514 30.226))
     (stroke (width 0) (type default))
     (uuid 7d58b94e-d14e-4a55-a113-971251072810)
   )
@@ -2967,6 +2963,10 @@
   (wire (pts (xy 258.064 158.496) (xy 267.208 158.496))
     (stroke (width 0) (type default))
     (uuid 7f398ece-f645-41d1-928b-f4a6a22a942c)
+  )
+  (wire (pts (xy 36.576 30.226) (xy 40.386 30.226))
+    (stroke (width 0) (type default))
+    (uuid 80a31212-d9bc-4b7a-a456-cd9c4bc10b1f)
   )
   (wire (pts (xy 205.486 88.138) (xy 208.026 88.138))
     (stroke (width 0) (type default))
@@ -3074,7 +3074,7 @@
     (stroke (width 0) (type default))
     (uuid 9af66871-91b8-4494-ae3e-c150c0c26f5e)
   )
-  (wire (pts (xy 45.974 28.702) (xy 45.974 30.226))
+  (wire (pts (xy 48.514 28.702) (xy 48.514 30.226))
     (stroke (width 0) (type default))
     (uuid 9b6520dd-414f-490e-8cae-8df34d39e93c)
   )
@@ -3153,6 +3153,10 @@
   (wire (pts (xy 207.645 32.258) (xy 207.645 33.528))
     (stroke (width 0) (type default))
     (uuid afc7c187-05a1-4566-a0c1-9ef02217975b)
+  )
+  (wire (pts (xy 48.514 30.226) (xy 58.166 30.226))
+    (stroke (width 0) (type default))
+    (uuid b00a0580-d515-45cc-9543-9f6ab3a8e4d8)
   )
   (wire (pts (xy 199.644 36.068) (xy 199.644 39.878))
     (stroke (width 0) (type default))
@@ -3501,7 +3505,7 @@
   )
 
   (text_box "Force enable"
-    (at 30.988 13.462 0) (size 20.828 20.574)
+    (at 37.846 13.462 0) (size 13.97 20.574)
     (stroke (width 0) (type default))
     (fill (type none))
     (effects (font (size 1.27 1.27)) (justify left top))
@@ -4167,7 +4171,7 @@
   (symbol (lib_id "Device:C_Small") (at 150.114 21.336 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00392d81-63f8-4562-8222-f608e9a86835)
-    (property "Reference" "C3" (at 152.654 20.0722 0)
+    (property "Reference" "C2" (at 152.654 20.0722 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 151.384 22.606 0)
@@ -4187,7 +4191,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C3") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -4196,7 +4200,7 @@
   (symbol (lib_id "power:GND") (at 96.266 112.776 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 00875365-d36d-4e3e-8af2-653b2d3db0a7)
-    (property "Reference" "#PWR054" (at 96.266 119.126 0)
+    (property "Reference" "#PWR052" (at 96.266 119.126 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 96.266 117.856 0)
@@ -4212,7 +4216,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR052") (unit 1)
         )
       )
     )
@@ -4221,7 +4225,7 @@
   (symbol (lib_id "Device:C_Small") (at 119.38 167.132 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 028fe179-8579-40ab-896e-275542e5e428)
-    (property "Reference" "C33" (at 121.92 165.8682 0)
+    (property "Reference" "C30" (at 121.92 165.8682 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10n" (at 120.65 168.402 0)
@@ -4241,7 +4245,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C33") (unit 1)
+          (reference "C30") (unit 1)
         )
       )
     )
@@ -4250,7 +4254,7 @@
   (symbol (lib_id "Device:R_Small") (at 206.502 63.5 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 04f8cf63-5ec5-4ee6-a08b-fb0ea0eba6f6)
-    (property "Reference" "R19" (at 206.502 65.405 90)
+    (property "Reference" "R16" (at 206.502 65.405 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 206.502 63.5 90)
@@ -4270,7 +4274,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R19") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -4304,7 +4308,7 @@
   (symbol (lib_id "power:GND") (at 209.804 23.876 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 053d12f5-5eb5-4f90-8d37-e6be051504b1)
-    (property "Reference" "#PWR09" (at 209.804 30.226 0)
+    (property "Reference" "#PWR010" (at 209.804 30.226 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 209.804 28.956 0)
@@ -4320,7 +4324,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -4329,7 +4333,7 @@
   (symbol (lib_id "Device:R_Small") (at 272.034 59.69 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 05c4679e-4bc9-48ff-87ae-b573087ee6b6)
-    (property "Reference" "R14" (at 270.51 57.658 90)
+    (property "Reference" "R11" (at 270.51 57.658 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 272.034 59.69 90)
@@ -4349,7 +4353,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R14") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -4358,7 +4362,7 @@
   (symbol (lib_id "Device:LED_Small") (at 215.138 55.118 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 06d05d70-a14e-4fd6-be64-57324f352188)
-    (property "Reference" "D5" (at 217.17 58.674 0)
+    (property "Reference" "D2" (at 217.17 58.674 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "RED" (at 217.678 54.864 0)
@@ -4378,7 +4382,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "D5") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
     )
@@ -4387,7 +4391,7 @@
   (symbol (lib_id "Device:C") (at 102.87 77.978 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0934a4d3-1ebe-473c-a85a-d619be8fd837)
-    (property "Reference" "C23" (at 97.79 77.978 0)
+    (property "Reference" "C19" (at 97.79 77.978 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10n" (at 97.79 80.01 0)
@@ -4407,7 +4411,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C23") (unit 1)
+          (reference "C19") (unit 1)
         )
       )
     )
@@ -4416,7 +4420,7 @@
   (symbol (lib_id "Device:R_Small") (at 201.422 63.5 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0946d0d0-5b6f-49b1-b06c-346c8f49adaf)
-    (property "Reference" "R18" (at 201.676 65.278 90)
+    (property "Reference" "R15" (at 201.676 65.278 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 201.422 63.5 90)
@@ -4436,7 +4440,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R18") (unit 1)
+          (reference "R15") (unit 1)
         )
       )
     )
@@ -4445,7 +4449,7 @@
   (symbol (lib_id "Device:C_Polarized") (at 52.451 110.236 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0ae23926-d9d2-4a05-bc8d-cb21c3b96d0a)
-    (property "Reference" "C28" (at 54.991 110.236 0)
+    (property "Reference" "C24" (at 54.991 110.236 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100uF 35V" (at 53.34 113.284 0)
@@ -4468,7 +4472,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C28") (unit 1)
+          (reference "C24") (unit 1)
         )
       )
     )
@@ -4477,7 +4481,7 @@
   (symbol (lib_id "power:GND") (at 201.676 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0afdd149-31dc-440a-95fc-d5e41e572d3b)
-    (property "Reference" "#PWR036" (at 201.676 80.01 0)
+    (property "Reference" "#PWR032" (at 201.676 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 199.136 74.93 90)
@@ -4493,7 +4497,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
     )
@@ -4502,7 +4506,7 @@
   (symbol (lib_id "power:GND") (at 115.57 81.788 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0c7e684a-c2fe-49ae-8bac-9ba8e8c514b0)
-    (property "Reference" "#PWR038" (at 115.57 88.138 0)
+    (property "Reference" "#PWR035" (at 115.57 88.138 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 115.57 86.868 0)
@@ -4518,7 +4522,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -4527,7 +4531,7 @@
   (symbol (lib_id "power:GND") (at 204.47 56.134 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0de12ce7-9cae-4170-b7fd-094ba28bef1e)
-    (property "Reference" "#PWR026" (at 204.47 62.484 0)
+    (property "Reference" "#PWR022" (at 204.47 62.484 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 201.93 57.404 90)
@@ -4543,7 +4547,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -4552,7 +4556,7 @@
   (symbol (lib_id "power:GND") (at 172.212 156.718 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0de89f7f-5dc6-4bce-b2e6-138c23fc179e)
-    (property "Reference" "#PWR078" (at 172.212 163.068 0)
+    (property "Reference" "#PWR075" (at 172.212 163.068 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 168.402 157.988 0)
@@ -4568,7 +4572,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR078") (unit 1)
+          (reference "#PWR075") (unit 1)
         )
       )
     )
@@ -4577,7 +4581,7 @@
   (symbol (lib_id "Device:C_Small") (at 247.396 155.956 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 104deca7-61bc-420c-b8e9-62a1977a6db0)
-    (property "Reference" "C32" (at 249.428 155.702 0)
+    (property "Reference" "C28" (at 249.428 155.702 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 249.428 157.48 0)
@@ -4597,7 +4601,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C32") (unit 1)
+          (reference "C28") (unit 1)
         )
       )
     )
@@ -4606,7 +4610,7 @@
   (symbol (lib_id "power:GND") (at 156.972 187.198 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1278fc56-0c94-49fe-878b-b0030c2ecd88)
-    (property "Reference" "#PWR088" (at 156.972 193.548 0)
+    (property "Reference" "#PWR084" (at 156.972 193.548 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 153.162 188.468 0)
@@ -4622,7 +4626,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR088") (unit 1)
+          (reference "#PWR084") (unit 1)
         )
       )
     )
@@ -4631,7 +4635,7 @@
   (symbol (lib_id "power:GND") (at 93.726 141.986 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 12d6634e-202a-4b83-8837-bdd32586f17d)
-    (property "Reference" "#PWR072" (at 93.726 148.336 0)
+    (property "Reference" "#PWR069" (at 93.726 148.336 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 93.726 147.066 0)
@@ -4647,7 +4651,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR072") (unit 1)
+          (reference "#PWR069") (unit 1)
         )
       )
     )
@@ -4656,7 +4660,7 @@
   (symbol (lib_id "power:GND") (at 245.11 97.028 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 14873381-b1bf-4085-8945-e874b4c07f02)
-    (property "Reference" "#PWR047" (at 245.11 103.378 0)
+    (property "Reference" "#PWR041" (at 245.11 103.378 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 245.11 102.108 0)
@@ -4672,7 +4676,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR041") (unit 1)
         )
       )
     )
@@ -4681,7 +4685,7 @@
   (symbol (lib_id "Device:R") (at 158.115 111.887 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 153b156c-fa36-41be-9f13-93ecd05c6561)
-    (property "Reference" "R36" (at 158.115 109.982 90)
+    (property "Reference" "R30" (at 158.115 109.982 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "8.2k" (at 158.115 111.887 90)
@@ -4701,7 +4705,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R36") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
     )
@@ -4710,7 +4714,7 @@
   (symbol (lib_id "Device:R") (at 149.86 96.012 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 16809795-5e06-4e98-908e-5815c9274661)
-    (property "Reference" "R33" (at 149.86 94.107 90)
+    (property "Reference" "R25" (at 149.86 94.107 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 149.86 96.012 90)
@@ -4730,7 +4734,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R33") (unit 1)
+          (reference "R25") (unit 1)
         )
       )
     )
@@ -4739,7 +4743,7 @@
   (symbol (lib_id "Device:R_Small") (at 272.034 50.546 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 177e0597-e16d-41f4-b06c-bd7567ae4617)
-    (property "Reference" "R11" (at 270.51 49.022 90)
+    (property "Reference" "R8" (at 270.51 49.022 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 272.034 50.546 90)
@@ -4759,7 +4763,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R11") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -4797,7 +4801,7 @@
   (symbol (lib_id "Device:C_Small") (at 200.914 21.336 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 18d0a20c-e60e-41bd-8e2b-5a80e5b2e1b8)
-    (property "Reference" "C8" (at 203.454 20.0722 0)
+    (property "Reference" "C7" (at 203.454 20.0722 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (at 202.184 22.606 0)
@@ -4817,7 +4821,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C8") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
     )
@@ -4855,7 +4859,7 @@
   (symbol (lib_id "power:+3.3V") (at 244.094 117.602 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c1cf6c4-5938-474c-a3fd-5873e0c594dd)
-    (property "Reference" "#PWR057" (at 244.094 121.412 0)
+    (property "Reference" "#PWR054" (at 244.094 121.412 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 240.284 117.602 0)
@@ -4871,7 +4875,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR054") (unit 1)
         )
       )
     )
@@ -4880,7 +4884,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 153.67 111.76 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c9da11d-5996-4cf7-bb2b-04d4294ad287)
-    (property "Reference" "TP2" (at 148.59 112.268 0)
+    (property "Reference" "TP3" (at 148.59 112.268 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Pad" (at 148.59 114.3 0)
@@ -4896,7 +4900,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "TP2") (unit 1)
+          (reference "TP3") (unit 1)
         )
       )
     )
@@ -4905,7 +4909,7 @@
   (symbol (lib_id "Device:C") (at 47.752 77.978 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1d963dca-ac6f-40a0-a5a1-30b6fea18c15)
-    (property "Reference" "C21" (at 41.656 77.978 0)
+    (property "Reference" "C17" (at 41.656 77.978 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10n" (at 42.926 80.01 0)
@@ -4925,7 +4929,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C21") (unit 1)
+          (reference "C17") (unit 1)
         )
       )
     )
@@ -4934,7 +4938,7 @@
   (symbol (lib_id "power:+3.3VA") (at 158.75 90.932 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1ee9db7a-aa3b-44f9-8740-0bd1ae0349ea)
-    (property "Reference" "#PWR045" (at 158.75 94.742 0)
+    (property "Reference" "#PWR038" (at 158.75 94.742 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 158.75 87.122 0)
@@ -4950,7 +4954,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR045") (unit 1)
+          (reference "#PWR038") (unit 1)
         )
       )
     )
@@ -4959,7 +4963,7 @@
   (symbol (lib_id "power:GND") (at 165.735 90.932 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1eed79d3-c58d-4dfd-ad60-d0af92a4c4fe)
-    (property "Reference" "#PWR046" (at 165.735 97.282 0)
+    (property "Reference" "#PWR039" (at 165.735 97.282 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 165.735 96.012 0)
@@ -4975,7 +4979,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR039") (unit 1)
         )
       )
     )
@@ -4984,7 +4988,7 @@
   (symbol (lib_id "Device:R_Small") (at 224.028 60.198 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1f1c7d92-65aa-4629-989d-512db6b2d9d5)
-    (property "Reference" "R17" (at 220.726 58.674 90)
+    (property "Reference" "R14" (at 220.726 58.674 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 224.028 60.198 90)
@@ -5004,7 +5008,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R17") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
     )
@@ -5013,7 +5017,7 @@
   (symbol (lib_id "power:+3.3V") (at 122.936 22.098 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1fe0f355-dd53-461b-bdd0-3dfe80fa9433)
-    (property "Reference" "#PWR033" (at 122.936 25.908 0)
+    (property "Reference" "#PWR07" (at 122.936 25.908 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 126.238 21.59 0)
@@ -5029,7 +5033,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -5038,7 +5042,7 @@
   (symbol (lib_id "Device:C_Small") (at 191.389 21.336 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2184376e-50dc-4b73-b033-6e584ec09e06)
-    (property "Reference" "C7" (at 193.929 20.0722 0)
+    (property "Reference" "C6" (at 193.929 20.0722 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22u" (at 192.659 22.606 0)
@@ -5058,7 +5062,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C7") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -5067,7 +5071,7 @@
   (symbol (lib_id "Device:C_Small") (at 141.224 21.336 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 221d1a37-38a9-4178-8421-fb1e1316e798)
-    (property "Reference" "C2" (at 143.764 20.0722 0)
+    (property "Reference" "C1" (at 143.764 20.0722 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22u" (at 142.494 22.606 0)
@@ -5087,7 +5091,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C2") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
     )
@@ -5125,7 +5129,7 @@
   (symbol (lib_id "power:GND") (at 215.9 29.718 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 24a63676-a94f-4d4e-aed3-ea9a2a9a9fb9)
-    (property "Reference" "#PWR011" (at 209.55 29.718 0)
+    (property "Reference" "#PWR013" (at 209.55 29.718 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 214.63 27.178 90)
@@ -5141,7 +5145,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -5175,7 +5179,7 @@
   (symbol (lib_id "power:GND") (at 110.998 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2a510932-d119-4d27-942b-230cc3eb6810)
-    (property "Reference" "#PWR041" (at 110.998 34.29 0)
+    (property "Reference" "#PWR012" (at 110.998 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 110.998 33.02 0)
@@ -5191,7 +5195,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -5200,7 +5204,7 @@
   (symbol (lib_id "power:GND") (at 191.135 36.068 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2c8af131-0af8-4c10-ad6d-83d47c6517ea)
-    (property "Reference" "#PWR017" (at 191.135 42.418 0)
+    (property "Reference" "#PWR014" (at 191.135 42.418 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 188.595 37.338 90)
@@ -5216,7 +5220,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -5225,7 +5229,7 @@
   (symbol (lib_id "power:GND") (at 218.694 110.744 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2edb20d0-7de8-4938-8928-83a7d23ea1c5)
-    (property "Reference" "#PWR044" (at 218.694 117.094 0)
+    (property "Reference" "#PWR050" (at 218.694 117.094 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 216.154 112.014 90)
@@ -5241,7 +5245,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR044") (unit 1)
+          (reference "#PWR050") (unit 1)
         )
       )
     )
@@ -5250,7 +5254,7 @@
   (symbol (lib_id "Device:C_Small") (at 209.804 21.336 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2f3e3048-faf1-43a5-843f-dfbb8176e366)
-    (property "Reference" "C9" (at 212.344 20.0722 0)
+    (property "Reference" "C8" (at 212.344 20.0722 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10n" (at 211.074 22.606 0)
@@ -5270,7 +5274,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C9") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
     )
@@ -5279,7 +5283,7 @@
   (symbol (lib_id "power:GND") (at 215.138 57.658 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2faaeb63-bfa2-40be-83d0-54c7a6fb898c)
-    (property "Reference" "#PWR028" (at 215.138 64.008 0)
+    (property "Reference" "#PWR025" (at 215.138 64.008 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 212.598 58.928 90)
@@ -5295,7 +5299,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -5304,7 +5308,7 @@
   (symbol (lib_id "power:+BATT") (at 206.502 123.444 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2fe70520-cbde-431f-a612-92a8125b5f30)
-    (property "Reference" "#PWR060" (at 206.502 127.254 0)
+    (property "Reference" "#PWR058" (at 206.502 127.254 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+BATT" (at 206.502 120.269 0)
@@ -5320,7 +5324,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR060") (unit 1)
+          (reference "#PWR058") (unit 1)
         )
       )
     )
@@ -5354,7 +5358,7 @@
   (symbol (lib_id "Device:R") (at 167.894 59.944 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 31406569-afdb-41c9-8918-6270c0941fe0)
-    (property "Reference" "R16" (at 169.799 59.944 90)
+    (property "Reference" "R12" (at 169.799 59.944 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "56k" (at 167.894 59.944 90)
@@ -5374,7 +5378,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R16") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -5383,7 +5387,7 @@
   (symbol (lib_id "Diode:B140-E3") (at 31.496 56.388 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 33dfdf30-1951-476a-bf66-a6e8a18dc1de)
-    (property "Reference" "D6" (at 31.75 51.308 0)
+    (property "Reference" "D3" (at 31.75 51.308 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SS54" (at 31.75 53.848 0)
@@ -5403,7 +5407,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "D6") (unit 1)
+          (reference "D3") (unit 1)
         )
       )
     )
@@ -5412,7 +5416,7 @@
   (symbol (lib_id "Device:R_Small") (at 272.796 55.372 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 347aaff1-64f2-4c59-86ea-dd986df294a2)
-    (property "Reference" "R13" (at 271.272 53.848 90)
+    (property "Reference" "R10" (at 271.272 53.848 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 272.796 55.372 90)
@@ -5432,7 +5436,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R13") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -5441,7 +5445,7 @@
   (symbol (lib_id "power:+3.3V") (at 253.492 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3b3a8539-e2d4-478a-81ed-5e138c4a5834)
-    (property "Reference" "#PWR052" (at 253.492 113.03 0)
+    (property "Reference" "#PWR048" (at 253.492 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 249.682 109.22 0)
@@ -5457,7 +5461,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
     )
@@ -5466,7 +5470,7 @@
   (symbol (lib_id "Device:R_Small") (at 215.646 80.518 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3d4b5157-0871-41e9-a27c-40c8241e4545)
-    (property "Reference" "R4" (at 217.551 80.518 90)
+    (property "Reference" "R23" (at 217.551 80.518 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "56k" (at 215.646 80.518 90)
@@ -5486,7 +5490,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R4") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -5524,7 +5528,7 @@
   (symbol (lib_id "power:+3.3V") (at 146.05 56.388 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3e3c94f1-94d4-40c9-afae-2841dfbcbdf3)
-    (property "Reference" "#PWR090" (at 146.05 60.198 0)
+    (property "Reference" "#PWR024" (at 146.05 60.198 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 147.066 52.578 0)
@@ -5540,7 +5544,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR090") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -5585,7 +5589,7 @@
   (symbol (lib_id "power:GND") (at 150.114 23.876 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3f038fa3-6156-4f60-a922-54eb5cd3f394)
-    (property "Reference" "#PWR08" (at 150.114 30.226 0)
+    (property "Reference" "#PWR09" (at 150.114 30.226 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 150.114 28.956 0)
@@ -5601,7 +5605,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -5610,7 +5614,7 @@
   (symbol (lib_id "Device:C_Small") (at 161.925 125.73 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 40ebde51-1999-4594-9069-2f16a6bf18a1)
-    (property "Reference" "C31" (at 166.37 124.46 90)
+    (property "Reference" "C27" (at 166.37 124.46 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 164.465 128.27 90)
@@ -5630,7 +5634,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C31") (unit 1)
+          (reference "C27") (unit 1)
         )
       )
     )
@@ -5639,7 +5643,7 @@
   (symbol (lib_id "Device:C") (at 115.57 78.232 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 450d52c1-34e7-45ef-86bc-7f0bc64c7dcf)
-    (property "Reference" "C24" (at 109.855 78.232 0)
+    (property "Reference" "C20" (at 109.855 78.232 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "220pF" (at 109.22 80.137 0)
@@ -5659,7 +5663,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C24") (unit 1)
+          (reference "C20") (unit 1)
         )
       )
     )
@@ -5668,7 +5672,7 @@
   (symbol (lib_id "Device:R_Small") (at 215.138 110.744 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 45724ea5-5aba-43b3-be63-495908c24c57)
-    (property "Reference" "R30" (at 214.376 112.776 90)
+    (property "Reference" "R29" (at 214.376 112.776 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 215.138 110.744 90)
@@ -5688,7 +5692,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R30") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
     )
@@ -5697,7 +5701,7 @@
   (symbol (lib_id "power:+3.3V") (at 250.952 127.254 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 45cee48b-10be-4755-b6cc-128c7336128f)
-    (property "Reference" "#PWR065" (at 250.952 131.064 0)
+    (property "Reference" "#PWR061" (at 250.952 131.064 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 253.746 124.714 0)
@@ -5713,7 +5717,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR065") (unit 1)
+          (reference "#PWR061") (unit 1)
         )
       )
     )
@@ -5722,7 +5726,7 @@
   (symbol (lib_id "power:GND") (at 252.73 97.028 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4621b7fa-e6ee-4dff-a456-f588583945c4)
-    (property "Reference" "#PWR048" (at 252.73 103.378 0)
+    (property "Reference" "#PWR042" (at 252.73 103.378 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 252.73 102.108 0)
@@ -5738,7 +5742,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -5747,7 +5751,7 @@
   (symbol (lib_id "Device:C_Small") (at 258.064 155.956 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 46239150-d4c1-438d-9f2e-eec3d3cce7e7)
-    (property "Reference" "C36" (at 259.842 155.702 0)
+    (property "Reference" "C29" (at 259.842 155.702 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 259.842 157.48 0)
@@ -5767,7 +5771,36 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C36") (unit 1)
+          (reference "C29") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 34.036 30.226 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 4647d264-c57a-4b40-b8e1-ee25e8aa8e9a)
+    (property "Reference" "JP4" (at 34.29 28.448 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100" (at 34.036 30.226 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 34.036 30.226 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 34.036 30.226 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C25076" (at 37.846 28.956 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 76e9828e-57dd-458e-8a73-7093eb20f5e1))
+    (pin "2" (uuid e885a595-03e8-4a25-8c08-b63d50b31276))
+    (instances
+      (project "StepperServoCAN"
+        (path "/92dad13e-412a-43d4-9260-9087579302b1"
+          (reference "JP4") (unit 1)
         )
       )
     )
@@ -5776,7 +5809,7 @@
   (symbol (lib_id "power:GND") (at 247.396 158.496 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 46c9b773-29c1-46ce-8ba3-91c0f7863507)
-    (property "Reference" "#PWR079" (at 247.396 164.846 0)
+    (property "Reference" "#PWR077" (at 247.396 164.846 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 243.586 159.766 0)
@@ -5792,7 +5825,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR079") (unit 1)
+          (reference "#PWR077") (unit 1)
         )
       )
     )
@@ -5801,7 +5834,7 @@
   (symbol (lib_id "Device:R") (at 149.86 101.092 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 493ac52c-8433-4700-88e5-ead92da93b24)
-    (property "Reference" "R34" (at 149.86 99.187 90)
+    (property "Reference" "R26" (at 149.86 99.187 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 149.86 101.092 90)
@@ -5821,7 +5854,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R34") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
     )
@@ -5830,7 +5863,7 @@
   (symbol (lib_id "Device:R") (at 103.886 135.636 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4cd4ec63-1623-4915-9aab-f8375ee68ccf)
-    (property "Reference" "R39" (at 106.426 135.636 90)
+    (property "Reference" "R34" (at 106.426 135.636 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.1R" (at 103.886 135.636 90)
@@ -5853,7 +5886,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R39") (unit 1)
+          (reference "R34") (unit 1)
         )
       )
     )
@@ -5862,7 +5895,7 @@
   (symbol (lib_id "Diode:1N5819") (at 173.99 67.564 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4cd751d5-0f40-4dc2-86bf-318afb1be597)
-    (property "Reference" "D16" (at 178.308 68.072 90)
+    (property "Reference" "D7" (at 178.308 68.072 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N5819WS" (at 180.594 68.072 90)
@@ -5882,7 +5915,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "D16") (unit 1)
+          (reference "D7") (unit 1)
         )
       )
     )
@@ -5891,7 +5924,7 @@
   (symbol (lib_id "power:+3.3V") (at 150.114 18.796 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4e3b398a-48af-4241-9040-83983bae5c12)
-    (property "Reference" "#PWR02" (at 150.114 22.606 0)
+    (property "Reference" "#PWR01" (at 150.114 22.606 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 149.8659 14.5881 0)
@@ -5907,7 +5940,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -5976,7 +6009,7 @@
   (symbol (lib_id "Device:C_Small") (at 146.05 67.818 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4e999709-84d9-40d1-a37c-deea31cb98b7)
-    (property "Reference" "C18" (at 148.336 67.31 0)
+    (property "Reference" "C16" (at 148.336 67.31 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 147.32 69.088 0)
@@ -5996,7 +6029,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C18") (unit 1)
+          (reference "C16") (unit 1)
         )
       )
     )
@@ -6005,7 +6038,7 @@
   (symbol (lib_id "power:+3.3VA") (at 158.75 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5043ae96-b9d7-414b-8434-61251174cba5)
-    (property "Reference" "#PWR063" (at 158.75 129.54 0)
+    (property "Reference" "#PWR059" (at 158.75 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 159.766 121.92 0)
@@ -6021,7 +6054,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR063") (unit 1)
+          (reference "#PWR059") (unit 1)
         )
       )
     )
@@ -6030,7 +6063,7 @@
   (symbol (lib_id "Device:R") (at 158.115 146.685 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5169dda2-aab9-4a6a-9368-3806fa7a8714)
-    (property "Reference" "R41" (at 158.115 144.78 90)
+    (property "Reference" "R36" (at 158.115 144.78 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "8.2k" (at 158.115 146.685 90)
@@ -6050,7 +6083,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R41") (unit 1)
+          (reference "R36") (unit 1)
         )
       )
     )
@@ -6059,7 +6092,7 @@
   (symbol (lib_id "power:GND") (at 49.53 185.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 51d08c17-5363-4338-bc3a-9ccbfd147e8d)
-    (property "Reference" "#PWR087" (at 49.53 191.77 0)
+    (property "Reference" "#PWR083" (at 49.53 191.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 49.53 190.5 0)
@@ -6075,7 +6108,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR087") (unit 1)
+          (reference "#PWR083") (unit 1)
         )
       )
     )
@@ -6084,7 +6117,7 @@
   (symbol (lib_id "power:+3.3V") (at 195.58 45.974 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 51d8e142-99c5-4d5e-8d4d-ed69c6d0f392)
-    (property "Reference" "#PWR022" (at 195.58 49.784 0)
+    (property "Reference" "#PWR017" (at 195.58 49.784 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 192.532 45.974 0)
@@ -6100,29 +6133,29 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 45.974 24.892 90) (unit 1)
+  (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 48.514 24.892 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 52faa024-8bdb-4e2e-9fcf-d42abb51fc65)
-    (property "Reference" "JP3" (at 44.704 22.352 0)
+    (property "Reference" "JP3" (at 47.244 22.352 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "ID1" (at 44.45 27.686 0)
+    (property "Value" "ID1" (at 46.99 27.686 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 45.974 24.892 0)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 48.514 24.892 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 45.974 24.892 0)
+    (property "Datasheet" "~" (at 48.514 24.892 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 605e5ca5-30d1-4d55-9a11-ffb23124a879))
-    (pin "2" (uuid 679cd4c2-5863-4702-b51a-a772676b83fd))
+    (pin "1" (uuid 3318387b-7289-4aa0-b2d4-8da2514c302d))
+    (pin "2" (uuid 11d4a0dd-c35e-4cab-87f9-798374556218))
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
@@ -6138,7 +6171,7 @@
   (symbol (lib_id "Diode:SM6T30A") (at 74.93 60.198 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 53f76e3b-9091-4406-9947-0627d404f91b)
-    (property "Reference" "D7" (at 77.978 58.9279 90)
+    (property "Reference" "D5" (at 77.978 58.9279 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SMBJ30CA" (at 77.978 61.4679 90)
@@ -6158,7 +6191,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "D7") (unit 1)
+          (reference "D5") (unit 1)
         )
       )
     )
@@ -6167,7 +6200,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 173.228 98.552 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 553ad35a-5a7c-4aee-b2b8-c3f4ae0bbe2d)
-    (property "Reference" "TP3" (at 172.72 93.472 0)
+    (property "Reference" "TP2" (at 172.72 93.472 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Pad" (at 170.688 93.472 0)
@@ -6183,7 +6216,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "TP3") (unit 1)
+          (reference "TP2") (unit 1)
         )
       )
     )
@@ -6192,7 +6225,7 @@
   (symbol (lib_id "Device:R_Small") (at 230.632 19.812 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 55676e6d-14ab-40c8-855e-b4e5fb221a5b)
-    (property "Reference" "R2" (at 232.537 19.812 90)
+    (property "Reference" "R1" (at 232.537 19.812 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 230.632 19.812 90)
@@ -6212,7 +6245,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R2") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -6221,7 +6254,7 @@
   (symbol (lib_id "Device:R_Small") (at 226.314 52.578 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 55aac857-f9fc-4c9d-bd74-7480bd1483f9)
-    (property "Reference" "R12" (at 229.362 50.8 90)
+    (property "Reference" "R9" (at 229.362 50.8 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 226.314 52.578 90)
@@ -6241,7 +6274,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R12") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -6250,7 +6283,7 @@
   (symbol (lib_id "power:GND") (at 249.174 134.874 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5697a50e-4703-4283-86bf-51a7ec7ce6ee)
-    (property "Reference" "#PWR069" (at 249.174 141.224 0)
+    (property "Reference" "#PWR066" (at 249.174 141.224 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 245.364 136.144 0)
@@ -6266,7 +6299,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR069") (unit 1)
+          (reference "#PWR066") (unit 1)
         )
       )
     )
@@ -6307,7 +6340,7 @@
   (symbol (lib_id "power:+3.3VA") (at 209.804 18.796 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5cfb566a-61f6-4cb8-a84d-3216d761df00)
-    (property "Reference" "#PWR03" (at 209.804 22.606 0)
+    (property "Reference" "#PWR02" (at 209.804 22.606 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 209.804 14.986 0)
@@ -6323,7 +6356,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -6332,7 +6365,7 @@
   (symbol (lib_id "power:GND") (at 59.69 82.296 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5e6f3bcb-88ae-412b-b5a1-40f324acd825)
-    (property "Reference" "#PWR040" (at 59.69 88.646 0)
+    (property "Reference" "#PWR037" (at 59.69 88.646 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 59.69 87.376 0)
@@ -6348,7 +6381,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
     )
@@ -6357,7 +6390,7 @@
   (symbol (lib_id "power:GND") (at 143.51 135.89 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 62a8f8ff-11ec-4842-b67a-6f9081e31eb6)
-    (property "Reference" "#PWR070" (at 143.51 142.24 0)
+    (property "Reference" "#PWR067" (at 143.51 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 143.51 140.97 0)
@@ -6373,7 +6406,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR070") (unit 1)
+          (reference "#PWR067") (unit 1)
         )
       )
     )
@@ -6407,7 +6440,7 @@
   (symbol (lib_id "power:GND") (at 212.598 42.418 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 64f7bc4b-03d5-4a9d-982e-ef679ab9731a)
-    (property "Reference" "#PWR021" (at 212.598 48.768 0)
+    (property "Reference" "#PWR016" (at 212.598 48.768 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 210.058 43.688 90)
@@ -6423,7 +6456,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -6461,7 +6494,7 @@
   (symbol (lib_id "Device:R") (at 140.97 67.818 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 65d40364-ba03-415f-93f8-66a34f7a62d8)
-    (property "Reference" "R21" (at 142.875 67.818 90)
+    (property "Reference" "R18" (at 142.875 67.818 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "5.6k" (at 140.97 67.818 90)
@@ -6481,7 +6514,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R21") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
     )
@@ -6490,7 +6523,7 @@
   (symbol (lib_id "Device:C_Small") (at 159.004 21.336 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 67598733-9731-419a-aec8-bdf6dc73da5e)
-    (property "Reference" "C4" (at 161.544 20.0722 0)
+    (property "Reference" "C3" (at 161.544 20.0722 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 160.274 22.606 0)
@@ -6510,7 +6543,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C4") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -6519,7 +6552,7 @@
   (symbol (lib_id "power:+3.3V") (at 247.65 19.558 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6977a830-5438-404e-8d75-cb9f504441a2)
-    (property "Reference" "#PWR04" (at 247.65 23.368 0)
+    (property "Reference" "#PWR03" (at 247.65 23.368 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 243.078 18.034 0)
@@ -6535,7 +6568,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -6569,7 +6602,7 @@
   (symbol (lib_id "power:+3.3VA") (at 255.27 19.812 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6f028851-f6ff-4381-88f4-95ff11c7103a)
-    (property "Reference" "#PWR05" (at 255.27 23.622 0)
+    (property "Reference" "#PWR04" (at 255.27 23.622 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 259.842 18.034 0)
@@ -6585,7 +6618,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -6594,7 +6627,7 @@
   (symbol (lib_id "Device:R") (at 143.002 181.102 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 70990c8b-0661-45b9-9f2e-a60733a332e5)
-    (property "Reference" "R46" (at 145.796 180.467 0)
+    (property "Reference" "R41" (at 145.796 180.467 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "120" (at 145.796 183.007 0)
@@ -6614,7 +6647,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R46") (unit 1)
+          (reference "R41") (unit 1)
         )
       )
     )
@@ -6623,7 +6656,7 @@
   (symbol (lib_id "power:GND") (at 282.194 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 71515903-27b0-4e06-ac4a-bf49ca9e0dc5)
-    (property "Reference" "#PWR029" (at 282.194 66.04 0)
+    (property "Reference" "#PWR026" (at 282.194 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 279.654 60.96 90)
@@ -6639,7 +6672,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -6673,7 +6706,7 @@
   (symbol (lib_id "power:GND") (at 167.894 71.374 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 79224e18-b23b-4ab3-b037-9aee3456c0fb)
-    (property "Reference" "#PWR035" (at 167.894 77.724 0)
+    (property "Reference" "#PWR030" (at 167.894 77.724 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 164.084 72.644 0)
@@ -6689,7 +6722,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -6698,7 +6731,7 @@
   (symbol (lib_id "power:GND") (at 128.27 170.942 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7be4c22c-1b2c-4c92-b51f-87339bb3eedf)
-    (property "Reference" "#PWR084" (at 128.27 177.292 0)
+    (property "Reference" "#PWR081" (at 128.27 177.292 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 128.27 176.022 0)
@@ -6714,7 +6747,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR084") (unit 1)
+          (reference "#PWR081") (unit 1)
         )
       )
     )
@@ -6755,7 +6788,7 @@
   (symbol (lib_id "Device:R") (at 140.97 60.198 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7e8b8a7e-43cd-4935-9078-d2d20b08bce1)
-    (property "Reference" "R15" (at 142.875 60.198 90)
+    (property "Reference" "R13" (at 142.875 60.198 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "56k" (at 140.97 60.198 90)
@@ -6775,7 +6808,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R15") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
     )
@@ -6784,7 +6817,7 @@
   (symbol (lib_id "Device:R") (at 149.86 90.932 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8154d9cf-9e75-4f74-9c7f-e1073719ff13)
-    (property "Reference" "R32" (at 149.86 89.027 90)
+    (property "Reference" "R24" (at 149.86 89.027 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "8.2k" (at 149.86 90.932 90)
@@ -6804,7 +6837,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R32") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -6813,7 +6846,7 @@
   (symbol (lib_id "power:GND") (at 216.662 157.734 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 832a5a50-e4a1-4afe-a568-f0c600e25da8)
-    (property "Reference" "#PWR080" (at 216.662 164.084 0)
+    (property "Reference" "#PWR076" (at 216.662 164.084 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 212.852 159.004 0)
@@ -6829,7 +6862,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR080") (unit 1)
+          (reference "#PWR076") (unit 1)
         )
       )
     )
@@ -6838,7 +6871,7 @@
   (symbol (lib_id "Device:R") (at 39.37 74.168 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 84fef273-4c58-416c-ab8e-a96ef35f182f)
-    (property "Reference" "R23" (at 38.735 71.628 90)
+    (property "Reference" "R19" (at 38.735 71.628 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2.2k" (at 39.37 74.168 90)
@@ -6858,7 +6891,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R23") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
@@ -6892,7 +6925,7 @@
   (symbol (lib_id "Device:R") (at 149.86 130.81 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 895ce180-b754-4771-b6e5-4d89154ebbfc)
-    (property "Reference" "R38" (at 149.86 128.905 90)
+    (property "Reference" "R32" (at 149.86 128.905 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 149.86 130.81 90)
@@ -6912,7 +6945,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R38") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
     )
@@ -6921,7 +6954,7 @@
   (symbol (lib_id "power:GND") (at 102.87 81.788 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 89d55043-5218-4cdd-a780-7c378f47febf)
-    (property "Reference" "#PWR037" (at 102.87 88.138 0)
+    (property "Reference" "#PWR034" (at 102.87 88.138 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 102.87 86.868 0)
@@ -6937,7 +6970,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -7004,7 +7037,7 @@
   (symbol (lib_id "Diode:1N5819") (at 173.99 59.944 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8c2c5abe-1710-4c28-9099-4ffb5b636459)
-    (property "Reference" "D15" (at 178.308 60.452 90)
+    (property "Reference" "D4" (at 178.308 60.452 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N5819WS" (at 180.594 60.452 90)
@@ -7024,7 +7057,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "D15") (unit 1)
+          (reference "D4") (unit 1)
         )
       )
     )
@@ -7033,7 +7066,7 @@
   (symbol (lib_id "Device:C_Small") (at 202.184 39.878 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8cf866c8-41ed-40e8-b336-09cfea134e6d)
-    (property "Reference" "C16" (at 199.644 41.783 90)
+    (property "Reference" "C12" (at 199.644 41.783 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10p" (at 200.279 38.608 90)
@@ -7059,7 +7092,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C16") (unit 1)
+          (reference "C12") (unit 1)
         )
       )
     )
@@ -7068,7 +7101,7 @@
   (symbol (lib_id "Device:FerriteBead_Small") (at 264.414 153.416 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8d9e9352-bb92-4d50-a64c-16d24c3c6752)
-    (property "Reference" "FB2" (at 263.906 150.622 90)
+    (property "Reference" "FB1" (at 263.906 150.622 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "FerriteBead 200mA " (at 263.779 159.766 90)
@@ -7088,7 +7121,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "FB2") (unit 1)
+          (reference "FB1") (unit 1)
         )
       )
     )
@@ -7097,7 +7130,7 @@
   (symbol (lib_id "Device:C_Small") (at 161.29 90.932 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8ec8d079-d61b-4a46-8f48-76dd8992fd6d)
-    (property "Reference" "C25" (at 165.735 89.662 90)
+    (property "Reference" "C21" (at 165.735 89.662 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 163.83 93.472 90)
@@ -7117,7 +7150,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C25") (unit 1)
+          (reference "C21") (unit 1)
         )
       )
     )
@@ -7221,7 +7254,7 @@
   (symbol (lib_id "power:GND") (at 143.51 101.092 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 90daaf5b-943d-45e8-9ff0-42771121da65)
-    (property "Reference" "#PWR050" (at 143.51 107.442 0)
+    (property "Reference" "#PWR044" (at 143.51 107.442 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 143.51 106.172 0)
@@ -7237,7 +7270,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR044") (unit 1)
         )
       )
     )
@@ -7246,7 +7279,7 @@
   (symbol (lib_id "Device:R_Small") (at 198.12 45.974 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 911b1fd0-e2d4-4346-bfa2-c083279e726e)
-    (property "Reference" "R9" (at 197.866 48.006 90)
+    (property "Reference" "R6" (at 197.866 48.006 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 198.12 45.974 90)
@@ -7266,7 +7299,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R9") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -7275,7 +7308,7 @@
   (symbol (lib_id "Device:C_Small") (at 176.784 21.336 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 92af5a35-8db8-44de-8206-89a023e41296)
-    (property "Reference" "C6" (at 179.324 20.0722 0)
+    (property "Reference" "C5" (at 179.324 20.0722 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 178.054 22.606 0)
@@ -7295,7 +7328,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C6") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -7304,7 +7337,7 @@
   (symbol (lib_id "power:+3.3V") (at 116.84 163.322 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 93192c15-f94b-46f8-a884-7eeca247022b)
-    (property "Reference" "#PWR081" (at 116.84 167.132 0)
+    (property "Reference" "#PWR078" (at 116.84 167.132 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 116.5919 159.1141 0)
@@ -7320,7 +7353,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR081") (unit 1)
+          (reference "#PWR078") (unit 1)
         )
       )
     )
@@ -7329,7 +7362,7 @@
   (symbol (lib_id "power:GND") (at 220.472 23.114 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 961721a6-0535-4c91-a29d-2433be98551e)
-    (property "Reference" "#PWR07" (at 214.122 23.114 0)
+    (property "Reference" "#PWR08" (at 214.122 23.114 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 219.202 19.304 0)
@@ -7345,7 +7378,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -7354,7 +7387,7 @@
   (symbol (lib_id "power:+3.3V") (at 258.064 145.796 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 96f076e1-3a35-4168-a34c-da8ebeb6f5f0)
-    (property "Reference" "#PWR074" (at 258.064 149.606 0)
+    (property "Reference" "#PWR071" (at 258.064 149.606 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 254.254 145.796 0)
@@ -7370,7 +7403,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR074") (unit 1)
+          (reference "#PWR071") (unit 1)
         )
       )
     )
@@ -7379,7 +7412,7 @@
   (symbol (lib_id "power:GND") (at 216.662 147.574 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 973271bc-7f02-4d28-be9e-22a74db81fb3)
-    (property "Reference" "#PWR076" (at 216.662 153.924 0)
+    (property "Reference" "#PWR073" (at 216.662 153.924 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 212.852 148.844 0)
@@ -7395,7 +7428,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR076") (unit 1)
+          (reference "#PWR073") (unit 1)
         )
       )
     )
@@ -7404,7 +7437,7 @@
   (symbol (lib_id "Device:R") (at 258.064 149.606 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 975f4a63-9d65-4ab8-9fc7-ad785883d8bb)
-    (property "Reference" "R42" (at 256.032 148.59 90)
+    (property "Reference" "R37" (at 256.032 148.59 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 258.064 149.352 90)
@@ -7424,7 +7457,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R42") (unit 1)
+          (reference "R37") (unit 1)
         )
       )
     )
@@ -7433,7 +7466,7 @@
   (symbol (lib_id "power:GND") (at 283.464 50.546 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9bb40e4b-18fd-45c2-8335-a5b4be561aef)
-    (property "Reference" "#PWR023" (at 283.464 56.896 0)
+    (property "Reference" "#PWR018" (at 283.464 56.896 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 280.924 51.816 90)
@@ -7449,7 +7482,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -7458,7 +7491,7 @@
   (symbol (lib_id "Sensor_Magnetic:AH1806-W") (at 122.936 32.258 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9d14dbf7-316e-46ee-8f36-e2e5ee7dd2f8)
-    (property "Reference" "U9" (at 117.602 30.988 0)
+    (property "Reference" "U1" (at 117.602 30.988 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "AH1806-W" (at 117.602 33.528 0)
@@ -7479,7 +7512,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "U9") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -7488,7 +7521,7 @@
   (symbol (lib_id "Device:C") (at 59.436 125.476 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9d629794-00e3-4000-84dc-3124672cdb68)
-    (property "Reference" "C30" (at 61.976 125.476 0)
+    (property "Reference" "C26" (at 61.976 125.476 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1uF 50V" (at 55.372 127.762 0)
@@ -7511,7 +7544,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C30") (unit 1)
+          (reference "C26") (unit 1)
         )
       )
     )
@@ -7520,7 +7553,7 @@
   (symbol (lib_id "Device:R") (at 253.492 153.416 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9df2adb2-e851-475e-9f9f-19172c41d9d8)
-    (property "Reference" "R43" (at 252.222 151.384 90)
+    (property "Reference" "R38" (at 252.222 151.384 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 253.238 153.416 90)
@@ -7540,7 +7573,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R43") (unit 1)
+          (reference "R38") (unit 1)
         )
       )
     )
@@ -7549,7 +7582,7 @@
   (symbol (lib_id "power:GND") (at 224.79 106.172 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9e67d90d-fed0-4f17-8f75-5dc677ca25dc)
-    (property "Reference" "#PWR020" (at 224.79 112.522 0)
+    (property "Reference" "#PWR046" (at 224.79 112.522 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 224.79 111.252 0)
@@ -7565,7 +7598,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
     )
@@ -7574,7 +7607,7 @@
   (symbol (lib_id "power:GND") (at 274.32 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a0cd8e54-76a5-413b-a9ae-0af52f1d39fe)
-    (property "Reference" "#PWR055" (at 274.32 116.84 0)
+    (property "Reference" "#PWR049" (at 274.32 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 270.51 111.76 0)
@@ -7590,7 +7623,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR049") (unit 1)
         )
       )
     )
@@ -7599,7 +7632,7 @@
   (symbol (lib_id "power:+3.3V") (at 173.99 56.134 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a30e37d4-b89f-42e1-8ccb-ba626273d633)
-    (property "Reference" "#PWR091" (at 173.99 59.944 0)
+    (property "Reference" "#PWR021" (at 173.99 59.944 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 175.26 52.324 0)
@@ -7615,7 +7648,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR091") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -7624,7 +7657,7 @@
   (symbol (lib_id "power:GND") (at 158.75 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a44d9439-4a4c-423e-9ffd-0c346fdcb942)
-    (property "Reference" "#PWR071" (at 158.75 147.32 0)
+    (property "Reference" "#PWR068" (at 158.75 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 158.75 146.05 0)
@@ -7640,7 +7673,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR071") (unit 1)
+          (reference "#PWR068") (unit 1)
         )
       )
     )
@@ -7649,7 +7682,7 @@
   (symbol (lib_id "Device:R") (at 254.254 134.874 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a4d5350b-63df-42c2-af17-1b6e3b358f9f)
-    (property "Reference" "R1" (at 254.889 137.414 90)
+    (property "Reference" "R33" (at 254.889 137.414 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100k" (at 254.254 134.874 90)
@@ -7669,7 +7702,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R1") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
     )
@@ -7678,7 +7711,7 @@
   (symbol (lib_id "power:GND") (at 47.752 82.296 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a5249e88-159e-4a6c-ac41-c39e9f78c5cc)
-    (property "Reference" "#PWR039" (at 47.752 88.646 0)
+    (property "Reference" "#PWR036" (at 47.752 88.646 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 47.752 87.376 0)
@@ -7694,7 +7727,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -7739,7 +7772,7 @@
   (symbol (lib_id "Device:C_Small") (at 202.184 32.258 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ab5ac150-0d85-4505-9101-67b26b614b55)
-    (property "Reference" "C13" (at 199.644 34.163 90)
+    (property "Reference" "C11" (at 199.644 34.163 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10p" (at 200.279 30.988 90)
@@ -7765,7 +7798,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C13") (unit 1)
+          (reference "C11") (unit 1)
         )
       )
     )
@@ -7803,7 +7836,7 @@
   (symbol (lib_id "Device:C_Small") (at 39.37 182.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ac717ce3-ce90-4ce0-a83f-45d6f448d0e8)
-    (property "Reference" "C35" (at 41.148 184.404 0)
+    (property "Reference" "C32" (at 41.148 184.404 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 34.036 184.404 0)
@@ -7823,7 +7856,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C35") (unit 1)
+          (reference "C32") (unit 1)
         )
       )
     )
@@ -7832,7 +7865,7 @@
   (symbol (lib_id "Device:R_Small") (at 202.946 45.974 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ae251508-77e5-415a-9e8c-d8db8b7198e8)
-    (property "Reference" "R10" (at 203.2 48.006 90)
+    (property "Reference" "R7" (at 203.2 48.006 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 202.946 45.974 90)
@@ -7852,7 +7885,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R10") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -7861,7 +7894,7 @@
   (symbol (lib_id "Device:C") (at 53.086 96.266 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid af0731f8-e50d-47fe-88d7-3ff683c73776)
-    (property "Reference" "C26" (at 47.752 96.266 0)
+    (property "Reference" "C22" (at 47.752 96.266 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 48.006 98.298 0)
@@ -7887,7 +7920,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C26") (unit 1)
+          (reference "C22") (unit 1)
         )
       )
     )
@@ -7896,7 +7929,7 @@
   (symbol (lib_id "Device:R") (at 167.894 67.564 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid af3acd14-28ac-45b8-b971-e68805f13c96)
-    (property "Reference" "R22" (at 169.799 67.564 90)
+    (property "Reference" "R17" (at 169.799 67.564 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "5.6k" (at 167.894 67.564 90)
@@ -7916,7 +7949,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R22") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
     )
@@ -7925,7 +7958,7 @@
   (symbol (lib_id "power:GND") (at 166.37 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid af495889-2f73-4d0c-8085-5396de38e5c5)
-    (property "Reference" "#PWR064" (at 166.37 132.08 0)
+    (property "Reference" "#PWR060" (at 166.37 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 166.37 130.81 0)
@@ -7941,7 +7974,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR064") (unit 1)
+          (reference "#PWR060") (unit 1)
         )
       )
     )
@@ -7950,7 +7983,7 @@
   (symbol (lib_id "Device:C_Small") (at 163.322 67.564 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b0fe627f-e2de-4426-be65-42c104f2e536)
-    (property "Reference" "C19" (at 158.75 69.342 0)
+    (property "Reference" "C14" (at 158.75 69.342 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 157.734 71.12 0)
@@ -7970,7 +8003,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C19") (unit 1)
+          (reference "C14") (unit 1)
         )
       )
     )
@@ -8015,7 +8048,7 @@
   (symbol (lib_id "power:GND") (at 96.266 141.986 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b335e1eb-be02-48ed-b8ca-9a08f95312af)
-    (property "Reference" "#PWR073" (at 96.266 148.336 0)
+    (property "Reference" "#PWR070" (at 96.266 148.336 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 96.266 147.066 0)
@@ -8031,7 +8064,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR073") (unit 1)
+          (reference "#PWR070") (unit 1)
         )
       )
     )
@@ -8040,7 +8073,7 @@
   (symbol (lib_id "Device:R") (at 53.594 74.168 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b767bbda-7608-4f5e-9323-848fba5bc438)
-    (property "Reference" "R24" (at 52.959 71.628 90)
+    (property "Reference" "R20" (at 52.959 71.628 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100k" (at 53.594 74.168 90)
@@ -8060,7 +8093,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R24") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -8094,7 +8127,7 @@
   (symbol (lib_id "power:GND") (at 216.916 60.198 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b92b7aa4-d82f-46c1-9c49-a19ca61e10f8)
-    (property "Reference" "#PWR030" (at 216.916 66.548 0)
+    (property "Reference" "#PWR027" (at 216.916 66.548 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 214.376 61.468 90)
@@ -8110,7 +8143,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -8144,7 +8177,7 @@
   (symbol (lib_id "Device:C") (at 59.69 77.978 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bbba40e6-3567-4a99-86e2-eb5eae381a9c)
-    (property "Reference" "C22" (at 53.975 77.978 0)
+    (property "Reference" "C18" (at 53.975 77.978 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "220pF" (at 53.34 79.883 0)
@@ -8164,7 +8197,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C22") (unit 1)
+          (reference "C18") (unit 1)
         )
       )
     )
@@ -8173,7 +8206,7 @@
   (symbol (lib_id "Device:C_Small") (at 128.27 167.132 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bc77377b-fc51-46e4-a08c-7460f8ff60c4)
-    (property "Reference" "C34" (at 130.81 165.8682 0)
+    (property "Reference" "C31" (at 130.81 165.8682 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 129.54 168.402 0)
@@ -8193,7 +8226,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C34") (unit 1)
+          (reference "C31") (unit 1)
         )
       )
     )
@@ -8202,7 +8235,7 @@
   (symbol (lib_id "Device:R") (at 149.86 135.89 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bccfb22a-3c20-4857-8b71-bea42f62a2fe)
-    (property "Reference" "R40" (at 149.86 133.985 90)
+    (property "Reference" "R35" (at 149.86 133.985 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 149.86 135.89 90)
@@ -8222,7 +8255,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R40") (unit 1)
+          (reference "R35") (unit 1)
         )
       )
     )
@@ -8260,7 +8293,7 @@
   (symbol (lib_id "Transistor_FET:BSS84") (at 259.08 129.794 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid be16759a-9348-4e04-b639-cdf28c821140)
-    (property "Reference" "Q1" (at 255.27 129.794 90)
+    (property "Reference" "Q3" (at 255.27 129.794 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "AO3401A" (at 266.446 129.032 90)
@@ -8281,7 +8314,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "Q1") (unit 1)
+          (reference "Q3") (unit 1)
         )
       )
     )
@@ -8290,7 +8323,7 @@
   (symbol (lib_id "Transistor_FET:BSS84") (at 210.566 83.058 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid becc00bb-7635-4a36-9248-cf10187cbfb2)
-    (property "Reference" "Q2" (at 210.566 79.248 0)
+    (property "Reference" "Q1" (at 210.566 79.248 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "AO3401A" (at 201.422 85.09 0)
@@ -8311,7 +8344,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "Q2") (unit 1)
+          (reference "Q1") (unit 1)
         )
       )
     )
@@ -8320,7 +8353,7 @@
   (symbol (lib_id "Device:C") (at 59.436 96.266 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bee52f86-9017-43f5-b288-812d3de8a261)
-    (property "Reference" "C27" (at 61.976 96.266 0)
+    (property "Reference" "C23" (at 61.976 96.266 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1uF 50V" (at 55.626 98.552 0)
@@ -8343,7 +8376,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C27") (unit 1)
+          (reference "C23") (unit 1)
         )
       )
     )
@@ -8352,7 +8385,7 @@
   (symbol (lib_id "power:GND") (at 206.502 131.064 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c039c831-9a9b-48ec-a791-06891b9da9e5)
-    (property "Reference" "#PWR066" (at 206.502 137.414 0)
+    (property "Reference" "#PWR064" (at 206.502 137.414 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 202.692 132.334 0)
@@ -8368,7 +8401,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR066") (unit 1)
+          (reference "#PWR064") (unit 1)
         )
       )
     )
@@ -8377,7 +8410,7 @@
   (symbol (lib_id "power:GND") (at 216.662 122.174 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c0bd7cd8-1ddc-426a-ac23-15ef0401631b)
-    (property "Reference" "#PWR059" (at 216.662 128.524 0)
+    (property "Reference" "#PWR057" (at 216.662 128.524 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 212.852 123.444 0)
@@ -8393,7 +8426,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR059") (unit 1)
+          (reference "#PWR057") (unit 1)
         )
       )
     )
@@ -8402,7 +8435,7 @@
   (symbol (lib_id "power:GND") (at 220.98 108.204 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c0c5c7b8-058a-4633-902d-03d1c78c2f61)
-    (property "Reference" "#PWR042" (at 220.98 114.554 0)
+    (property "Reference" "#PWR047" (at 220.98 114.554 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 218.44 109.474 90)
@@ -8418,7 +8451,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR047") (unit 1)
         )
       )
     )
@@ -8427,7 +8460,7 @@
   (symbol (lib_id "power:GND") (at 140.97 71.628 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c22b3437-8e54-41bf-95ff-87e3a35e9f1b)
-    (property "Reference" "#PWR034" (at 140.97 77.978 0)
+    (property "Reference" "#PWR031" (at 140.97 77.978 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 137.16 72.898 0)
@@ -8443,7 +8476,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
     )
@@ -8452,7 +8485,7 @@
   (symbol (lib_id "power:GND") (at 122.936 42.418 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c5919600-bf97-4c58-9ec3-e891440ba169)
-    (property "Reference" "#PWR094" (at 122.936 48.768 0)
+    (property "Reference" "#PWR015" (at 122.936 48.768 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 122.936 47.498 0)
@@ -8468,7 +8501,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR094") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -8477,7 +8510,7 @@
   (symbol (lib_id "Device:R") (at 109.22 74.168 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c64fd5e4-4afd-4749-8fcf-dde8a2d5f636)
-    (property "Reference" "R26" (at 108.585 71.628 90)
+    (property "Reference" "R22" (at 108.585 71.628 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100k" (at 109.22 74.168 90)
@@ -8497,7 +8530,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R26") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -8506,7 +8539,7 @@
   (symbol (lib_id "power:GND") (at 74.93 64.008 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c76e5cd7-77a1-4763-9f8c-b1206c1daa0c)
-    (property "Reference" "#PWR032" (at 74.93 70.358 0)
+    (property "Reference" "#PWR029" (at 74.93 70.358 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 71.12 65.278 0)
@@ -8522,7 +8555,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -8567,7 +8600,7 @@
   (symbol (lib_id "Device:C_Small") (at 206.756 49.276 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cb5ea8d2-801d-4399-8d90-e7c293529253)
-    (property "Reference" "C17" (at 211.074 47.498 0)
+    (property "Reference" "C13" (at 211.074 47.498 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 211.836 51.054 0)
@@ -8587,7 +8620,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C17") (unit 1)
+          (reference "C13") (unit 1)
         )
       )
     )
@@ -8596,7 +8629,7 @@
   (symbol (lib_id "power:GND") (at 156.972 177.038 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cbdcdb87-2af9-4251-89ac-981ab15d02ab)
-    (property "Reference" "#PWR085" (at 156.972 183.388 0)
+    (property "Reference" "#PWR082" (at 156.972 183.388 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 153.162 178.308 0)
@@ -8612,7 +8645,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR085") (unit 1)
+          (reference "#PWR082") (unit 1)
         )
       )
     )
@@ -8621,7 +8654,7 @@
   (symbol (lib_id "power:+BATT") (at 216.662 132.334 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cca1cb0a-e117-4c06-a8b5-9c61bae0b69e)
-    (property "Reference" "#PWR068" (at 216.662 136.144 0)
+    (property "Reference" "#PWR065" (at 216.662 136.144 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+BATT" (at 216.662 129.159 0)
@@ -8637,7 +8670,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR068") (unit 1)
+          (reference "#PWR065") (unit 1)
         )
       )
     )
@@ -8646,7 +8679,7 @@
   (symbol (lib_id "Device:R") (at 103.886 106.426 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cca35b53-4835-4e88-8867-45ca14665c3f)
-    (property "Reference" "R35" (at 106.426 106.426 90)
+    (property "Reference" "R27" (at 106.426 106.426 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.1R" (at 103.886 106.426 90)
@@ -8669,7 +8702,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R35") (unit 1)
+          (reference "R27") (unit 1)
         )
       )
     )
@@ -8678,7 +8711,7 @@
   (symbol (lib_id "Device:C") (at 53.086 125.476 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cccd3a42-82a2-455d-90cc-58f2b226175d)
-    (property "Reference" "C29" (at 48.006 125.222 0)
+    (property "Reference" "C25" (at 48.006 125.222 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 48.006 127.762 0)
@@ -8701,7 +8734,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C29") (unit 1)
+          (reference "C25") (unit 1)
         )
       )
     )
@@ -8710,7 +8743,7 @@
   (symbol (lib_id "Diode:1N5819") (at 146.05 60.198 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cd48d9dd-7e14-4eb1-a67c-ed116149a619)
-    (property "Reference" "D14" (at 149.606 58.674 90)
+    (property "Reference" "D6" (at 149.606 58.674 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N5819WS" (at 152.654 60.706 90)
@@ -8730,7 +8763,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "D14") (unit 1)
+          (reference "D6") (unit 1)
         )
       )
     )
@@ -8793,7 +8826,7 @@
   (symbol (lib_id "Device:R_Small") (at 229.87 42.418 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d0d55fcf-ee00-42ab-b32b-9de8ee0adec4)
-    (property "Reference" "R8" (at 229.87 40.513 90)
+    (property "Reference" "R5" (at 229.87 40.513 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 229.87 42.418 90)
@@ -8813,7 +8846,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R8") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -8822,7 +8855,7 @@
   (symbol (lib_id "Device:C_Small") (at 167.894 21.336 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d1ab38f3-b454-4c85-93cb-7f90c1842671)
-    (property "Reference" "C5" (at 170.434 20.0722 0)
+    (property "Reference" "C4" (at 170.434 20.0722 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 169.164 22.606 0)
@@ -8842,36 +8875,36 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C5") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Device:R") (at 38.1 30.226 270) (unit 1)
+  (symbol (lib_id "Device:R_Small") (at 42.926 30.226 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d2623a72-e1bb-46d0-ad51-d9f6dea0dd4f)
-    (property "Reference" "R20" (at 38.1 28.321 90)
+    (property "Reference" "R3" (at 42.926 28.321 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1k" (at 38.1 30.226 90)
+    (property "Value" "1k" (at 42.926 30.226 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 38.1 28.448 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 42.926 30.226 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 38.1 30.226 0)
+    (property "Datasheet" "~" (at 42.926 30.226 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C11702" (at 38.1 28.321 0)
+    (property "LCSC" "C11702" (at 42.926 28.321 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a67b3d9d-e6fb-4613-8a20-d1df31b34a9c))
-    (pin "2" (uuid 6b53d63a-af7b-4664-a529-2a6cff929709))
+    (pin "1" (uuid 70a23ba9-fe07-42aa-b5a5-f2a5884f31ca))
+    (pin "2" (uuid ef728e88-a434-481b-a431-22fb68cfb68d))
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R20") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -8880,7 +8913,7 @@
   (symbol (lib_id "power:GND") (at 253.492 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d3701c80-48e6-472c-ac19-e2d1510acfc3)
-    (property "Reference" "#PWR058" (at 253.492 125.73 0)
+    (property "Reference" "#PWR055" (at 253.492 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 249.682 120.65 0)
@@ -8896,7 +8929,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR058") (unit 1)
+          (reference "#PWR055") (unit 1)
         )
       )
     )
@@ -8931,7 +8964,7 @@
   (symbol (lib_id "power:GND") (at 52.451 114.046 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d4239e40-cbac-4cd2-95b5-a31b419d470d)
-    (property "Reference" "#PWR056" (at 52.451 120.396 0)
+    (property "Reference" "#PWR053" (at 52.451 120.396 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 52.451 119.126 0)
@@ -8947,7 +8980,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR053") (unit 1)
         )
       )
     )
@@ -8956,7 +8989,7 @@
   (symbol (lib_id "power:GND") (at 59.436 100.076 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d4bbd0cf-6943-449c-a522-46de7b3a16c2)
-    (property "Reference" "#PWR049" (at 59.436 106.426 0)
+    (property "Reference" "#PWR043" (at 59.436 106.426 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 59.436 105.156 0)
@@ -8972,7 +9005,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR049") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -8981,7 +9014,7 @@
   (symbol (lib_id "power:GND") (at 172.212 166.878 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d4bed417-d345-4781-9e75-87a991cb477e)
-    (property "Reference" "#PWR083" (at 172.212 173.228 0)
+    (property "Reference" "#PWR080" (at 172.212 173.228 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 168.402 168.148 0)
@@ -8997,7 +9030,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR083") (unit 1)
+          (reference "#PWR080") (unit 1)
         )
       )
     )
@@ -9006,7 +9039,7 @@
   (symbol (lib_id "Device:R") (at 94.234 74.168 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d7d7b8b1-bced-421c-8444-9ec79321a235)
-    (property "Reference" "R25" (at 93.599 72.263 90)
+    (property "Reference" "R21" (at 93.599 72.263 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2.2k" (at 94.234 74.168 90)
@@ -9026,7 +9059,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R25") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
     )
@@ -9035,7 +9068,7 @@
   (symbol (lib_id "power:+3.3V") (at 208.026 77.724 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d85364b8-4ece-4884-8482-e4e0bfe23727)
-    (property "Reference" "#PWR015" (at 208.026 81.534 0)
+    (property "Reference" "#PWR033" (at 208.026 81.534 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 211.582 76.708 0)
@@ -9051,7 +9084,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -9111,7 +9144,7 @@
   (symbol (lib_id "Device:R") (at 102.87 179.832 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dc5f80ed-1930-4978-b0d2-5127e61dbd7e)
-    (property "Reference" "R45" (at 102.108 181.991 90)
+    (property "Reference" "R40" (at 102.108 181.991 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470" (at 102.87 179.832 90)
@@ -9131,7 +9164,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R45") (unit 1)
+          (reference "R40") (unit 1)
         )
       )
     )
@@ -9215,7 +9248,7 @@
   (symbol (lib_id "power:GND") (at 158.75 106.172 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e3002450-fa32-43ef-823e-519eda5f3c75)
-    (property "Reference" "#PWR051" (at 158.75 112.522 0)
+    (property "Reference" "#PWR045" (at 158.75 112.522 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 158.75 111.252 0)
@@ -9231,7 +9264,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR045") (unit 1)
         )
       )
     )
@@ -9240,7 +9273,7 @@
   (symbol (lib_id "power:+BATT") (at 53.594 24.638 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e38d5360-6b03-4ff6-acfa-f85a8e0d9cb3)
-    (property "Reference" "#PWR010" (at 53.594 28.448 0)
+    (property "Reference" "#PWR011" (at 53.594 28.448 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+BATT" (at 53.594 20.828 0)
@@ -9256,7 +9289,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -9265,7 +9298,7 @@
   (symbol (lib_id "power:GND") (at 156.972 166.878 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e53e3263-d826-410a-93bb-7c6cbb43acd8)
-    (property "Reference" "#PWR082" (at 156.972 173.228 0)
+    (property "Reference" "#PWR079" (at 156.972 173.228 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 153.162 168.148 0)
@@ -9281,7 +9314,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR082") (unit 1)
+          (reference "#PWR079") (unit 1)
         )
       )
     )
@@ -9322,7 +9355,7 @@
   (symbol (lib_id "Device:R_Small") (at 225.425 37.338 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e7a2f993-b1de-473a-a5df-c6f72ad78a6c)
-    (property "Reference" "R7" (at 229.235 36.068 90)
+    (property "Reference" "R4" (at 229.235 36.068 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100" (at 225.552 37.338 90)
@@ -9342,7 +9375,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R7") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -9351,7 +9384,7 @@
   (symbol (lib_id "Device:C_Small") (at 110.998 25.4 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e7ac5180-6e29-4d7a-b9aa-4ecab9be4d40)
-    (property "Reference" "C1" (at 115.316 23.622 0)
+    (property "Reference" "C10" (at 115.316 23.622 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 116.078 27.178 0)
@@ -9371,7 +9404,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C1") (unit 1)
+          (reference "C10") (unit 1)
         )
       )
     )
@@ -9380,7 +9413,7 @@
   (symbol (lib_id "power:+BATT") (at 21.336 56.388 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e8448a55-ac53-4760-a427-a61830f818be)
-    (property "Reference" "#PWR027" (at 21.336 60.198 0)
+    (property "Reference" "#PWR023" (at 21.336 60.198 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+BATT" (at 21.336 52.578 0)
@@ -9396,7 +9429,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -9405,7 +9438,7 @@
   (symbol (lib_id "Device:C_Small") (at 225.298 23.114 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ea9aa619-4d66-4f40-8061-e57b21278c76)
-    (property "Reference" "C10" (at 226.06 24.638 90)
+    (property "Reference" "C9" (at 226.06 24.638 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 222.758 20.066 90)
@@ -9425,7 +9458,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C10") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
     )
@@ -9462,26 +9495,26 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 45.974 21.082 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 48.514 21.082 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ed3b704b-b053-468d-9328-0427411b1c08)
-    (property "Reference" "#PWR095" (at 45.974 24.892 0)
+    (property "Reference" "#PWR05" (at 48.514 24.892 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 45.7259 16.8741 0)
+    (property "Value" "+3.3V" (at 48.2659 16.8741 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 45.974 21.082 0)
+    (property "Footprint" "" (at 48.514 21.082 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 45.974 21.082 0)
+    (property "Datasheet" "" (at 48.514 21.082 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8860e75f-9308-41d5-8d6c-16e247b0ac60))
+    (pin "1" (uuid ca11f9a6-a6d9-43a9-bd32-269b209dc5e0))
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR095") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
           (reference "#PWR095") (unit 1)
@@ -9493,7 +9526,7 @@
   (symbol (lib_id "power:+BATT") (at 167.894 56.134 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ed89c858-87ed-4133-a3bb-760a71e00558)
-    (property "Reference" "#PWR025" (at 167.894 59.944 0)
+    (property "Reference" "#PWR020" (at 167.894 59.944 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+BATT" (at 164.846 52.832 0)
@@ -9509,7 +9542,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -9518,7 +9551,7 @@
   (symbol (lib_id "power:+3.3V") (at 242.316 146.812 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eda794fe-9dd7-4695-a507-ed1d6bbf4d8f)
-    (property "Reference" "#PWR075" (at 242.316 150.622 0)
+    (property "Reference" "#PWR072" (at 242.316 150.622 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 245.872 144.272 0)
@@ -9534,7 +9567,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR075") (unit 1)
+          (reference "#PWR072") (unit 1)
         )
       )
     )
@@ -9543,7 +9576,7 @@
   (symbol (lib_id "Device:C_Small") (at 212.09 67.564 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f0357580-9a34-4bba-bb15-36a946cdaf70)
-    (property "Reference" "C20" (at 209.55 67.056 90)
+    (property "Reference" "C15" (at 209.55 67.056 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 211.074 68.326 90)
@@ -9563,7 +9596,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "C20") (unit 1)
+          (reference "C15") (unit 1)
         )
       )
     )
@@ -9572,7 +9605,7 @@
   (symbol (lib_id "power:+3.3V") (at 198.882 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f052560d-d299-4566-91ef-aa175bfaecc2)
-    (property "Reference" "#PWR031" (at 198.882 67.31 0)
+    (property "Reference" "#PWR028" (at 198.882 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 195.58 63.754 0)
@@ -9588,7 +9621,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -9597,7 +9630,7 @@
   (symbol (lib_id "power:GND") (at 93.726 112.776 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f082922c-edd9-42f1-968e-89e1e29e226e)
-    (property "Reference" "#PWR053" (at 93.726 119.126 0)
+    (property "Reference" "#PWR051" (at 93.726 119.126 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 93.726 117.856 0)
@@ -9613,7 +9646,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR053") (unit 1)
+          (reference "#PWR051") (unit 1)
         )
       )
     )
@@ -9622,7 +9655,7 @@
   (symbol (lib_id "power:GND") (at 274.32 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f3718998-f389-42ec-ab2b-7cd3ce2f5cd2)
-    (property "Reference" "#PWR061" (at 274.32 127 0)
+    (property "Reference" "#PWR056" (at 274.32 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 270.51 121.92 0)
@@ -9638,7 +9671,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR061") (unit 1)
+          (reference "#PWR056") (unit 1)
         )
       )
     )
@@ -9647,7 +9680,7 @@
   (symbol (lib_id "Device:R_Small") (at 218.44 29.718 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f3a67085-00e2-4db3-81d0-83a954dfcfb0)
-    (property "Reference" "R6" (at 218.44 27.178 90)
+    (property "Reference" "R2" (at 218.44 27.178 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 218.44 29.718 90)
@@ -9667,7 +9700,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R6") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -9676,7 +9709,7 @@
   (symbol (lib_id "Device:LED_Small") (at 222.25 42.418 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f450f312-6b92-4a0a-87c3-3a0c19ac4e1a)
-    (property "Reference" "D4" (at 225.044 41.402 0)
+    (property "Reference" "D1" (at 225.044 41.402 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "BLUE" (at 218.186 41.402 0)
@@ -9696,7 +9729,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "D4") (unit 1)
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -9705,7 +9738,7 @@
   (symbol (lib_id "Device:R") (at 149.86 126.238 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f46864f4-8fa3-482b-9215-75a500dbe2c3)
-    (property "Reference" "R37" (at 149.86 123.698 90)
+    (property "Reference" "R31" (at 149.86 123.698 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "8.2k" (at 149.86 126.238 90)
@@ -9725,7 +9758,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R37") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
     )
@@ -9734,7 +9767,7 @@
   (symbol (lib_id "power:GND") (at 59.436 129.286 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f4710446-924f-4a74-bbab-89ca3fe19523)
-    (property "Reference" "#PWR067" (at 59.436 135.636 0)
+    (property "Reference" "#PWR063" (at 59.436 135.636 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 59.436 134.366 0)
@@ -9750,7 +9783,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR067") (unit 1)
+          (reference "#PWR063") (unit 1)
         )
       )
     )
@@ -9759,7 +9792,7 @@
   (symbol (lib_id "Transistor_FET:2N7002") (at 218.186 88.138 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f4ebb4ac-d9d8-4ce8-a79d-300cc7ffbb0d)
-    (property "Reference" "Q3" (at 212.852 86.868 0)
+    (property "Reference" "Q2" (at 212.852 86.868 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2N7002" (at 214.122 90.678 0)
@@ -9783,7 +9816,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "Q3") (unit 1)
+          (reference "Q2") (unit 1)
         )
       )
     )
@@ -9817,7 +9850,7 @@
   (symbol (lib_id "power:GND") (at 215.646 93.218 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fa2b4e69-fe92-45d8-9dcf-beadf6198bd8)
-    (property "Reference" "#PWR043" (at 215.646 99.568 0)
+    (property "Reference" "#PWR040" (at 215.646 99.568 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 213.106 94.488 90)
@@ -9833,7 +9866,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR040") (unit 1)
         )
       )
     )
@@ -9842,7 +9875,7 @@
   (symbol (lib_id "power:GND") (at 116.84 190.627 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fa6f7c5b-6ab0-4338-9a3e-6b6f37787f09)
-    (property "Reference" "#PWR089" (at 116.84 196.977 0)
+    (property "Reference" "#PWR085" (at 116.84 196.977 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 116.84 195.707 0)
@@ -9858,7 +9891,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR089") (unit 1)
+          (reference "#PWR085") (unit 1)
         )
       )
     )
@@ -9929,7 +9962,7 @@
   (symbol (lib_id "Device:R") (at 31.75 167.64 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fe6db020-c72d-4e9c-85ec-87225e8f67b3)
-    (property "Reference" "R44" (at 28.194 169.418 90)
+    (property "Reference" "R39" (at 28.194 169.418 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470" (at 31.75 167.64 90)
@@ -9949,7 +9982,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "R44") (unit 1)
+          (reference "R39") (unit 1)
         )
       )
     )
@@ -9958,7 +9991,7 @@
   (symbol (lib_id "power:GND") (at 282.956 55.372 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ffcd391f-36f6-45b6-a974-77880cd654b5)
-    (property "Reference" "#PWR024" (at 282.956 61.722 0)
+    (property "Reference" "#PWR019" (at 282.956 61.722 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 280.416 56.642 90)
@@ -9974,7 +10007,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -9983,7 +10016,7 @@
   (symbol (lib_id "power:GND") (at 156.972 156.718 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ffeee01d-76bb-4984-9c3f-a023f05c8a23)
-    (property "Reference" "#PWR077" (at 156.972 163.068 0)
+    (property "Reference" "#PWR074" (at 156.972 163.068 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 153.162 157.988 0)
@@ -9999,7 +10032,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1"
-          (reference "#PWR077") (unit 1)
+          (reference "#PWR074") (unit 1)
         )
       )
     )

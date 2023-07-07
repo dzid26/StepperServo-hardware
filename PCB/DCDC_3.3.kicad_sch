@@ -1101,7 +1101,7 @@
           (reference "R15") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "R47") (unit 1)
+          (reference "R49") (unit 1)
         )
       )
     )
@@ -1161,7 +1161,7 @@
           (reference "#PWR012") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR088") (unit 1)
+          (reference "#PWR090") (unit 1)
         )
       )
     )
@@ -1228,7 +1228,7 @@
           (reference "D3") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "D16") (unit 1)
+          (reference "D20") (unit 1)
         )
       )
     )
@@ -1327,7 +1327,7 @@
           (reference "D17") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "D15") (unit 1)
+          (reference "D19") (unit 1)
         )
       )
     )
@@ -1397,7 +1397,7 @@
           (reference "D2") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "D17") (unit 1)
+          (reference "D21") (unit 1)
         )
       )
     )
@@ -1429,7 +1429,7 @@
           (reference "D14") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "D18") (unit 1)
+          (reference "D22") (unit 1)
         )
       )
     )
@@ -1527,7 +1527,7 @@
           (reference "#PWR012") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR089") (unit 1)
+          (reference "#PWR091") (unit 1)
         )
       )
     )
@@ -1587,7 +1587,7 @@
           (reference "#PWR018") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR093") (unit 1)
+          (reference "#PWR095") (unit 1)
         )
       )
     )
@@ -1596,7 +1596,7 @@
   (symbol (lib_id "Regulator_Switching:LM2842X") (at 136.144 82.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7c6d31a7-3585-480e-8da4-48b753ca4fef)
-    (property "Reference" "U10" (at 136.144 72.898 0)
+    (property "Reference" "U11" (at 136.144 72.898 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "LV2842XLVDDCR" (at 136.144 75.438 0)
@@ -1626,7 +1626,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "U10") (unit 1)
+          (reference "U11") (unit 1)
         )
       )
     )
@@ -1690,7 +1690,7 @@
           (reference "R18") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "R44") (unit 1)
+          (reference "R47") (unit 1)
         )
       )
     )
@@ -1718,7 +1718,7 @@
           (reference "#PWR019") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR091") (unit 1)
+          (reference "#PWR093") (unit 1)
         )
       )
     )
@@ -1746,7 +1746,7 @@
           (reference "#PWR019") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR090") (unit 1)
+          (reference "#PWR092") (unit 1)
         )
       )
     )
@@ -1774,7 +1774,7 @@
           (reference "#PWR019") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR092") (unit 1)
+          (reference "#PWR094") (unit 1)
         )
       )
     )
@@ -1802,7 +1802,7 @@
           (reference "#PWR012") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR094") (unit 1)
+          (reference "#PWR096") (unit 1)
         )
       )
     )
@@ -1834,7 +1834,7 @@
           (reference "R6") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "R46") (unit 1)
+          (reference "R48") (unit 1)
         )
       )
     )
@@ -1862,7 +1862,7 @@
           (reference "#PWR092") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR087") (unit 1)
+          (reference "#PWR089") (unit 1)
         )
       )
     )
@@ -1903,7 +1903,7 @@
           (reference "D1") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "D14") (unit 1)
+          (reference "D18") (unit 1)
         )
       )
     )
@@ -1912,7 +1912,7 @@
   (symbol (lib_id "Regulator_Linear:HT75xx-1-SOT89") (at 137.668 50.546 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e2799435-395b-4c74-a6ef-320aaa7b8389)
-    (property "Reference" "U9" (at 137.668 40.64 0)
+    (property "Reference" "U10" (at 137.668 40.64 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "HT75xx-1-SOT89" (at 137.668 43.18 0)
@@ -1936,7 +1936,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "U9") (unit 1)
+          (reference "U10") (unit 1)
         )
       )
     )
@@ -1964,7 +1964,7 @@
           (reference "#PWR06") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR095") (unit 1)
+          (reference "#PWR097") (unit 1)
         )
       )
     )
@@ -1992,7 +1992,7 @@
           (reference "#PWR019") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "#PWR086") (unit 1)
+          (reference "#PWR088") (unit 1)
         )
       )
     )
@@ -2024,7 +2024,7 @@
           (reference "R18") (unit 1)
         )
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "R43") (unit 1)
+          (reference "R46") (unit 1)
         )
       )
     )
@@ -2033,7 +2033,7 @@
   (symbol (lib_id "Device:R") (at 105.664 54.61 180) (unit 1)
     (in_bom no) (on_board yes) (dnp yes)
     (uuid ff524de6-7154-4dea-bc55-266e812ea23d)
-    (property "Reference" "JP5" (at 103.886 55.88 0)
+    (property "Reference" "JP6" (at 103.886 55.88 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0" (at 106.426 54.61 0)
@@ -2056,7 +2056,7 @@
     (instances
       (project "StepperServoCAN"
         (path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-          (reference "JP5") (unit 1)
+          (reference "JP6") (unit 1)
         )
       )
     )

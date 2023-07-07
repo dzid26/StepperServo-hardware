@@ -44,7 +44,7 @@ outputs:
       # [boolean=false] use legacy Protel file extensions
       use_protel_extensions: false
       # [string=''] Board variant to apply
-      variant: ''
+      variant: 'rotated'
     layers:
       - 'Edge.Cuts'
       - 'copper'

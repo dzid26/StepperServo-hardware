@@ -6726,7 +6726,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 48.514 24.892 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp yes)
     (uuid 52faa024-8bdb-4e2e-9fcf-d42abb51fc65)
     (property "Reference" "JP1" (at 47.244 22.352 0)
       (effects (font (size 1.27 1.27)))
@@ -9767,7 +9767,7 @@
   )
 
   (symbol (lib_id "Device:R_Small") (at 42.926 30.226 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp yes)
     (uuid d2623a72-e1bb-46d0-ad51-d9f6dea0dd4f)
     (property "Reference" "R3" (at 42.926 28.321 90)
       (effects (font (size 1.27 1.27)))

@@ -1020,7 +1020,7 @@
     (uuid b3710f09-5366-40f6-9ce8-0375d0577c00)
   )
 
-  (text_box "Test circuit for low power mode using LTO - not used by default.\nProduction LDO would be SE8733"
+  (text_box "Test circuit for low power mode using LTO - inactive by default.\nProduction LDO would be SE8733"
     (at 70.612 29.972 0) (size 148.336 35.306)
     (stroke (width 0) (type default))
     (fill (type none))
@@ -1032,8 +1032,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 3d074004-7c4d-49f5-9d2e-3d2edffd2f12)
   )
-  (text "I_{1} = 1uA\nI_{Hyst}=3uA\nV_{Ena} = 1.25V  (1.05...1.38)\n\nR1 = (V_{start} - V_{stop})/I_{Hyst}\nR1 = (10-9) / 3uA = 0.333MOhm\nR2 = V_{Ena} / ((V_{start} - V_{Ena})/R1+I_{1})\nR2 (max) = 1.38 / ((9-1.38)/0.333M + 1u) ≈ 56kOhm\n\nV_{stop_typ} = 8.2V\nV_{start_typ} = 9.2V\n\nV_{stop_real} = V_{stop_typ}+D1_V{F}_ON\nV_{start_real} = V_{start_typ}+D1_V{F}_OFF\nV_{stop_real} = 8.2 + 0.7 = 8.9V\nV_{start_real} = 9.2 + 0.3..0.6 = 9.5..9.8\n\n\nCap_time_const:\n12V -> 7V 60ms\n0V -> On: ~150ms"
-    (at 39.878 150.114 0)
+  (text "I_{1} = 1uA\nI_{Hyst}=3uA\nV_{Ena} = 1.25V  (1.05...1.38)\n\nAssume max V_{Ena} 1.38:\nR1 = (V_{start} - V_{stop})/I_{Hyst}\nR1 = (10-9) / 3uA = 0.333MOhm\nR2 = V_{Ena} / ((V_{start} - V_{Ena})/R1+I_{1})\nR2 (max) = 1.38 / ((9-1.38)/0.333M + 1u) ≈ 56kOhm\n\nAssume typical V_{Ena} 1.2 - from volt div:\nV_{start_typ} = 8.2V\nV_{stop_typ} = 8.2 -1 = 7.2\n\nV_{stop_real} = V_{stop_typ}+D1_V{F}_ON\nV_{start_real} = V_{start_typ}+D1_V{F}_OFF\nV_{stop_real} = 7.2 + 0.6 = 7.8V\nV_{start_real} = 8.2 + 0.4 = 8.6V\n\n\nCap_time_const:\n12V -> 7V 60ms\n0V -> On: ~150ms"
+    (at 40.132 155.448 0)
     (effects (font (size 1.27 1.27)) (justify left bottom) (href "https://everycircuit.com/circuit/6478510418558976"))
     (uuid 54981c22-c5b4-4d50-b15d-461ac161c4a6)
   )
@@ -1046,6 +1046,10 @@
     (at 110.49 104.394 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9a75ad5f-4356-4476-85ab-652b091886c4)
+  )
+  (text "INACTIVE" (at 72.136 45.72 0)
+    (effects (font (size 11.27 11.27)) (justify left bottom))
+    (uuid cc2b5207-248c-4a8b-a422-23924ae0c6f8)
   )
   (text "VOUT = 0.765V (1+(R1/R2))=3.366V" (at 150.876 101.092 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1404,7 +1408,7 @@
   )
 
   (symbol (lib_id "Diode:1N5819") (at 85.852 147.32 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp yes)
     (uuid 59d1b49b-a8d4-49f4-aff4-ce86c7288422)
     (property "Reference" "D14" (at 89.408 145.796 90)
       (effects (font (size 1.27 1.27)))

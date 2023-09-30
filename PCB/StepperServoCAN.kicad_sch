@@ -6,7 +6,7 @@
 
   (title_block
     (title "StepperServoCAN")
-    (rev "0.2")
+    (rev "0.3")
     (company "RetroPilot")
     (comment 1 "Licensed under CERN-OHL-S v2")
   )
@@ -9815,7 +9815,7 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x06") (at 270.51 147.32 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid db14f177-5831-49ec-aaee-6d9eb370b209)
     (property "Reference" "J4" (at 270.002 149.606 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -10461,7 +10461,7 @@
   )
 
   (symbol (lib_id "Sensor_Magnetic:TMAG5170-Q1") (at -25.4 179.578 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp yes)
+    (in_bom no) (on_board yes) (dnp yes)
     (uuid f43455e2-e19d-4f11-bcc6-b296b8c6410e)
     (property "Reference" "U8" (at -15.494 165.1 0)
       (effects (font (size 1.27 1.27)))

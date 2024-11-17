@@ -267,7 +267,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -291,7 +291,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -327,7 +327,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/cca35b53-4835-4e88-8867-45ca14665c3f")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -501,7 +503,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -525,7 +527,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -549,7 +551,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/177e0597-e16d-41f4-b06c-bd7567ae4617")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -721,7 +725,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -745,7 +749,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -769,7 +773,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/02b7cee2-23f5-4ce7-82a1-f8181e495d8d")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -942,7 +948,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -966,7 +972,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -990,7 +996,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/04f8cf63-5ec5-4ee6-a08b-fb0ea0eba6f6")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1163,7 +1171,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1187,7 +1195,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1211,7 +1219,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/bccfb22a-3c20-4857-8b71-bea42f62a2fe")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1384,7 +1394,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad_TopOnly"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1408,7 +1418,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1420,19 +1430,9 @@
 				)
 			)
 		)
-		(property "exclude_from_bom" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "318a79d1-9059-4599-9022-6d107f56424c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
+		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/b8f5360f-bc3d-4b7d-bfe6-ca08aee9d439")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr exclude_from_pos_files exclude_from_bom)
@@ -1519,7 +1519,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -1543,7 +1543,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -1567,7 +1567,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/05c4679e-4bc9-48ff-87ae-b573087ee6b6")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1740,7 +1742,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad_TopOnly"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1764,7 +1766,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1776,19 +1778,9 @@
 				)
 			)
 		)
-		(property "exclude_from_bom" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "dec5e0ef-009d-4314-920d-da8766254ce0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
+		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/742d8548-2217-4f0a-9af6-e248184dd694")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr exclude_from_pos_files exclude_from_bom)
@@ -1875,7 +1867,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1887,7 +1879,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1899,7 +1891,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1923,7 +1915,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/fce4df8e-c7d3-4f2b-88f2-75d354c29b87")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -2169,7 +2163,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -2193,7 +2187,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -2217,7 +2211,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/f46864f4-8fa3-482b-9215-75a500dbe2c3")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2390,7 +2386,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -2414,7 +2410,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -2438,7 +2434,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/0946d0d0-5b6f-49b1-b06c-346c8f49adaf")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2611,7 +2609,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2635,7 +2633,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2647,7 +2645,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/77b164ec-7756-467e-b196-e6ac6aec1cd0")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -2722,7 +2722,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2734,7 +2734,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2746,7 +2746,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2770,7 +2770,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/1a84b331-1fe1-4b7e-9e38-cf843c809490")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3015,7 +3017,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3039,7 +3041,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3063,7 +3065,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/a4d5350b-63df-42c2-af17-1b6e3b358f9f")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3236,7 +3240,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3248,7 +3252,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A226MQ8NRN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3260,7 +3264,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3284,7 +3288,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/2184376e-50dc-4b73-b033-6e584ec09e06")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3457,7 +3463,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3469,7 +3475,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3481,7 +3487,7 @@
 				)
 			)
 		)
-		(property "Description" "40V 1A Schottky Barrier Rectifier Diode, DO-41"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3505,6 +3511,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "D*DO?41*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/2646ddd8-f885-45ef-bc9b-2f0204e68b17")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -3752,7 +3759,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3764,7 +3771,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3776,7 +3783,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3800,7 +3807,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/8ec8d079-d61b-4a46-8f48-76dd8992fd6d")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3973,7 +3982,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-6_1x06_P2.54mm_Horizontal"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3997,7 +4006,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4009,19 +4018,9 @@
 				)
 			)
 		)
-		(property "exclude_from_bom" ""
-			(at 37.71 211.73 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d51d74c3-d164-4841-915d-ba959dc5ba39")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/db14f177-5831-49ec-aaee-6d9eb370b209")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(fp_line
@@ -4519,7 +4518,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4543,7 +4542,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4567,7 +4566,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/b767bbda-7608-4f5e-9323-848fba5bc438")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4740,7 +4741,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4752,7 +4753,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4764,7 +4765,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4788,7 +4789,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/ac717ce3-ce90-4ce0-a83f-45d6f448d0e8")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4961,7 +4964,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -4973,7 +4976,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -4985,7 +4988,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -5009,7 +5012,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/f0357580-9a34-4bba-bb15-36a946cdaf70")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5182,7 +5187,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5206,7 +5211,7 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5231,6 +5236,7 @@
 			)
 		)
 		(path "/1859af1f-466f-4131-ae13-d2e8102bab5f")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5772,7 +5778,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -5784,7 +5790,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-eu/products/productdetail?partno=GRM21BR61H106KE43%23"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -5796,7 +5802,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -5844,6 +5850,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/5f34779c-a6d4-46bd-9e78-96530c713258")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -6019,7 +6026,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6031,7 +6038,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6043,7 +6050,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6067,7 +6074,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/bc77377b-fc51-46e4-a08c-7460f8ff60c4")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6240,7 +6249,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6252,7 +6261,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151132_FH--Guangdong-Fenghua-Advanced-Tech-0402B221K500NT_C1530.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6264,7 +6273,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6288,7 +6297,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/bbba40e6-3567-4a99-86e2-eb5eae381a9c")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -6462,7 +6473,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6474,7 +6485,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810192041_MDD-Microdiode-Electronics--SS54_C22452.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6486,7 +6497,7 @@
 				)
 			)
 		)
-		(property "Description" "40V 1A Schottky Barrier Rectifier Diode, SMA(DO-214AC)"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6510,7 +6521,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "D*SMA*")
 		(path "/33dfdf30-1951-476a-bf66-a6e8a18dc1de")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -6756,7 +6769,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6780,7 +6793,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6804,7 +6817,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/975f4a63-9d65-4ab8-9fc7-ad785883d8bb")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6977,7 +6992,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7001,7 +7016,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7025,7 +7040,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/c25489f7-f329-4604-a7df-4701ac61cd22")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7198,7 +7215,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7222,7 +7239,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7246,7 +7263,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/7e8b8a7e-43cd-4935-9078-d2d20b08bce1")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 0)
 		(attr smd)
@@ -7420,7 +7439,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7432,7 +7451,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7444,7 +7463,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7468,7 +7487,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/4e999709-84d9-40d1-a37c-deea31cb98b7")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7641,7 +7662,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7665,7 +7686,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7689,6 +7710,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/50a1ce9d-6d19-466c-bf13-2737558735ba")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -7885,7 +7907,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7897,7 +7919,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7909,7 +7931,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7933,7 +7955,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/3d9238bb-9828-4c83-a217-9f896663f8e7")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8178,7 +8202,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8190,7 +8214,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL31A106KBHNNN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8202,7 +8226,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8250,7 +8274,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/af0731f8-e50d-47fe-88d7-3ff683c73776")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -8424,7 +8450,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8436,7 +8462,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8448,7 +8474,7 @@
 				)
 			)
 		)
-		(property "Description" "40V 1A Schottky Barrier Rectifier Diode, DO-41"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8472,7 +8498,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "D*DO?41*")
 		(path "/4cd751d5-0f40-4dc2-86bf-318afb1be597")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8717,7 +8745,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:VSSOP-8_3.0x3.0mm_P0.65mm"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8729,7 +8757,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tmag5170-q1.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8741,7 +8769,7 @@
 				)
 			)
 		)
-		(property "Description" "Magnetic 3-axis linear sensor, 12-bit, Automotive, SPI Interface, VSSOP-8"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8765,33 +8793,11 @@
 				)
 			)
 		)
-		(property "dnp" ""
-			(at 200.33 0.37 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "f69d4aa7-0606-41fc-be5d-03bb6dcc01d3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "exclude_from_bom" ""
-			(at 200.33 0.37 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "fdc9f6be-246a-45aa-8b8b-38042d684a8d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
+		(property ki_fp_filters "VSSOP*3.0x3.0mm*P0.65mm*")
 		(path "/f43455e2-e19d-4f11-bcc6-b296b8c6410e")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
-		(attr smd exclude_from_pos_files exclude_from_bom)
+		(attr smd exclude_from_pos_files exclude_from_bom dnp)
 		(fp_line
 			(start 0 -1.62)
 			(end -3 -1.62)
@@ -9026,7 +9032,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9050,7 +9056,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9062,7 +9068,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/0eb78108-9adc-44b8-b598-3dae3c23b2bf")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -9195,7 +9203,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9207,7 +9215,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmv324.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9219,7 +9227,7 @@
 				)
 			)
 		)
-		(property "Description" "Low-Voltage Rail-to-Rail Output Operational Amplifiers, SOT-23-5/SC-70-5"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9243,7 +9251,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23* *SC*70*")
 		(path "/5781786d-4f8c-48e4-a695-db725c1ace12")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 0)
 		(attr smd)
@@ -9478,7 +9488,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9502,7 +9512,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9526,7 +9536,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/9df2adb2-e851-475e-9f9f-19172c41d9d8")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9699,7 +9711,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9711,7 +9723,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810171817_Alpha---Omega-Semicon-AO3401A_C15127.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9723,7 +9735,7 @@
 				)
 			)
 		)
-		(property "Description" "-0.13A Id, -50V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9747,7 +9759,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23*")
 		(path "/be16759a-9348-4e04-b639-cdf28c821140")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9962,7 +9976,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9974,7 +9988,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9986,7 +10000,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -10010,7 +10024,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/d1ab38f3-b454-4c85-93cb-7f90c1842671")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10183,7 +10199,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10195,7 +10211,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10207,7 +10223,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10231,7 +10247,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/40ebde51-1999-4594-9069-2f16a6bf18a1")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 0)
 		(attr smd)
@@ -10405,7 +10423,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10429,7 +10447,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10453,7 +10471,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/a3f2da48-29d7-4ce3-8c97-8e2cd5cda489")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10626,7 +10646,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x5.7"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -10638,7 +10658,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Lelon-VZT101M1VTR-0606_C249982.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -10650,7 +10670,7 @@
 				)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -10686,7 +10706,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "CP_*")
 		(path "/0ae23926-d9d2-4a05-bc8d-cb21c3b96d0a")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -11091,7 +11113,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad_TopOnly"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11115,7 +11137,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11127,19 +11149,9 @@
 				)
 			)
 		)
-		(property "exclude_from_bom" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "1e814795-9545-49b5-814e-fd8d575e63f6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
+		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/304be8a5-132b-4a20-8b54-11d0148298f8")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr exclude_from_pos_files exclude_from_bom)
@@ -11226,7 +11238,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -11238,7 +11250,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2304140030_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--2N7002_C8545.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -11250,7 +11262,7 @@
 				)
 			)
 		)
-		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -11286,7 +11298,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23*")
 		(path "/f4ebb4ac-d9d8-4ce8-a79d-300cc7ffbb0d")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11501,7 +11515,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad_TopOnly"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11525,7 +11539,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11537,19 +11551,9 @@
 				)
 			)
 		)
-		(property "exclude_from_bom" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "51b88ffc-d08b-410a-9f6b-3600f68b1f60")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
+		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/85d35abd-63a0-4b17-b7dd-756e0e841212")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr exclude_from_pos_files exclude_from_bom)
@@ -11636,7 +11640,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11660,7 +11664,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11684,7 +11688,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/af3acd14-28ac-45b8-b971-e68805f13c96")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11857,7 +11863,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11869,7 +11875,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B103KB5NNN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11881,7 +11887,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11905,7 +11911,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/1d963dca-ac6f-40a0-a5a1-30b6fea18c15")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12078,7 +12086,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12102,7 +12110,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12126,7 +12134,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/55aac857-f9fc-4c9d-bd74-7480bd1483f9")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12300,7 +12310,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12312,7 +12322,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811101510_Everlight-Elec-19-217-BHC-ZL1M2RY-3T_C72041.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12324,7 +12334,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12348,7 +12358,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/f450f312-6b92-4a0a-87c3-3a0c19ac4e1a")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12543,7 +12555,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12555,7 +12567,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmv324.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12567,7 +12579,7 @@
 				)
 			)
 		)
-		(property "Description" "Low-Voltage Rail-to-Rail Output Operational Amplifiers, SOT-23-5/SC-70-5"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12591,7 +12603,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23* *SC*70*")
 		(path "/7c60894a-6773-43e9-9683-e55e826eb7a5")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12825,7 +12839,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12837,7 +12851,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KB54PN"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12849,7 +12863,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12885,6 +12899,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/3f89bfae-f3f6-464f-b68c-99611942b5eb")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -13059,7 +13074,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13083,7 +13098,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13107,7 +13122,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/1f1c7d92-65aa-4629-989d-512db6b2d9d5")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13280,7 +13297,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13304,7 +13321,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13328,7 +13345,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/493ac52c-8433-4700-88e5-ead92da93b24")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13501,7 +13520,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13513,7 +13532,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL31A106KBHNNN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13525,7 +13544,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13561,7 +13580,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/cccd3a42-82a2-455d-90cc-58f2b226175d")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -13736,7 +13757,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad_TopOnly"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13760,7 +13781,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13772,19 +13793,9 @@
 				)
 			)
 		)
-		(property "exclude_from_bom" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "842db9c8-04bb-4ec8-a3cd-bb50b49619a5")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
+		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/cf2d6176-9ff9-42c9-85fb-1e3b78a2c5cb")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr exclude_from_pos_files exclude_from_bom)
@@ -13871,7 +13882,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -13883,7 +13894,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -13895,7 +13906,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -13919,7 +13930,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/92af5a35-8db8-44de-8206-89a023e41296")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14092,7 +14105,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMF"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14104,7 +14117,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.vishay.com/doc?85881"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14116,7 +14129,7 @@
 				)
 			)
 		)
-		(property "Description" "200W unidirectional Transil Transient Voltage Suppressor, 30Vrwm, SMF"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14140,6 +14153,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "D*SMF*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/4b5b0983-00b9-48e4-b8e9-c449c95d36a0")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -14386,7 +14400,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14410,7 +14424,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14422,7 +14436,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/a79d7bf6-b6fd-4150-86bf-70040442a02c")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -14555,7 +14571,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -14579,7 +14595,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -14591,7 +14607,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/6ab1f0ec-fa4a-4672-8f8b-88938a1de5f5")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -14738,7 +14756,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14750,7 +14768,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL31A106KBHNNN"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14762,7 +14780,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14798,7 +14816,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/97f20fe0-2373-4849-b11a-4401e56908af")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -15188,7 +15208,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -15212,7 +15232,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -15236,7 +15256,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/8154d9cf-9e75-4f74-9c7f-e1073719ff13")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15409,7 +15431,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15433,7 +15455,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15445,7 +15467,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/bab33243-0126-4d4c-bd04-4295e3dd9f80")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -15520,7 +15544,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15532,7 +15556,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15544,7 +15568,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15568,7 +15592,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00392d81-63f8-4562-8222-f608e9a86835")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15741,7 +15767,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15753,7 +15779,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15765,7 +15791,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15789,7 +15815,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/67598733-9731-419a-aec8-bdf6dc73da5e")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15962,7 +15990,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -15986,7 +16014,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -16010,7 +16038,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/911b1fd0-e2d4-4346-bfa2-c083279e726e")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -16184,7 +16214,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -16208,7 +16238,7 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -16233,6 +16263,7 @@
 			)
 		)
 		(path "/8b0907de-eaa1-4bf8-87ef-bbdef1bf4913")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -16775,7 +16806,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16799,7 +16830,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16823,7 +16854,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/06d05d70-a14e-4fd6-be64-57324f352188")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17018,7 +17051,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SC-59"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17030,7 +17063,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AH1806.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17042,7 +17075,7 @@
 				)
 			)
 		)
-		(property "Description" "High Sensitivity Micropower Omnipolar Hall-Effect Switch, SC-59"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17066,7 +17099,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SC?59*")
 		(path "/9d14dbf7-316e-46ee-8f36-e2e5ee7dd2f8")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -17278,7 +17313,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17302,7 +17337,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17326,7 +17361,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/20bd6410-65d3-4837-b8c7-9368ee612fb4")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17499,7 +17536,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17523,7 +17560,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17547,7 +17584,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/153b156c-fa36-41be-9f13-93ecd05c6561")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17720,7 +17759,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17744,7 +17783,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17780,6 +17819,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/207eebb9-5d4f-484b-9e8f-5e195f2a7fff")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -17954,7 +17994,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -17966,7 +18006,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -17978,7 +18018,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -18002,7 +18042,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/e7ac5180-6e29-4d7a-b9aa-4ecab9be4d40")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18175,7 +18217,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18199,7 +18241,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18223,7 +18265,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/84fef273-4c58-416c-ab8e-a96ef35f182f")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18396,7 +18440,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18420,7 +18464,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18444,7 +18488,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/c64fd5e4-4afd-4749-8fcf-dde8a2d5f636")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18617,7 +18663,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18641,7 +18687,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18653,7 +18699,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/6b3dd9c5-7c35-4f6d-9030-6a85a792969b")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -18787,7 +18835,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -18811,7 +18859,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -18835,7 +18883,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/dc5f80ed-1930-4978-b0d2-5127e61dbd7e")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19008,7 +19058,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST_SMD:JST-S4B-XH-SM4-TB"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19020,7 +19070,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810291321_JST-Sales-America-S4B-XH-SM4-TB-LF-SN_C161861.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19032,7 +19082,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19068,7 +19118,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/fbc2fd9d-6715-4043-9833-f288b896675c")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -19355,7 +19407,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "tle_foot:Infineon-TLE5012-Level_A"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19379,7 +19431,7 @@
 				)
 			)
 		)
-		(property "Description" "TLE5012"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19644,6 +19696,7 @@
 			)
 		)
 		(path "/90cc0a39-09c6-4713-9c24-b1eae5e2e410")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19931,7 +19984,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19943,7 +19996,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810101110_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--1N4148WS_C2128.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19955,7 +20008,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20015,6 +20068,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "D*SOD?323*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/d7192853-00ef-4745-8550-a2fcbca350d4")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -20261,7 +20315,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20273,7 +20327,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20285,7 +20339,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20309,7 +20363,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/224605de-099f-491f-8959-ce662e2d179f")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20554,7 +20610,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20578,7 +20634,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20602,6 +20658,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/ec21f911-1970-4763-b2eb-3cc49908a68d")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -20776,7 +20833,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -20788,7 +20845,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2110081230_Sunlord-SDCL1608C68NJTDF_C13415.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -20800,7 +20857,7 @@
 				)
 			)
 		)
-		(property "Description" "Inductor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -20836,7 +20893,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/e6150822-4b6a-4580-9e9e-24e7ea01832e")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21009,7 +21068,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST_SMD:JST-S4B-XH-SM4-TB"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -21021,7 +21080,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810291321_JST-Sales-America-S4B-XH-SM4-TB-LF-SN_C161861.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -21033,7 +21092,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -21069,7 +21128,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/3eab7876-661c-4496-8f06-05b543857077")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -21355,7 +21416,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad_TopOnly"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21379,7 +21440,7 @@
 				)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21391,19 +21452,9 @@
 				)
 			)
 		)
-		(property "exclude_from_bom" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "44ec899c-4660-41e6-a8c8-f28d585a26d3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
+		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/f947dbb4-32ad-4a7d-92e9-07c764a13f37")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr exclude_from_pos_files exclude_from_bom)
@@ -21490,7 +21541,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21502,7 +21553,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21514,7 +21565,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21538,7 +21589,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/e2d64af4-2687-442f-b3fa-6b4f4577cf72")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21783,7 +21836,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21807,7 +21860,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21831,7 +21884,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/e7a2f993-b1de-473a-a5df-c6f72ad78a6c")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22005,7 +22060,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22029,7 +22084,7 @@
 				)
 			)
 		)
-		(property "Description" "Solder Jumper, 2-pole, open"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22041,7 +22096,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SolderJumper*Open*")
 		(path "/123af2c2-09fc-49ac-b506-14bbf4720c72")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -22270,7 +22327,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22294,7 +22351,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22318,6 +22375,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/952289c8-96c1-41ac-b6e2-1a31119c1309")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -22492,7 +22550,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22516,7 +22574,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22528,7 +22586,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/e966cc9f-7dfe-49be-87ce-ec8600f8d002")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -22602,7 +22662,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST_SMD:JST-S4B-XH-SM4-TB"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22614,7 +22674,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810291321_JST-Sales-America-S4B-XH-SM4-TB-LF-SN_C161861.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22626,7 +22686,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22662,7 +22722,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/ca773494-3491-4a1d-9b8b-7b690ee87752")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -22949,7 +23011,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -22973,7 +23035,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -22997,7 +23059,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/fe6db020-c72d-4e9c-85ec-87225e8f67b3")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23171,7 +23235,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -23195,7 +23259,7 @@
 				)
 			)
 		)
-		(property "Description" "Solder Jumper, 2-pole, open"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -23207,7 +23271,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SolderJumper*Open*")
 		(path "/d3f11ac5-d3a0-4701-8fcd-8f26e47f2c5c")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -23328,7 +23394,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -23340,7 +23406,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810171817_Alpha---Omega-Semicon-AO3401A_C15127.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -23352,7 +23418,7 @@
 				)
 			)
 		)
-		(property "Description" "-0.13A Id, -50V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -23376,7 +23442,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23*")
 		(path "/becc00bb-7635-4a36-9248-cf10187cbfb2")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23591,7 +23659,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -23615,7 +23683,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -23627,7 +23695,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/0529ae14-eeed-4bbd-8778-c02e6414a49c")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -23760,7 +23830,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23784,7 +23854,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23796,7 +23866,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/6493e80a-cee3-4cd2-8242-b3bb5d9f5ca7")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -23932,7 +24004,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -23956,7 +24028,7 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -23981,6 +24053,7 @@
 			)
 		)
 		(path "/bd17a2b7-5991-4a77-85b7-af7d6b51d36f")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24522,7 +24595,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -24534,7 +24607,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151132_FH--Guangdong-Fenghua-Advanced-Tech-0402B221K500NT_C1530.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -24546,7 +24619,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -24570,7 +24643,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/450d52c1-34e7-45ef-86bc-7f0bc64c7dcf")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24743,7 +24818,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -24755,7 +24830,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -24767,7 +24842,7 @@
 				)
 			)
 		)
-		(property "Description" "40V 1A Schottky Barrier Rectifier Diode, DO-41"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -24791,7 +24866,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "D*DO?41*")
 		(path "/cd48d9dd-7e14-4eb1-a67c-ed116149a619")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25036,7 +25113,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -25048,7 +25125,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2109180930_Sunlord-GZ1608D601TF_C1002.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -25060,7 +25137,7 @@
 				)
 			)
 		)
-		(property "Description" "Ferrite bead, small symbol"
+		(property "Description" "This one is 200mA which is way above the limit because at 12V current is 4x smaller"
 			(at 219.34 221.4 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25096,6 +25173,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Inductor_* L_* *Ferrite*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/508a9bb6-5190-428d-88cd-2fc1c228cbd4")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -25270,7 +25348,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_QFP:LQFP-48_7x7mm_P0.5mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25282,7 +25360,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25294,7 +25372,7 @@
 				)
 			)
 		)
-		(property "Description" "ARM Cortex-M3 MCU, 128KB flash, 20KB RAM, 72MHz, 2-3.6V, 37 GPIO, LQFP-48"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25318,7 +25396,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "LQFP*7x7mm*P0.5mm*")
 		(path "/e174656d-5986-4af1-b37e-71db8fbd778a")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -26233,7 +26313,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26257,7 +26337,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26269,7 +26349,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/1c9da11d-5996-4cf7-bb2b-04d4294ad287")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -26333,7 +26415,7 @@
 				)
 			)
 		)
-		(property "Value" "FerriteBead 200mA "
+		(property "Value" "FerriteBead 200mA"
 			(at 0 1.55 90)
 			(layer "F.Fab")
 			(uuid "b8aa476a-3ed5-440b-8708-33d8f480b45a")
@@ -26344,7 +26426,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -26356,7 +26438,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2109180930_Sunlord-GZ1608D601TF_C1002.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -26368,7 +26450,7 @@
 				)
 			)
 		)
-		(property "Description" "Ferrite bead, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -26392,7 +26474,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Inductor_* L_* *Ferrite*")
 		(path "/8d9e9352-bb92-4d50-a64c-16d24c3c6752")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -26565,7 +26649,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26577,7 +26661,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A226MQ8NRN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26589,7 +26673,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26613,7 +26697,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/221d1a37-38a9-4178-8421-fb1e1316e798")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -26786,7 +26872,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -26810,7 +26896,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -26834,7 +26920,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/347aaff1-64f2-4c59-86ea-dd986df294a2")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27008,7 +27096,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27020,7 +27108,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27032,7 +27120,7 @@
 				)
 			)
 		)
-		(property "Description" "CAN Bus Transceivers, 3.3V, 1Mbps, Low-Power capabilities, SOIC-8"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27056,7 +27144,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOIC*3.9x4.9mm*P1.27mm*")
 		(path "/4e8a8768-cb1e-41e2-ace7-704471d20b94")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27321,7 +27411,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27333,7 +27423,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27345,7 +27435,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27369,7 +27459,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/654d67bb-6823-4b4b-861d-a33998e49d17")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27614,7 +27706,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27638,7 +27730,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27662,7 +27754,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/ca9b697f-f4b4-43b5-8037-d5c845530b23")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -27836,7 +27930,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27848,7 +27942,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27860,7 +27954,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27884,7 +27978,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/b0fe627f-e2de-4426-be65-42c104f2e536")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28057,7 +28153,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28069,7 +28165,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B103KB5NNN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28081,7 +28177,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28105,7 +28201,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/0934a4d3-1ebe-473c-a85a-d619be8fd837")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28279,7 +28377,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -28303,7 +28401,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -28327,6 +28425,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/d1c6ba03-4ed1-42eb-af90-f84ba8899441")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -28501,7 +28600,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28513,7 +28612,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05A105KA5NQN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28525,7 +28624,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28549,6 +28648,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/617ecaaa-dd0c-4708-9e51-cdd3033851be")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -28724,7 +28824,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -28748,7 +28848,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -28772,7 +28872,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/d0d55fcf-ee00-42ab-b32b-9de8ee0adec4")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28945,7 +29047,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28969,7 +29071,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28981,7 +29083,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/553ad35a-5a7c-4aee-b2b8-c3f4ae0bbe2d")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -29056,7 +29160,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29068,7 +29172,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05A105KA5NQN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29080,7 +29184,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29104,7 +29208,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/18d0a20c-e60e-41bd-8e2b-5a80e5b2e1b8")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -29277,7 +29383,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -29289,7 +29395,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -29301,7 +29407,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -29325,6 +29431,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/90f938b0-d529-4976-9255-4d90bd170a57")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -29499,7 +29606,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29511,7 +29618,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05A105KA5NQN"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29523,7 +29630,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29547,7 +29654,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/aa49fb4e-65d5-434f-91b2-c2c918dbb651")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -29720,7 +29829,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29732,7 +29841,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29744,7 +29853,7 @@
 				)
 			)
 		)
-		(property "Description" "40V 1A Schottky Barrier Rectifier Diode, DO-41"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29768,7 +29877,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "D*DO?41*")
 		(path "/8c2c5abe-1710-4c28-9099-4ffb5b636459")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -30013,7 +30124,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30025,7 +30136,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811121620_Texas-Instruments-LV2842XLVDDCR_C225807.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30037,7 +30148,7 @@
 				)
 			)
 		)
-		(property "Description" "600mA 42V Input Step-Down DC-DC Regulator, Adjustable Output Voltage, 550kHz, TSOT-23-5"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30085,6 +30196,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TSOT?23*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/7c6d31a7-3585-480e-8da4-48b753ca4fef")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -30331,7 +30443,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30355,7 +30467,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30379,7 +30491,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/f3a67085-00e2-4db3-81d0-83a954dfcfb0")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -30552,7 +30666,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30576,7 +30690,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30600,7 +30714,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/65d40364-ba03-415f-93f8-66a34f7a62d8")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -30774,7 +30890,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30798,7 +30914,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30822,7 +30938,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/d7d7b8b1-bced-421c-8444-9ec79321a235")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -30996,7 +31114,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31020,7 +31138,7 @@
 				)
 			)
 		)
-		(property "Description" "Solder Jumper, 2-pole, open"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31032,7 +31150,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SolderJumper*Open*")
 		(path "/fc654452-d6d1-490a-98f3-c018498870b3")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -31153,7 +31273,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31165,7 +31285,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31177,7 +31297,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31201,7 +31321,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/1f4fea8b-78bd-4c7a-a47d-72ff13a126aa")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -31446,7 +31568,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31458,7 +31580,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL21B105KBFNNN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31470,7 +31592,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31506,7 +31628,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/9d629794-00e3-4000-84dc-3124672cdb68")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -31681,7 +31805,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -31705,7 +31829,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -31729,6 +31853,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/065078f9-b2a4-41a9-ba0e-c3a5fa58f5f3")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -31903,7 +32028,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31915,7 +32040,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A226MQ8NRN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31927,7 +32052,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31951,6 +32076,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/0efeb3d7-ae55-4292-a6dd-b2f6d2c8baa9")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -32126,7 +32252,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -32138,7 +32264,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B103KB5NNN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -32150,7 +32276,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -32174,7 +32300,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/2f3e3048-faf1-43a5-843f-dfbb8176e366")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -32347,7 +32475,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -32371,7 +32499,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -32395,6 +32523,7 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7/6965b08b-c245-4491-8de8-715823646808")
 		(sheetname "DCDC 3.3V")
 		(sheetfile "DCDC_3.3.kicad_sch")
@@ -32570,7 +32699,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -32582,7 +32711,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -32594,7 +32723,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -32618,7 +32747,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/d7bd9747-99c1-4779-8b1a-ea5f3bf346c8")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -32864,7 +32995,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -32888,7 +33019,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -32912,7 +33043,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/bb7e6a19-a908-4e2b-9906-6937bd005eb0")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -33086,7 +33219,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -33110,7 +33243,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -33134,7 +33267,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/895ce180-b754-4771-b6e5-4d89154ebbfc")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -33307,7 +33442,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -33319,7 +33454,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -33331,7 +33466,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -33355,7 +33490,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/ea9aa619-4d66-4f40-8061-e57b21278c76")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -33528,7 +33665,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm_ThermalVias"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -33540,7 +33677,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2109242230_ZHONGKEWEI-AT8236_C2827823.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -33552,7 +33689,7 @@
 				)
 			)
 		)
-		(property "Description" "Full-Bridge, DMOS PWM, Motor Driver, 40V, 3.5A, -40 to +85C"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -33576,7 +33713,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOIC-*1EP*")
 		(path "/3c7f067b-3865-4af5-8c6e-acac97405108")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -33954,7 +34093,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33978,7 +34117,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34002,7 +34141,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/16809795-5e06-4e98-908e-5815c9274661")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -34175,7 +34316,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -34199,7 +34340,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -34223,7 +34364,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/5169dda2-aab9-4a6a-9368-3806fa7a8714")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -34396,7 +34539,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -34420,7 +34563,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -34444,7 +34587,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/ae251508-77e5-415a-9e8c-d8db8b7198e8")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -34617,7 +34762,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -34629,7 +34774,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05C100JB5NNN"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -34641,7 +34786,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -34689,7 +34834,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/ab5ac150-0d85-4505-9101-67b26b614b55")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -34862,7 +35009,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34886,7 +35033,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34910,7 +35057,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/31406569-afdb-41c9-8918-6270c0941fe0")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -35083,7 +35232,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -35107,7 +35256,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -35131,7 +35280,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/55676e6d-14ab-40c8-855e-b4e5fb221a5b")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -35293,7 +35444,7 @@
 				)
 			)
 		)
-		(property "Value" "SMBJ28A"
+		(property "Value" "SMBJ30CA"
 			(at 0 3.1 0)
 			(layer "F.Fab")
 			(uuid "2b3a2eac-7ce7-4d83-b77d-9b00a7d86aa9")
@@ -35304,7 +35455,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMB"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -35316,7 +35467,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2201121330_Liown-SMBJ30CA_C2925441.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -35328,7 +35479,7 @@
 				)
 			)
 		)
-		(property "Description" "600W unidirectional Transil Transient Voltage Suppressor, 30Vrwm, DO-214AA"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -35340,7 +35491,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C284012"
+		(property "LCSC" "C2925441"
 			(at 228.56 191.94 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -35352,7 +35503,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "D*SMB*")
 		(path "/53f76e3b-9091-4406-9947-0627d404f91b")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -35598,7 +35751,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -35622,7 +35775,7 @@
 				)
 			)
 		)
-		(property "Description" "Solder Jumper, 2-pole, open"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -35634,7 +35787,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SolderJumper*Open*")
 		(path "/8324dfa4-1302-4dbd-a44a-ad89ccceb3b4")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_line
@@ -35863,7 +36018,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -35875,7 +36030,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -35887,7 +36042,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -35911,7 +36066,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/8b0df48d-07f3-4e3e-93ae-3d40c9ad652f")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -36156,7 +36313,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Sunlord_SWPA3012S"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -36168,7 +36325,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810061014_cjiang-Changjiang-Microelectronics-Tech-FNR4030S221MT_C167899.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -36180,7 +36337,7 @@
 				)
 			)
 		)
-		(property "Description" "Inductor symbol for simulation only"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -36407,7 +36564,7 @@
 				)
 			)
 		)
-		(property "Value" "AT8236"
+		(property "Value" "DRV8870"
 			(at 0 3.4 90)
 			(layer "F.Fab")
 			(uuid "cc6affe6-2bae-414f-a92a-50a2f5efd0a0")
@@ -36418,7 +36575,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm_ThermalVias"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -36430,7 +36587,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/drv8870.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -36442,7 +36599,7 @@
 				)
 			)
 		)
-		(property "Description" "Full-Bridge, DMOS PWM, Motor Driver, 40V, 3.5A, -40 to +85C"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -36454,7 +36611,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2827823"
+		(property "LCSC" "C86590"
 			(at 187.595 -4.895 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36466,7 +36623,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOIC-*1EP*")
 		(path "/7798c651-97e9-4a1f-aa3f-a66a5675aba6")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -36844,7 +37003,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36856,7 +37015,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05C100JB5NNN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36868,7 +37027,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36916,7 +37075,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/8cf866c8-41ed-40e8-b336-09cfea134e6d")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -37090,7 +37251,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -37114,7 +37275,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -37138,7 +37299,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/3d4b5157-0871-41e9-a27c-40c8241e4545")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -37311,7 +37474,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37335,7 +37498,7 @@
 				)
 			)
 		)
-		(property "Description" "test point"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37347,7 +37510,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Pin* Test*")
 		(path "/6452df5f-bb10-4601-98ba-f39f48089e6c")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -37422,7 +37587,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -37434,7 +37599,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B103KB5NNN"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -37446,7 +37611,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -37470,7 +37635,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/028fe179-8579-40ab-896e-275542e5e428")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -37643,7 +37810,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37655,7 +37822,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37667,7 +37834,7 @@
 				)
 			)
 		)
-		(property "Description" "Schottky diode, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37691,7 +37858,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/ceeddb3f-2b0c-4c4a-88d2-b38f4c0796cf")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -37936,7 +38105,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -37948,7 +38117,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2103291133_Yangxing-Tech-X322516MLB4SI_C13738.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -37960,7 +38129,7 @@
 				)
 			)
 		)
-		(property "Description" "Four pin crystal, GND on pins 2 and 4, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -37984,7 +38153,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Crystal*")
 		(path "/eb659227-34fc-41e8-8ff3-f24f85bb4b26")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -38185,7 +38356,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38209,7 +38380,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38233,7 +38404,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/70990c8b-0661-45b9-9f2e-a60733a332e5")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -38406,7 +38579,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38430,7 +38603,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38466,7 +38639,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/4cd4ec63-1623-4915-9aab-f8375ee68ccf")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
@@ -38641,7 +38816,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38665,7 +38840,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38689,7 +38864,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/f767788f-cf70-4fbc-bb18-e23e0cce5d44")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -38862,7 +39039,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38874,7 +39051,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38886,7 +39063,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38910,7 +39087,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/cb5ea8d2-801d-4399-8d90-e7c293529253")
+		(sheetname "Root")
 		(sheetfile "StepperServoCAN.kicad_sch")
 		(attr smd)
 		(fp_line

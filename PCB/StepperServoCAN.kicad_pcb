@@ -6462,7 +6462,7 @@
 				)
 			)
 		)
-		(property "Value" "SS54"
+		(property "Value" "SS54LB"
 			(at 0 2.6 90)
 			(layer "F.Fab")
 			(uuid "3ed952fb-7796-4fcf-a525-581ab7cf8fe4")
@@ -6509,11 +6509,24 @@
 				)
 			)
 		)
-		(property "LCSC" "C22452"
+		(property "LCSC" "C7450527"
 			(at 26.94 209.5 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ae891fd8-a3e9-4cf0-81f5-6061ba12de2a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Field6" "Alternative SS54L - 450mV@5A"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1da729f4-260a-450a-b9c0-4018d46bd2fc")
 			(effects
 				(font
 					(size 1 1)

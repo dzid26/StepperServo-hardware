@@ -15656,7 +15656,7 @@
 				)
 			)
 		)
-		(property "Value" "SS54"
+		(property "Value" "SS54LB"
 			(at 31.75 53.848 0)
 			(effects
 				(font
@@ -15691,7 +15691,16 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22452"
+		(property "LCSC" "C7450527"
+			(at 31.496 56.388 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field6" "Alternative SS54L - 450mV@5A"
 			(at 31.496 56.388 0)
 			(effects
 				(font

@@ -6386,12 +6386,6 @@
 		(uuid "036e5ab8-4ecb-41cb-85e6-0d70bc7dc8ed")
 	)
 	(junction
-		(at 38.1 121.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0406d157-3bfc-44ac-b391-383594fa9394")
-	)
-	(junction
 		(at 235.712 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6432,6 +6426,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0f8b1ee5-1950-4fd7-a978-070962c1c2bf")
+	)
+	(junction
+		(at 52.07 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "108d07b5-d848-4f42-a661-7b39e162f62a")
 	)
 	(junction
 		(at 176.784 23.876)
@@ -6626,12 +6626,6 @@
 		(uuid "5d159bfe-d4ba-4d5f-97fe-e0d6c7bbaadb")
 	)
 	(junction
-		(at 127.508 135.636)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5d189472-da2e-4d6e-8e25-825e6657449d")
-	)
-	(junction
 		(at 204.47 56.134)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6642,6 +6636,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5fbfdce2-849c-4f40-a6c3-97e40bd7578a")
+	)
+	(junction
+		(at 50.8 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "602f60c9-877c-45d0-8da4-77edcd2f1186")
 	)
 	(junction
 		(at 191.389 23.876)
@@ -6788,12 +6788,6 @@
 		(uuid "a6bb338e-2c7d-4aa7-b891-0bcb6b14a90c")
 	)
 	(junction
-		(at 40.386 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a8aadf57-5bd6-47e2-add9-75bd84df07f4")
-	)
-	(junction
 		(at 153.67 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6806,16 +6800,16 @@
 		(uuid "b1e68086-b72e-46d3-97ff-f77fb3a495e0")
 	)
 	(junction
+		(at 50.8 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b501b86d-0659-4f1d-9191-e5e8cf3470fb")
+	)
+	(junction
 		(at 47.752 74.168)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b6d46ab7-994e-41a5-82af-1eacd5efa694")
-	)
-	(junction
-		(at 44.45 129.54)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bd8a14ef-1f3d-4448-8c62-d3ce7ff72a91")
 	)
 	(junction
 		(at 200.66 45.974)
@@ -6824,10 +6818,22 @@
 		(uuid "be100b4d-c290-4265-b100-2e0c97dd5ae7")
 	)
 	(junction
+		(at 44.45 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c321de11-9f85-41b0-aeb7-21e7513e398d")
+	)
+	(junction
 		(at 32.766 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c6bce002-8504-4a03-8019-38394cdb0283")
+	)
+	(junction
+		(at 44.45 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c78e6c9d-ad52-4cfb-8651-cda8d3419b34")
 	)
 	(junction
 		(at 102.87 74.168)
@@ -6884,12 +6890,6 @@
 		(uuid "e2d4fe1d-a2cb-4264-bab3-43ed662f92ec")
 	)
 	(junction
-		(at 119.888 135.636)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e3a6296c-bacf-4516-9167-518495ca2926")
-	)
-	(junction
 		(at 203.2 145.796)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6900,12 +6900,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e69244a9-d937-40bb-bf0a-594c71f83d95")
-	)
-	(junction
-		(at 46.736 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e6eecd5c-ce89-4f22-a5cc-d08fcdbc5695")
 	)
 	(junction
 		(at 83.566 113.03)
@@ -6926,10 +6920,10 @@
 		(uuid "e9289b40-6333-4575-8c14-4dd0c6549e4d")
 	)
 	(junction
-		(at 46.736 100.33)
+		(at 44.45 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f0ef7491-52ed-4dcc-8da0-cd9364ec1bec")
+		(uuid "f178070e-9b4d-4e9e-8818-07207dfb0cae")
 	)
 	(junction
 		(at 244.094 117.856)
@@ -7108,6 +7102,16 @@
 			(type default)
 		)
 		(uuid "1111b803-62fd-4e91-bfdb-8a031ac69648")
+	)
+	(wire
+		(pts
+			(xy 52.07 128.27) (xy 52.07 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11142893-1a13-4ac4-ba97-20187b1be3d1")
 	)
 	(wire
 		(pts
@@ -7468,16 +7472,6 @@
 			(type default)
 		)
 		(uuid "32e8f8c7-379e-4a79-9beb-f24961c7919a")
-	)
-	(wire
-		(pts
-			(xy 40.386 100.33) (xy 46.736 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "338a6dbf-1bdc-422d-9c19-af01c1131909")
 	)
 	(wire
 		(pts
@@ -8061,6 +8055,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 92.71) (xy 50.8 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68b41303-1928-4bf8-a1e2-6e1490218408")
+	)
+	(wire
+		(pts
 			(xy 158.75 125.73) (xy 159.385 125.73)
 		)
 		(stroke
@@ -8078,6 +8082,16 @@
 			(type default)
 		)
 		(uuid "6b2d9711-b373-43c4-8c73-41d96a0fd16f")
+	)
+	(wire
+		(pts
+			(xy 50.8 92.71) (xy 81.026 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b39b2f5-43d9-4cd9-ba2f-97b246f8c573")
 	)
 	(wire
 		(pts
@@ -8158,6 +8172,16 @@
 			(type default)
 		)
 		(uuid "708ef56e-4d93-4ff0-b18c-ef08a885dfa3")
+	)
+	(wire
+		(pts
+			(xy 50.8 92.71) (xy 50.8 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70c1d91c-c4c7-4f89-8e2b-ac800214ff16")
 	)
 	(wire
 		(pts
@@ -8431,6 +8455,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 129.54) (xy 52.07 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "914d0054-e5ea-4cc7-a2f8-b93867370c4d")
+	)
+	(wire
+		(pts
 			(xy 265.43 65.278) (xy 269.494 65.278)
 		)
 		(stroke
@@ -8471,16 +8505,6 @@
 	)
 	(wire
 		(pts
-			(xy 127.508 130.556) (xy 127.508 135.636)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96e2bb9e-cbb6-4a6f-a514-4790abb5814d")
-	)
-	(wire
-		(pts
 			(xy 214.376 52.578) (xy 223.774 52.578)
 		)
 		(stroke
@@ -8488,6 +8512,16 @@
 			(type default)
 		)
 		(uuid "96e79ac6-e879-4dd3-93d9-d98ecb10a983")
+	)
+	(wire
+		(pts
+			(xy 50.8 99.06) (xy 50.8 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97f7006a-642c-487f-b90c-402cf1eb140e")
 	)
 	(wire
 		(pts
@@ -8511,16 +8545,6 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 129.54) (xy 44.45 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a4f7728-fc18-494e-b734-48a11c6d89f9")
-	)
-	(wire
-		(pts
 			(xy 141.224 18.796) (xy 150.114 18.796)
 		)
 		(stroke
@@ -8538,6 +8562,16 @@
 			(type default)
 		)
 		(uuid "9aee7e75-15d7-4223-85a5-a5d1c0f156d8")
+	)
+	(wire
+		(pts
+			(xy 52.07 121.92) (xy 52.07 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c2c7a31-9b28-4e71-bafd-80dbc1530f10")
 	)
 	(wire
 		(pts
@@ -8701,16 +8735,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.736 92.71) (xy 81.026 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad556f8e-fea4-4a69-9fc0-e560b8e58d25")
-	)
-	(wire
-		(pts
 			(xy 115.57 74.422) (xy 115.57 74.168)
 		)
 		(stroke
@@ -8771,7 +8795,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 121.92) (xy 44.45 121.92)
+			(xy 32.766 121.92) (xy 44.45 121.92)
 		)
 		(stroke
 			(width 0)
@@ -9051,16 +9075,6 @@
 	)
 	(wire
 		(pts
-			(xy 119.888 130.556) (xy 119.888 135.636)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb26893e-aa2b-4e91-b89f-53a951c06f77")
-	)
-	(wire
-		(pts
 			(xy 130.556 185.674) (xy 130.556 182.372)
 		)
 		(stroke
@@ -9068,6 +9082,16 @@
 			(type default)
 		)
 		(uuid "cb4bd9e4-b99c-4e8c-834e-c74f49a96e0b")
+	)
+	(wire
+		(pts
+			(xy 50.8 100.33) (xy 44.45 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb7b4fc0-7b3f-4348-b23b-7046af07c54d")
 	)
 	(wire
 		(pts
@@ -9088,36 +9112,6 @@
 			(type default)
 		)
 		(uuid "cc26debb-fd26-4828-bf83-886cddaebe01")
-	)
-	(wire
-		(pts
-			(xy 40.386 92.71) (xy 46.736 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cdcbd849-eda4-44f3-a913-573c2a5e8dfa")
-	)
-	(wire
-		(pts
-			(xy 127.508 135.636) (xy 127.508 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cec5433e-bc62-4e17-bfc1-6f90f68b3e3c")
-	)
-	(wire
-		(pts
-			(xy 32.766 121.92) (xy 38.1 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d02ffa7e-cc37-41b8-9506-834c5f25751d")
 	)
 	(wire
 		(pts
@@ -9181,7 +9175,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 121.92) (xy 81.026 121.92)
+			(xy 44.45 121.92) (xy 52.07 121.92)
 		)
 		(stroke
 			(width 0)
@@ -9331,7 +9325,7 @@
 	)
 	(wire
 		(pts
-			(xy 32.766 92.71) (xy 40.386 92.71)
+			(xy 32.766 92.71) (xy 44.45 92.71)
 		)
 		(stroke
 			(width 0)
@@ -9591,6 +9585,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 121.92) (xy 81.026 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f18a2ba2-79a8-43cd-a37f-2cc4f1c6af4f")
+	)
+	(wire
+		(pts
 			(xy 210.185 41.148) (xy 210.185 36.068)
 		)
 		(stroke
@@ -9628,16 +9632,6 @@
 			(type default)
 		)
 		(uuid "f670f482-31f6-4ef0-9bba-790fd0be6e70")
-	)
-	(wire
-		(pts
-			(xy 119.888 135.636) (xy 119.888 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7b4100b-c4bc-4c4b-b854-fbf634a36810")
 	)
 	(wire
 		(pts
@@ -9907,17 +9901,6 @@
 			(justify left bottom)
 		)
 		(uuid "8846bb3b-5253-4af2-af33-680cb1aa1461")
-	)
-	(text "Thermal\nmass"
-		(exclude_from_sim no)
-		(at 121.158 144.78 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "8afa4a85-80a0-4cca-b0b5-f8ca4c067e9a")
 	)
 	(text "12mA @ 3V"
 		(exclude_from_sim no)
@@ -14017,73 +14000,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 119.888 142.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1bc36416-4992-4a4f-b36f-ac9ef189a7ff")
-		(property "Reference" "#PWR072"
-			(at 119.888 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 119.888 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 119.888 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 119.888 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 119.888 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "28e071bc-0b10-4f94-9cf4-19204f64dd16")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "#PWR072")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 244.094 112.776 0)
 		(unit 1)
@@ -15147,73 +15063,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR068")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 127.508 142.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "28f6996b-9749-461c-965f-3706e93ca004")
-		(property "Reference" "#PWR073"
-			(at 127.508 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 127.508 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 127.508 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127.508 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 127.508 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5b2259c9-02be-4449-a877-549824f252f2")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -17525,7 +17374,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMBJ30CA"
+		(property "Value" "SMCJ28CA"
 			(at 77.978 61.4679 90)
 			(effects
 				(font
@@ -17534,7 +17383,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMB"
+		(property "Footprint" "Diode_SMD:D_SMC"
 			(at 69.85 60.198 0)
 			(effects
 				(font
@@ -17543,7 +17392,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2201121330_Liown-SMBJ30CA_C2925441.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2312221742_hongjiacheng-SMCJ28CA_C19077606.pdf"
 			(at 74.93 58.928 0)
 			(effects
 				(font
@@ -17561,7 +17410,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2925441"
+		(property "LCSC" "C19077606"
 			(at 74.93 60.198 0)
 			(effects
 				(font
@@ -21446,7 +21295,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 45.4152 129.54 0)
 			(effects
 				(font
@@ -21568,93 +21417,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 46.736 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9d629794-00e3-4000-84dc-3124672cdb68")
-		(property "Reference" "C26"
-			(at 49.276 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF 50V"
-			(at 42.672 98.806 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 47.7012 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL21B105KBFNNN"
-			(at 46.736 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 46.736 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part" "CL21B105KBFNNNE"
-			(at 46.736 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C28323"
-			(at 49.276 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "630c7889-e92b-4c80-9a2b-4138cf8370a3")
-		)
-		(pin "2"
-			(uuid "bb80d2f3-9836-473a-af3e-82e36829aabf")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "C26")
 					(unit 1)
 				)
 			)
@@ -21797,6 +21559,93 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 52.07 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a12df3e9-2166-44b4-8fa1-8bd183a81945")
+		(property "Reference" "C10"
+			(at 54.61 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n 50V"
+			(at 54.61 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 52.07 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 52.07 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL05B104KB54PNC"
+			(at 52.07 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C307331"
+			(at 54.61 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "399da37e-bc2b-46d8-8d21-0393433b0218")
+		)
+		(pin "2"
+			(uuid "eb902f99-7d02-4794-8390-f651f5958c3f")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -22614,7 +22463,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 40.386 96.52 0)
+		(at 44.45 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22622,7 +22471,7 @@
 		(dnp no)
 		(uuid "af0731f8-e50d-47fe-88d7-3ff683c73776")
 		(property "Reference" "C25"
-			(at 35.052 96.52 0)
+			(at 39.116 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22631,7 +22480,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 35.306 98.552 0)
+			(at 39.37 98.552 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22640,7 +22489,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 41.3512 100.33 0)
+			(at 45.4152 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22649,7 +22498,7 @@
 			)
 		)
 		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL31A106KBHNNN"
-			(at 40.386 96.52 0)
+			(at 44.45 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22658,7 +22507,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 40.386 96.52 0)
+			(at 44.45 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22667,7 +22516,7 @@
 			)
 		)
 		(property "Parrt" ""
-			(at 40.386 96.52 0)
+			(at 44.45 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22676,7 +22525,7 @@
 			)
 		)
 		(property "Part" "GRM21BR61H106KE43L"
-			(at 40.386 96.52 0)
+			(at 44.45 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22685,7 +22534,7 @@
 			)
 		)
 		(property "LCSC" "C13585"
-			(at 35.306 96.52 0)
+			(at 39.37 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22997,6 +22846,93 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 50.8 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b4d573f4-bd03-42f8-91ed-50de275e468b")
+		(property "Reference" "C13"
+			(at 53.34 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF 50V"
+			(at 46.736 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 51.7652 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL21B105KBFNNN"
+			(at 50.8 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "CL21B105KBFNNNE"
+			(at 50.8 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C28323"
+			(at 53.34 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7eafa8c6-9e98-48b9-9a79-7223e69c64ef")
+		)
+		(pin "2"
+			(uuid "e3526a10-0b7d-4f73-a646-d7ed9c72f19e")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 53.594 74.168 90)
 		(unit 1)
@@ -23201,84 +23137,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "TP7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 123.698 130.556 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bb7e6a19-a908-4e2b-9906-6937bd005eb0")
-		(property "Reference" "JP3"
-			(at 122.174 128.524 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 123.698 129.794 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 123.698 128.778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.698 130.556 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 123.698 130.556 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C21189"
-			(at 123.698 130.556 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f02f6e2a-a834-4ba9-8535-de48d0b074e9")
-		)
-		(pin "2"
-			(uuid "db324107-cafa-4502-9dc0-ef37b15e985b")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "JP3")
 					(unit 1)
 				)
 			)
@@ -24278,84 +24136,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 123.698 135.636 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ca9b697f-f4b4-43b5-8037-d5c845530b23")
-		(property "Reference" "JP5"
-			(at 122.174 133.604 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 123.698 134.874 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 123.698 133.858 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.698 135.636 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 123.698 135.636 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C21189"
-			(at 123.698 135.636 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9447652e-d735-4650-8e6e-ab73142dda53")
-		)
-		(pin "2"
-			(uuid "515d2fc9-749e-421f-b187-6d2fb7ab9852")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "JP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 206.756 49.276 180)
 		(unit 1)
@@ -24644,93 +24424,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "R27")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 38.1 125.73 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cccd3a42-82a2-455d-90cc-58f2b226175d")
-		(property "Reference" "C28"
-			(at 33.02 125.476 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 33.02 128.016 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 39.0652 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL31A106KBHNNN"
-			(at 38.1 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 38.1 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part" "GRM21BR61H106KE43L"
-			(at 38.1 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C13585"
-			(at 33.02 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d158c303-81a5-43bb-b260-b378be558561")
-		)
-		(pin "2"
-			(uuid "51a5a3d9-2fdc-4c90-903f-31380a7e7c1c")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -25314,7 +25007,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 46.736 100.33 0)
+		(at 44.45 100.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25323,7 +25016,7 @@
 		(fields_autoplaced yes)
 		(uuid "d4bbd0cf-6943-449c-a522-46de7b3a16c2")
 		(property "Reference" "#PWR043"
-			(at 46.736 106.68 0)
+			(at 44.45 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25332,7 +25025,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 46.736 105.41 0)
+			(at 44.45 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25341,7 +25034,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 46.736 100.33 0)
+			(at 44.45 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25350,7 +25043,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 46.736 100.33 0)
+			(at 44.45 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25359,7 +25052,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 46.736 100.33 0)
+			(at 44.45 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -4431,141 +4431,6 @@
 				)
 			)
 		)
-		(symbol "Sensor_Magnetic:AH1806-W"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -5.08 8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "AH1806-W"
-				(at 7.62 8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SC-59"
-				(at 13.97 -8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AH1806.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "High Sensitivity Micropower Omnipolar Hall-Effect Switch, SC-59"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "hall switch"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SC?59*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "AH1806-W_0_1"
-				(rectangle
-					(start 5.08 7.62)
-					(end -5.08 -7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "AH1806-W_1_1"
-				(pin power_in line
-					(at 0 10.16 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin open_collector line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "OUTPUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Sensor_Magnetic:TMAG5170-Q1"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -6965,12 +6830,6 @@
 		(uuid "be100b4d-c290-4265-b100-2e0c97dd5ae7")
 	)
 	(junction
-		(at 122.936 22.098)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c57ad805-0c96-4cec-b0e5-be83703468eb")
-	)
-	(junction
 		(at 32.766 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7125,16 +6984,6 @@
 			(type default)
 		)
 		(uuid "061959fb-6a81-480f-9b0b-f23c917f4b62")
-	)
-	(wire
-		(pts
-			(xy 110.998 22.098) (xy 122.936 22.098)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06585e13-98f2-4dd4-8e95-f886fb7f36ba")
 	)
 	(wire
 		(pts
@@ -7565,16 +7414,6 @@
 			(type default)
 		)
 		(uuid "2c9ffc9a-e190-49a0-901a-15d00312f970")
-	)
-	(wire
-		(pts
-			(xy 110.998 22.098) (xy 110.998 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d1baeb7-a9f9-429d-aef6-8f462198f137")
 	)
 	(wire
 		(pts
@@ -9916,25 +9755,6 @@
 		)
 		(uuid "ff14714c-7f3b-4212-a5af-672b68415165")
 	)
-	(text_box "Experimental wakeup on HAL"
-		(exclude_from_sim no)
-		(at 106.68 16.51 0)
-		(size 30.734 28.702)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "44096faa-2fef-4bda-beb2-8bca8ae0b150")
-	)
 	(text "LSS_ADC = 9.2 x LSS"
 		(exclude_from_sim no)
 		(at 165.1 85.217 0)
@@ -10469,28 +10289,6 @@
 		(uuid "19394f22-3b5b-425a-9e84-55b4d17e472c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 115.0077 126.9206 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "HALL"
-		(shape output)
-		(at 130.556 32.258 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "19aafdd1-c289-4ab6-abc3-4bff21f95ad5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 137.9371 32.258 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14817,71 +14615,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 122.936 22.098 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1fe0f355-dd53-461b-bdd0-3dfe80fa9433")
-		(property "Reference" "#PWR07"
-			(at 122.936 25.908 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 126.238 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 122.936 22.098 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 122.936 22.098 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 122.936 22.098 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a7000ac6-eb8d-4429-b9ae-6d7b5674aaab")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 217.424 135.636 180)
 		(unit 1)
@@ -15517,73 +15250,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR073")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 110.998 27.94 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2a510932-d119-4d27-942b-230cc3eb6810")
-		(property "Reference" "#PWR012"
-			(at 110.998 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 110.998 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 110.998 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 110.998 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 110.998 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5bdebbf8-6ff7-4cc8-aa03-7e5ef998045d")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -22013,88 +21679,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Sensor_Magnetic:AH1806-W")
-		(at 122.936 32.258 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9d14dbf7-316e-46ee-8f36-e2e5ee7dd2f8")
-		(property "Reference" "U1"
-			(at 117.602 30.988 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "AH1806-W"
-			(at 117.602 33.528 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SC-59"
-			(at 136.906 41.148 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AH1806.pdf"
-			(at 122.936 32.258 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 122.936 32.258 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C126664"
-			(at 122.936 32.258 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "61f29d69-21e6-459b-9c01-def9b62c0c9f")
-		)
-		(pin "2"
-			(uuid "ec82d17f-8a3c-414a-8397-8ab5e31276c2")
-		)
-		(pin "3"
-			(uuid "82984a75-1530-4928-83c0-08e1e1bf2432")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 46.736 96.52 0)
 		(unit 1)
@@ -24551,73 +24135,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "R41")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 122.936 42.418 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c5919600-bf97-4c58-9ec3-e891440ba169")
-		(property "Reference" "#PWR015"
-			(at 122.936 48.768 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 122.936 47.498 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 122.936 42.418 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 122.936 42.418 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 122.936 42.418 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7fd496ed-4df0-44c8-9718-5544ef6cc17a")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -27189,84 +26706,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 110.998 25.4 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e7ac5180-6e29-4d7a-b9aa-4ecab9be4d40")
-		(property "Reference" "C10"
-			(at 115.316 23.622 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 116.078 27.178 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 110.998 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
-			(at 110.998 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 110.998 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C1525"
-			(at 107.188 26.6701 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cd9fdcbc-8039-41a4-8d2a-8a969d41fcb5")
-		)
-		(pin "2"
-			(uuid "f52f0b9d-6371-4833-8f2e-2b402e6b97c4")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "C10")
 					(unit 1)
 				)
 			)

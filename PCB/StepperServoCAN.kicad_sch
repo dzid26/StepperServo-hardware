@@ -12148,7 +12148,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 203.2 135.636 0)
 			(effects
 				(font
@@ -12175,7 +12175,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17673"
+		(property "LCSC" "C2906941"
 			(at 200.66 135.636 0)
 			(effects
 				(font
@@ -14519,7 +14519,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 217.424 135.636 0)
 			(effects
 				(font
@@ -15373,7 +15373,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad_TopOnly"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad_TopOnly"
 			(at 156.972 154.178 0)
 			(effects
 				(font
@@ -18873,7 +18873,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad_TopOnly"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad_TopOnly"
 			(at 172.212 154.178 0)
 			(effects
 				(font
@@ -19684,7 +19684,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad_TopOnly"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad_TopOnly"
 			(at 172.212 164.338 0)
 			(effects
 				(font
@@ -23036,7 +23036,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad_TopOnly"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad_TopOnly"
 			(at 156.972 164.338 0)
 			(effects
 				(font

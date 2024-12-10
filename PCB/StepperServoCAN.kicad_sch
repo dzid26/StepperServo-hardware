@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "StepperServoCAN")
-		(rev "0.3")
+		(rev "0.4")
 		(company "RetroPilot")
 		(comment 1 "Licensed under CERN-OHL-S v2")
 	)
@@ -7689,16 +7689,6 @@
 	)
 	(wire
 		(pts
-			(xy 274.574 50.546) (xy 283.464 50.546)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "324f74fb-694d-42b9-8ef8-7a12c4df8896")
-	)
-	(wire
-		(pts
 			(xy 47.752 82.296) (xy 47.752 81.788)
 		)
 		(stroke
@@ -7839,6 +7829,16 @@
 	)
 	(wire
 		(pts
+			(xy 281.94 50.546) (xy 274.574 50.546)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "411b171b-e0b5-4731-8fee-2a8ed5f4f147")
+	)
+	(wire
+		(pts
 			(xy 231.14 88.138) (xy 232.41 88.138)
 		)
 		(stroke
@@ -7916,6 +7916,16 @@
 			(type default)
 		)
 		(uuid "452aefd1-b237-4982-95f9-195c0e6f9d82")
+	)
+	(wire
+		(pts
+			(xy 281.94 50.546) (xy 281.94 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4572a78b-a238-4066-802e-ce6e638cfdfa")
 	)
 	(wire
 		(pts
@@ -10020,6 +10030,18 @@
 			(justify left bottom)
 		)
 		(uuid "1d377940-d945-418c-9680-5f68bc2eacfc")
+	)
+	(text "v0.1 PA2=Gnd, PA5=flt, PB2=flt\nv0.2 PA2=Gnd, PA5=flt, PB2=gnd\nv0.3 PA2=Gnd, PA5=Gnd, PB2=gnd\nv0.4 PA2=3.3, PA5=Gnd, PB2=gnd"
+		(exclude_from_sim no)
+		(at 248.92 172.72 0)
+		(effects
+			(font
+				(face "Liberation Mono")
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "26964d0e-43b8-4aab-87b6-0d176c278b75")
 	)
 	(text "CAN transceiver\n"
 		(exclude_from_sim no)
@@ -14456,6 +14478,71 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3VA")
+		(at 281.94 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1e9a64aa-92e9-4af0-afd1-eecbb8b2728e")
+		(property "Reference" "#PWR012"
+			(at 281.94 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3VA"
+			(at 279.4 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 281.94 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 281.94 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 281.94 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f9ea4082-593d-41e1-b164-40d3687ecee7")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -21757,73 +21844,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 283.464 50.546 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9bb40e4b-18fd-45c2-8335-a5b4be561aef")
-		(property "Reference" "#PWR018"
-			(at 283.464 56.896 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 280.924 51.816 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 283.464 50.546 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 283.464 50.546 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 283.464 50.546 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b56ac9dc-10fe-4505-bdbc-1b9d162fe5e3")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 246.888 149.86 90)
 		(unit 1)
@@ -25205,7 +25225,7 @@
 		(dnp no)
 		(uuid "d3f11ac5-d3a0-4701-8fcd-8f26e47f2c5c")
 		(property "Reference" "ID2"
-			(at 280.162 57.912 0)
+			(at 279.4 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28195,7 +28215,7 @@
 		(dnp no)
 		(uuid "fc654452-d6d1-490a-98f3-c018498870b3")
 		(property "Reference" "ID1"
-			(at 281.686 54.102 0)
+			(at 279.4 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)

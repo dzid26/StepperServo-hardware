@@ -6858,12 +6858,6 @@
 		(uuid "666548df-979f-4900-a1df-fa9d470f6f50")
 	)
 	(junction
-		(at 218.44 60.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "673cf428-2243-45bc-aefc-0d4801e9510e")
-	)
-	(junction
 		(at 167.894 18.796)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7150,14 +7144,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fbad7e9c-096a-42e1-8e8d-49484c9410da")
-	)
-	(no_connect
-		(at 223.012 161.798)
-		(uuid "1e171c58-5274-4b8a-b9a7-79ad5c2e6b28")
-	)
-	(no_connect
-		(at 230.632 161.798)
-		(uuid "259770d3-fb87-4594-81a7-372425a2fef8")
 	)
 	(no_connect
 		(at 93.218 181.61)
@@ -7625,7 +7611,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 60.96) (xy 233.68 60.96)
+			(xy 215.9 60.96) (xy 233.68 60.96)
 		)
 		(stroke
 			(width 0)
@@ -8955,16 +8941,6 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 60.96) (xy 218.44 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7a73b0c-2c7d-4ad0-a183-0fddcb7ead45")
-	)
-	(wire
-		(pts
 			(xy 113.03 74.168) (xy 115.57 74.168)
 		)
 		(stroke
@@ -9874,17 +9850,6 @@
 			(justify left bottom)
 		)
 		(uuid "5f689600-85bd-440d-9a0a-d7aa5da1a385")
-	)
-	(text "Spare resistors:"
-		(exclude_from_sim no)
-		(at 192.024 162.306 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "600553ab-a6de-420a-b33a-26d7006f19d1")
 	)
 	(text "Motor driver"
 		(exclude_from_sim no)
@@ -14720,72 +14685,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 218.694 161.544 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2179bafe-8f65-4a61-96cc-759b6131fbcd")
-		(property "Reference" "#PWR0101"
-			(at 225.044 161.544 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 219.964 165.354 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 218.694 161.544 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 218.694 161.544 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 218.694 161.544 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dee96e0a-4d52-459b-b7d0-9c4603057f27")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "#PWR0101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 191.389 21.336 0)
 		(unit 1)
@@ -17372,72 +17271,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 211.074 161.544 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "527ffe7c-8eb2-49d6-9789-91d6ebeca9d3")
-		(property "Reference" "#PWR0100"
-			(at 204.724 161.544 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 209.804 157.734 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 211.074 161.544 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 211.074 161.544 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 211.074 161.544 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9441d22c-caa4-4c14-bb27-1fe9cad41703")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "#PWR0100")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Diode:SM6T30A")
 		(at 74.93 60.198 270)
 		(unit 1)
@@ -19153,73 +18986,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 218.44 60.96 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "77b164ec-7756-467e-b196-e6ac6aec1cd0")
-		(property "Reference" "TP11"
-			(at 217.424 59.944 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Pad"
-			(at 215.9 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 223.52 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 223.52 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 218.44 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "73440b86-5e5b-44ff-bcb8-a1f033e629ee")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -27488,84 +27254,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 226.822 161.798 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f767788f-cf70-4fbc-bb18-e23e0cce5d44")
-		(property "Reference" "JP8"
-			(at 225.298 159.766 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 226.822 161.036 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 226.822 160.02 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 226.822 161.798 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 226.822 161.798 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C21189"
-			(at 226.822 161.798 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2146661f-f710-41f7-a48b-fc8d8f820855")
-		)
-		(pin "2"
-			(uuid "57e17269-6cd3-4e4f-afbf-e72bf704b8d9")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "JP8")
 					(unit 1)
 				)
 			)

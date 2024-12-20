@@ -7611,16 +7611,6 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 60.96) (xy 233.68 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31db6a2e-bdb3-495a-80a3-8f40604f6be4")
-	)
-	(wire
-		(pts
 			(xy -25.4 164.592) (xy -25.4 166.878)
 		)
 		(stroke
@@ -7921,7 +7911,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 66.04) (xy 215.9 68.58)
+			(xy 228.6 78.74) (xy 223.52 78.74)
 		)
 		(stroke
 			(width 0)
@@ -9191,6 +9181,16 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 81.28) (xy 223.52 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb9b599d-3ae0-40ea-852b-0e5067a71455")
+	)
+	(wire
+		(pts
 			(xy 201.168 145.796) (xy 203.2 145.796)
 		)
 		(stroke
@@ -10140,7 +10140,7 @@
 			)
 		)
 	)
-	(global_label "TLE_IFC"
+	(global_label "TLE_IFA"
 		(shape input)
 		(at 266.7 91.44 0)
 		(fields_autoplaced yes)
@@ -10152,7 +10152,7 @@
 		)
 		(uuid "0abd502e-2661-4453-aa50-9aec9ec27d44")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 276.1888 91.3606 0)
+			(at 276.5795 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10537,7 +10537,7 @@
 			)
 		)
 	)
-	(global_label "HALL"
+	(global_label "IIF_IDX"
 		(shape output)
 		(at -12.7 171.958 0)
 		(fields_autoplaced yes)
@@ -10549,7 +10549,7 @@
 		)
 		(uuid "396fc59d-3ac5-4e1c-ac3b-15742e0deb47")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -5.3189 171.958 0)
+			(at -3.3647 171.958 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10717,7 +10717,7 @@
 	)
 	(global_label "TLE_IFB"
 		(shape input)
-		(at 233.68 81.28 180)
+		(at 233.68 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10727,7 +10727,7 @@
 		)
 		(uuid "4bcc0e85-8838-4bbd-bb1a-b8f07363284c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 224.1912 81.2006 0)
+			(at 224.1912 60.8806 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10992,28 +10992,6 @@
 		(uuid "87b10dab-c92f-4406-a28a-e3cc61775cfc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 220.1998 91.3606 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TLE_IFA"
-		(shape input)
-		(at 233.68 78.74 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "89301a53-023c-4a27-ba97-56e16f3fc49c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 224.3726 78.6606 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11419,7 +11397,7 @@
 			)
 		)
 	)
-	(global_label "HALL"
+	(global_label "IIF_IDX"
 		(shape input)
 		(at 266.7 83.82 0)
 		(fields_autoplaced yes)
@@ -11431,7 +11409,7 @@
 		)
 		(uuid "cf156ded-e3e4-436d-b8f7-1d9b51f71c5c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 274.0811 83.82 0)
+			(at 276.0353 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11883,7 +11861,7 @@
 			)
 		)
 	)
-	(global_label "TLE_IFC"
+	(global_label "IIF_IDX"
 		(shape output)
 		(at 39.37 175.26 180)
 		(fields_autoplaced yes)
@@ -11895,7 +11873,7 @@
 		)
 		(uuid "f896777f-28f3-442e-bbd3-86bd2430f4a2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 29.8812 175.1806 0)
+			(at 30.0347 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14457,7 +14435,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 215.9 63.5 0)
+		(at 231.14 78.74 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14465,7 +14443,7 @@
 		(dnp no)
 		(uuid "1f1c7d92-65aa-4629-989d-512db6b2d9d5")
 		(property "Reference" "R14"
-			(at 214.122 63.246 90)
+			(at 226.06 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14473,7 +14451,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 215.9 63.246 90)
+			(at 231.394 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14481,7 +14459,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 215.9 63.5 0)
+			(at 231.14 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14490,7 +14468,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 215.9 63.5 0)
+			(at 231.14 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14499,7 +14477,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 63.5 0)
+			(at 231.14 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14508,7 +14486,7 @@
 			)
 		)
 		(property "LCSC" "C11702"
-			(at 213.995 63.5 0)
+			(at 231.14 76.835 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16675,6 +16653,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 231.14 81.28 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4bc68b82-9277-44f9-9932-0a505d79f3fb")
+		(property "Reference" "R39"
+			(at 226.06 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 231.394 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 231.14 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 231.14 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C11702"
+			(at 231.14 79.375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7eabaf4b-247b-450f-9f15-398efb989858")
+		)
+		(pin "2"
+			(uuid "f73cadc9-30cc-47af-9aa5-aa3fb5ed1292")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "R39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 91.186 135.89 0)
 		(mirror x)
@@ -17327,6 +17381,15 @@
 		)
 		(property "LCSC" "C19077606"
 			(at 74.93 60.198 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Unidirectional could be slightly stronger, but bi was cheaper to assemble. Doesn't matter."
+			(at 74.93 60.198 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20297,7 +20360,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-TLE5012B_Exxxx-DataSheet-v02_01-EN.pdf?fileId=db3a304334fac4c601350f31c43c433f"
 			(at 39.37 152.4 0)
 			(effects
 				(font
@@ -20313,76 +20376,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
-			)
-		)
-		(property "Component Link 1 Description" "Manufacturer URL"
-			(at 39.37 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Component Link 1 URL" "http://www.infineon.com/"
-			(at 39.37 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Component Link 3 Description" "Package Specification"
-			(at 39.37 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Component Link 3 URL" "http://www.infineon.com/dgdl/TLE7259-2GE_DS_rev12.pdf?folderId=db3a3043163797a6011666d32a0c0de1&fileId=db3a3043163797a6011666d4dbb80de2&location=en.Products.Automotive_ICs.Automotive_Transceivers.LIN_Transceivers.DATASHEET.TLE7259-2GE_DS_rev12.pdf"
-			(at 39.37 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet Version" "Rev. 1.0"
-			(at 39.37 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Green" "true"
-			(at 39.37 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Halogen free" "available"
-			(at 39.37 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -20416,56 +20409,6 @@
 				(hide yes)
 			)
 		)
-		(property "Package Version" "Mar-07"
-			(at 39.37 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Packing" "Reel"
-			(at 39.37 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "category" "IC"
-			(at 39.37 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "ciiva ids" "2417005"
-			(at 39.37 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "library id" "1b15dfdf5dbbaf04"
-			(at 39.37 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
 		(property "manufacturer" "Infineon"
 			(at 39.37 111.76 0)
 			(effects
@@ -20478,36 +20421,6 @@
 		)
 		(property "package" "PG-DSO-8-16"
 			(at 39.37 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "release date" "1409234811"
-			(at 39.37 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "vault revision" "E581E8E0-9BC8-4E10-9C4E-2BCCB84CD538"
-			(at 39.37 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "imported" "yes"
-			(at 39.37 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23672,6 +23585,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 223.52 81.28 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c2ad849a-d6e4-4339-bf6b-c8f735623ff8")
+		(property "Reference" "#PWR05"
+			(at 217.17 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 222.25 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.52 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 223.52 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d6450efe-5b53-445a-9eaa-1e3f5047ab42")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 109.22 74.168 90)
 		(unit 1)
@@ -25359,7 +25339,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 215.9 68.58 0)
+		(at 223.52 78.74 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25367,7 +25347,7 @@
 		(dnp no)
 		(uuid "df70aa63-be94-4c60-9674-70f86d368f1e")
 		(property "Reference" "#PWR027"
-			(at 215.9 74.93 0)
+			(at 217.17 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25376,7 +25356,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 213.36 69.85 90)
+			(at 222.25 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25386,7 +25366,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 68.58 0)
+			(at 223.52 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25395,7 +25375,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 68.58 0)
+			(at 223.52 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25404,7 +25384,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 68.58 0)
+			(at 223.52 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)

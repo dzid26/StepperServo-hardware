@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.1,
-          "height": 2.1,
-          "width": 2.1
+          "drill": 0.0,
+          "height": 0.3,
+          "width": 0.3
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -49,7 +49,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.0
+          "min_clearance": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -62,8 +62,19 @@
       "drc_exclusions": [
         "footprint_type_mismatch|103525000|91200000|df474732-1861-4418-8e50-998672b69fe5|00000000-0000-0000-0000-000000000000",
         "footprint_type_mismatch|96245000|91350000|edb3f930-2815-426a-acba-c23aad3658ca|00000000-0000-0000-0000-000000000000",
-        "text_height|122270000|101560000|65f23795-7492-4e00-bfc6-e365ca79b64c|00000000-0000-0000-0000-000000000000",
-        "text_height|122810000|102830000|badf02e2-9a2b-43cb-8efa-7424a4a6df9f|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|102920000|105750000|b4ec1ba2-5314-4eeb-81a5-f97001ee05de|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|103525000|91200000|df474732-1861-4418-8e50-998672b69fe5|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|124720000|87088000|6d826653-51a4-4209-9b39-6324ae9702a2|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|124720000|89616000|96ace4c8-5794-49bf-ba8b-e0dc07c71c94|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|124720000|92144000|a111cd72-9b28-4b3d-a3f1-ed0b438d391e|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|124720000|93360000|1ac621d9-b807-46aa-a15e-7fe3412bb530|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|124720000|94672000|425905a1-8d72-4106-9a65-5fc62f221619|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|124720000|97200000|85329d38-8a80-458e-8a90-d109b414a930|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|124720000|99728000|69501391-2cae-4461-bf21-70f8b111f708|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|89400000|100893750|aae9a48b-8502-491e-b8b8-eab071a0f065|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|96245000|91350000|edb3f930-2815-426a-acba-c23aad3658ca|00000000-0000-0000-0000-000000000000",
+        "text_thickness|123860000|103700000|d756f185-7961-4400-99e4-6164c25d12eb|00000000-0000-0000-0000-000000000000",
+        "text_thickness|124740000|110740000|6acdc952-8be9-412d-bec6-ba941c473a2f|00000000-0000-0000-0000-000000000000",
         "text_thickness|98840000|79990000|5c8f96d9-194a-4a27-96eb-2e37ae115e89|00000000-0000-0000-0000-000000000000",
         "via_dangling|112230000|82840000|65a10797-3a50-4b5c-92e3-b1ccc64279ea|00000000-0000-0000-0000-000000000000",
         "via_dangling|112240000|81490000|0501d6e8-e5af-4019-909b-8612c132b2db|00000000-0000-0000-0000-000000000000",
@@ -113,7 +124,7 @@
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
-        "text_height": "warning",
+        "text_height": "ignore",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -688,7 +699,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "",
+    "bom_export_filename": "StepperServoCAN-bom v0.3.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",

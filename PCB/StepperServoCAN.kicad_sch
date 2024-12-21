@@ -11,6 +11,553 @@
 		(comment 1 "Licensed under CERN-OHL-S v2")
 	)
 	(lib_symbols
+		(symbol "ADMT4000:ADMT4000BRUZAB-R7"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "IC"
+				(at 44.45 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "ADMT4000BRUZAB-R7"
+				(at 44.45 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "SOP65P640X120-24N"
+				(at 44.45 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.analog.com/ADMT4000/datasheet"
+				(at 44.45 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "True Power-On Multiturn Sensor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "1.2"
+				(at 44.45 -394.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "584-ADMT4000BRUZABR7"
+				(at 44.45 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Analog-Devices/ADMT4000BRUZAB-R7?qs=%252BXxaIXUDbq1WEnRjojBYdg%3D%3D"
+				(at 44.45 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "Analog Devices"
+				(at 44.45 -694.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "ADMT4000BRUZAB-R7"
+				(at 44.45 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "ADMT4000BRUZAB-R7_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 43.18 -30.48)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "DV18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -22.86 0)
+					(length 5.08)
+					(name "TEST_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -25.4 0)
+					(length 5.08)
+					(name "NC_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -27.94 0)
+					(length 5.08)
+					(name "NC_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -27.94 180)
+					(length 5.08)
+					(name "NC_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -25.4 180)
+					(length 5.08)
+					(name "NC_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -22.86 180)
+					(length 5.08)
+					(name "SDO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -20.32 180)
+					(length 5.08)
+					(name "SDI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -17.78 180)
+					(length 5.08)
+					(name "SCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -15.24 180)
+					(length 5.08)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -12.7 180)
+					(length 5.08)
+					(name "GPIO0/BUSY"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "GPIO3/ACALC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -10.16 180)
+					(length 5.08)
+					(name "GPIO1/~{CNV}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -7.62 180)
+					(length 5.08)
+					(name "VDRIVE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -5.08 180)
+					(length 5.08)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 -2.54 180)
+					(length 5.08)
+					(name "GPIO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 48.26 0 180)
+					(length 5.08)
+					(name "NC_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 0)
+					(length 5.08)
+					(name "GPIO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 0)
+					(length 5.08)
+					(name "GPIO5/BOOTLOAD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -10.16 0)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -12.7 0)
+					(length 5.08)
+					(name "GND_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -15.24 0)
+					(length 5.08)
+					(name "GND_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -17.78 0)
+					(length 5.08)
+					(name "TEST_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -20.32 0)
+					(length 5.08)
+					(name "TEST_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Amplifier_Operational:LMV321"
 			(pin_names
 				(offset 0.127)
@@ -6678,6 +7225,12 @@
 		(uuid "2bb37465-826f-494d-abf1-53143e544cc1")
 	)
 	(junction
+		(at 137.16 236.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2be6d7fc-d881-4f16-b948-126cc12f5eef")
+	)
+	(junction
 		(at 44.45 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7391,6 +7944,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 251.46) (xy 137.16 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b39630f-e9d5-483c-b0f1-be216fe2fc74")
+	)
+	(wire
+		(pts
 			(xy 163.322 63.754) (xy 167.894 63.754)
 		)
 		(stroke
@@ -7458,6 +8021,16 @@
 			(type default)
 		)
 		(uuid "2520dfbf-756d-4cf0-9168-31ff4e470014")
+	)
+	(wire
+		(pts
+			(xy 86.36 236.22) (xy 88.9 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "255a026f-6ac2-4ce7-b1d3-f7afcdcdf6d2")
 	)
 	(wire
 		(pts
@@ -7891,6 +8464,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 233.68) (xy 88.9 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f6c8ece-b030-417e-90ff-ce0b409ff6c9")
+	)
+	(wire
+		(pts
 			(xy 138.43 189.23) (xy 129.54 189.23)
 		)
 		(stroke
@@ -7968,6 +8551,16 @@
 			(type default)
 		)
 		(uuid "55a6b774-89f1-402a-89cc-5b4c528b86aa")
+	)
+	(wire
+		(pts
+			(xy 86.36 231.14) (xy 88.9 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56c8ed95-dafa-4902-9da4-8bccc7cde668")
 	)
 	(wire
 		(pts
@@ -8559,6 +9152,26 @@
 		)
 		(uuid "8ad23a4e-4453-468b-a2e0-0abbd0827fee")
 	)
+	(wire
+		(pts
+			(xy 137.16 233.68) (xy 137.16 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b7a88fa-0fe3-4989-aff4-495f0653d035")
+	)
+	(wire
+		(pts
+			(xy 83.82 228.6) (xy 88.9 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d146cd2-4e26-4bba-87ef-6b3fb78258e6")
+	)
 	(polyline
 		(pts
 			(xy 15.24 88.138) (xy 130.302 88.138)
@@ -8731,6 +9344,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 248.92) (xy 137.16 248.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a073b89c-9c31-4946-b662-a2b32860e759")
+	)
+	(wire
+		(pts
 			(xy 91.186 100.33) (xy 103.886 100.33)
 		)
 		(stroke
@@ -8871,6 +9494,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 231.14) (xy 137.16 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "add01464-a1d9-401c-b475-a7d921e07a6e")
+	)
+	(wire
+		(pts
 			(xy 198.12 35.56) (xy 198.12 40.64)
 		)
 		(stroke
@@ -8878,6 +9511,16 @@
 			(type default)
 		)
 		(uuid "b0a8b0e0-b5f8-4114-af8f-fc72c102daba")
+	)
+	(wire
+		(pts
+			(xy 83.82 238.76) (xy 88.9 238.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1388c5e-7253-4eff-a976-8e027da6bf3c")
 	)
 	(wire
 		(pts
@@ -9211,6 +9854,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 236.22) (xy 139.7 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc6f8c72-cf51-4a18-9325-35fbc90bbd9a")
+	)
+	(wire
+		(pts
 			(xy 271.78 157.48) (xy 264.668 157.48)
 		)
 		(stroke
@@ -9321,6 +9974,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 241.3) (xy 137.16 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dad0a9f3-38b5-4972-9749-242c763a8fe5")
+	)
+	(wire
+		(pts
 			(xy 163.83 90.932) (xy 165.735 90.932)
 		)
 		(stroke
@@ -9418,6 +10081,16 @@
 			(type default)
 		)
 		(uuid "e1bfbf65-7e07-46a5-82d5-49850bdcbc94")
+	)
+	(wire
+		(pts
+			(xy 144.78 238.76) (xy 137.16 238.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1eecc4f-cb3e-4ccb-bdfc-f1680c211c81")
 	)
 	(wire
 		(pts
@@ -9884,6 +10557,17 @@
 		)
 		(uuid "761c1df3-eecb-40fa-ac0b-0e7820dcd541")
 	)
+	(text "To test ADMT4000:\nscrape silkscreen from footprint pads\nremove TLE5012B\nremove Q1&Q2 and short AUX_3.3 with 3.3V. \n"
+		(exclude_from_sim no)
+		(at 93.98 218.44 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+			(justify left)
+		)
+		(uuid "853ad584-7248-405e-8f1f-0a237dcc80f7")
+	)
 	(text "Limits current in \ncase of overvoltage"
 		(exclude_from_sim no)
 		(at 249.428 128.524 0)
@@ -9997,6 +10681,28 @@
 		)
 		(uuid "475dbe78-ffad-4831-93e2-34cc97616a38")
 	)
+	(label "R30"
+		(at 86.36 231.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "4bb9a49b-fd71-4c85-ae3b-7533afc62e14")
+	)
+	(label "R23"
+		(at 86.36 236.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "5068ec9d-f008-49dd-b542-ec2d97d34171")
+	)
 	(label "TLE_DATA_R"
 		(at 39.37 167.64 180)
 		(fields_autoplaced yes)
@@ -10019,6 +10725,39 @@
 		)
 		(uuid "5dc983f9-b799-429e-b2f1-1d78f67e3826")
 	)
+	(label "R30"
+		(at 144.78 241.3 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+			(justify right bottom)
+		)
+		(uuid "6c761a4e-2b1b-4dbf-83b6-035bacfdae7f")
+	)
+	(label "R30"
+		(at 144.78 231.14 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+			(justify right bottom)
+		)
+		(uuid "73cb03a0-5eb1-4213-a489-85c60f63f8e9")
+	)
+	(label "AUX_ON"
+		(at 144.78 251.46 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a275391e-08b2-43b9-856c-9e06a527029e")
+	)
 	(label "R23"
 		(at 215.9 83.82 0)
 		(fields_autoplaced yes)
@@ -10031,6 +10770,17 @@
 		(uuid "a2823f00-7082-45fc-bfe7-350c8d7b55f6")
 	)
 	(label "R30"
+		(at 144.78 238.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+			(justify right bottom)
+		)
+		(uuid "ae2924ea-5de6-4e2f-bba7-6fe3cbf92dda")
+	)
+	(label "R30"
 		(at 254 132.08 0)
 		(fields_autoplaced yes)
 		(effects
@@ -10040,6 +10790,17 @@
 			(justify left bottom)
 		)
 		(uuid "b7990323-32aa-4ca3-8c38-b5893e51e35c")
+	)
+	(label "R30"
+		(at 86.36 233.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "b94481ee-98f6-4a06-94d3-5fd4a41fcfd4")
 	)
 	(label "LSS_A_OP-"
 		(at 153.67 107.442 180)
@@ -10062,6 +10823,17 @@
 			(justify left bottom)
 		)
 		(uuid "d157c87a-162c-4526-a013-15cc0613b878")
+	)
+	(label "TLE_DATA_R"
+		(at 144.78 248.92 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.6 0.6)
+			)
+			(justify right bottom)
+		)
+		(uuid "d8bd5702-b081-4d47-98a8-ed7c21a57380")
 	)
 	(label "AUX_ON"
 		(at 19.05 232.41 180)
@@ -10511,6 +11283,50 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TLE_CSQ"
+		(shape input)
+		(at 137.16 243.84 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "347c618b-a550-494a-8311-60c980ae591c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 148.0675 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TLE_SCK"
+		(shape input)
+		(at 137.16 246.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3795f722-4827-4b34-97a6-c48e281d9f51")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 148.007 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -11133,6 +11949,28 @@
 			)
 		)
 	)
+	(global_label "AUX_3.3"
+		(shape passive)
+		(at 83.82 238.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9ebde839-39f1-4f32-ada8-6c34f1afd0b0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 74.4055 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "LSS_A_ADC"
 		(shape input)
 		(at 266.7 53.34 0)
@@ -11549,6 +12387,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "AUX_3.3"
+		(shape passive)
+		(at 139.7 236.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "de5e7167-6537-4f6b-a6f4-65371aa7b254")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.1939 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -16002,6 +16862,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 137.16 228.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "154ae50a-7bf1-40e4-a0c8-177956f6bbb0")
+		(property "Reference" "#PWR018"
+			(at 143.51 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5c4959e0-025d-467b-928d-74dc8d0f5d28")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 149.86 96.012 270)
 		(unit 1)
@@ -17601,6 +18528,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 88.9 246.38 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1ca25ea5-5a68-4881-9776-c057e12a7fad")
+		(property "Reference" "#PWR090"
+			(at 82.55 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "36420198-7aa0-4e07-9b64-b7a813ae57ba")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR090")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 47.752 77.978 0)
 		(unit 1)
@@ -18563,6 +19557,73 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 256.54 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "207085a1-f7e1-49d0-9b94-b03e6911d0b5")
+		(property "Reference" "#PWR0104"
+			(at 143.51 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b9a9683b-073a-4a33-9339-bfa907524de0")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -19864,6 +20925,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 78.74 228.6 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2cdb4749-1c48-4e7c-bcd0-ad27d0fdcc17")
+		(property "Reference" "#PWR015"
+			(at 72.39 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 73.66 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 78.74 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6095ea42-fd38-400e-ba61-29c77dd62ea3")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 209.804 21.336 0)
 		(unit 1)
@@ -20248,6 +21376,73 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 254 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3015dd08-7d5b-460d-99ec-85e875958040")
+		(property "Reference" "#PWR0102"
+			(at 143.51 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "155b0b54-a69f-4dcf-a82f-a23d5a96e2f3")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -28668,6 +29863,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 88.9 256.54 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "707c533a-3e0c-48f5-9995-25cf5d44166f")
+		(property "Reference" "#PWR0103"
+			(at 82.55 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "70ff2f95-9450-452c-a812-7cd0df1efbbf")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 129.54 180.34 0)
 		(unit 1)
@@ -28987,6 +30249,192 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ADMT4000:ADMT4000BRUZAB-R7")
+		(at 88.9 228.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "737f5408-f091-4997-b62b-d2b83e89ee4e")
+		(property "Reference" "U9"
+			(at 113.03 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ADMT4000BRUZAB-R7"
+			(at 113.03 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TSSOP-24_4.4x7.8mm_P0.65mm"
+			(at 133.35 323.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/ADMT4000/datasheet"
+			(at 133.35 423.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "True Power-On Multiturn Sensor"
+			(at 88.9 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "1.2"
+			(at 133.35 623.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "584-ADMT4000BRUZABR7"
+			(at 133.35 723.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Analog-Devices/ADMT4000BRUZAB-R7?qs=%252BXxaIXUDbq1WEnRjojBYdg%3D%3D"
+			(at 133.35 823.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Analog Devices"
+			(at 133.35 923.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ADMT4000BRUZAB-R7"
+			(at 133.35 1023.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a82c8880-73df-42b7-b0a7-f3d4975c6b92")
+		)
+		(pin "23"
+			(uuid "463ef168-fa9b-4e29-a6a5-3093a97ec235")
+		)
+		(pin "24"
+			(uuid "05f8814e-36be-4582-a698-43b0df4c505c")
+		)
+		(pin "1"
+			(uuid "155a9e39-fa9e-4259-ad01-8e7818d1755a")
+		)
+		(pin "20"
+			(uuid "d45a9e2a-99e1-4c78-b779-7a8b928226f7")
+		)
+		(pin "5"
+			(uuid "1c8eaaf9-dbee-440a-bcf9-f942d2cbfd59")
+		)
+		(pin "21"
+			(uuid "07d4b280-2884-4b6e-b930-31b9c6efba7f")
+		)
+		(pin "7"
+			(uuid "4796113c-3700-4df2-9d68-fc4d772667ca")
+		)
+		(pin "4"
+			(uuid "2a2cf61b-51dc-43dd-a786-cf50d3fc6e66")
+		)
+		(pin "10"
+			(uuid "0d9b11c6-6b53-4d76-a4a2-cc4a2824baf0")
+		)
+		(pin "18"
+			(uuid "9189416a-212c-4efe-bcac-f258c920570c")
+		)
+		(pin "12"
+			(uuid "951fec73-805d-447c-8fd6-9e6e9c5f0cd7")
+		)
+		(pin "13"
+			(uuid "7f3f1699-3a6b-4740-84db-815a47d9a404")
+		)
+		(pin "16"
+			(uuid "c81ce355-3cc6-4efd-9489-c0ad412b90ef")
+		)
+		(pin "22"
+			(uuid "340040b3-bdd3-459d-b600-e57e6676a60c")
+		)
+		(pin "17"
+			(uuid "9c651aa5-1814-44d6-8934-50be5bbda5ea")
+		)
+		(pin "15"
+			(uuid "2ac0b563-b4c6-41ea-8465-0bf979b40863")
+		)
+		(pin "14"
+			(uuid "1aeca4ea-b7c4-43af-83f5-dd435461fc3c")
+		)
+		(pin "3"
+			(uuid "711052dd-d836-45aa-b85a-73877b3e991b")
+		)
+		(pin "11"
+			(uuid "c104192d-729c-4610-8d98-0f690134c8b2")
+		)
+		(pin "19"
+			(uuid "38fa5f96-68ee-4716-b130-ab02fa006b21")
+		)
+		(pin "6"
+			(uuid "90c3999e-dac3-49c3-925f-432d1677d817")
+		)
+		(pin "8"
+			(uuid "c8235ed2-7175-46c5-bd64-9c1a0aecec7a")
+		)
+		(pin "9"
+			(uuid "d1d99952-9881-48c5-8c2e-8b35b3e9b71c")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "U9")
 					(unit 1)
 				)
 			)
@@ -29577,6 +31025,73 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 88.9 251.46 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7ba36c47-1f90-473b-91f0-3bb01556fbb9")
+		(property "Reference" "#PWR0100"
+			(at 82.55 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec210535-4705-4a1a-9951-867aa4e2f4e2")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -34094,6 +35609,73 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR081")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 88.9 243.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "950af0c9-0619-4cce-a97b-e8f13d2067aa")
+		(property "Reference" "#PWR073"
+			(at 82.55 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2e957f9a-968d-463b-a501-9fbbd04c90b2")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -40787,6 +42369,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 88.9 254 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "be4918eb-508c-4a17-a6ff-f5666068837e")
+		(property "Reference" "#PWR0101"
+			(at 82.55 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5a31858e-32e3-4703-8abb-7dfcfbbfac82")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_FET:BSS84")
 		(at 210.82 83.82 180)
 		(unit 1)
@@ -44872,6 +46521,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 88.9 241.3 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d8250154-924a-4d57-908a-2d2701da249d")
+		(property "Reference" "#PWR072"
+			(at 82.55 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4bdcdad9-e2b7-4ebc-94b6-2e38c8225322")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 208.28 78.74 0)
 		(unit 1)
@@ -46367,6 +48083,73 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 88.9 248.92 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3af0f8a-1f4c-4c9e-bc96-d7d3ee61dff8")
+		(property "Reference" "#PWR099"
+			(at 82.55 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "de8910af-769f-478f-8813-2a3db5d4630a")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -48306,6 +50089,84 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 81.28 228.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f222a727-ba94-4245-8ec8-08620d6584b4")
+		(property "Reference" "C14"
+			(at 85.725 227.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 83.82 231.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 81.28 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
+			(at 81.28 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1525"
+			(at 81.915 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2d57ae8e-2b57-497a-a33b-39dfffd479ac")
+		)
+		(pin "2"
+			(uuid "586f3919-fbc0-4910-b6ae-627c7111d5a5")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "C14")
 					(unit 1)
 				)
 			)

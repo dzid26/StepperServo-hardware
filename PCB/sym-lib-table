@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "tle5012")(type "Legacy")(uri "${KIPRJMOD}/TLE5012/TLE5012.lib")(options "")(descr ""))
   (lib (name "Connector_JST_SMD")(type "Legacy")(uri "${KIPRJMOD}/Connector_JST/Connector_JST.lib")(options "")(descr ""))
+  (lib (name "ADMT4000")(type "KiCad")(uri "${KIPRJMOD}/ADMT4000/ADMT4000BRUZAB-R7.kicad_sym")(options "")(descr ""))
 )

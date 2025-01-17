@@ -8144,6 +8144,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 48.26) (xy 205.74 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b8efbb6-a69a-46b5-89a5-b35843f0a821")
+	)
+	(wire
+		(pts
 			(xy 168.91 98.552) (xy 173.228 98.552)
 		)
 		(stroke
@@ -8704,7 +8714,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 45.72) (xy 195.58 45.72)
+			(xy 191.77 45.72) (xy 195.58 45.72)
 		)
 		(stroke
 			(width 0)
@@ -10364,7 +10374,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 50.8) (xy 205.74 55.88)
+			(xy 205.74 53.34) (xy 205.74 55.88)
 		)
 		(stroke
 			(width 0)
@@ -10513,9 +10523,9 @@
 		)
 		(uuid "5c23fafd-ed17-4786-a1c5-7b7c1880492f")
 	)
-	(text "ESD/filters"
+	(text "ESD"
 		(exclude_from_sim no)
-		(at 193.04 60.96 0)
+		(at 210.82 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10602,6 +10612,17 @@
 			(justify left bottom)
 		)
 		(uuid "8cd393fa-c170-43af-a78b-084d43325de5")
+	)
+	(text "ESD"
+		(exclude_from_sim no)
+		(at 205.74 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9609c9f2-82ae-40aa-a66e-f4d447aed79d")
 	)
 	(text "Reverse polarity\nprotection and reverse current\ninhibition when not powered"
 		(exclude_from_sim no)
@@ -14741,8 +14762,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1859af1f-466f-4131-ae13-d2e8102bab5f")
-		(property "Reference" "SW3"
-			(at 200.914 72.898 0)
+		(property "Reference" "F2"
+			(at 199.39 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14805,7 +14826,7 @@
 		(instances
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "SW3")
+					(reference "F2")
 					(unit 1)
 				)
 			)
@@ -18444,7 +18465,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 193.04 45.72 0)
+		(at 191.77 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18452,7 +18473,7 @@
 		(dnp no)
 		(uuid "51d8e142-99c5-4d5e-8d4d-ed69c6d0f392")
 		(property "Reference" "#PWR017"
-			(at 193.04 49.53 0)
+			(at 191.77 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18461,7 +18482,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 193.666 42.0458 0)
+			(at 192.396 42.0458 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18469,7 +18490,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 45.72 0)
+			(at 191.77 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18478,7 +18499,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 45.72 0)
+			(at 191.77 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18487,7 +18508,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 193.04 45.72 0)
+			(at 191.77 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24540,8 +24561,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bd17a2b7-5991-4a77-85b7-af7d6b51d36f")
-		(property "Reference" "SW2"
-			(at 198.374 54.864 0)
+		(property "Reference" "F1"
+			(at 196.85 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24604,7 +24625,7 @@
 		(instances
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
-					(reference "SW2")
+					(reference "F1")
 					(unit 1)
 				)
 			)
@@ -25343,7 +25364,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 205.74 48.26 180)
+		(at 205.74 50.8 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25351,7 +25372,7 @@
 		(dnp no)
 		(uuid "cb5ea8d2-801d-4399-8d90-e7c293529253")
 		(property "Reference" "C16"
-			(at 210.058 46.482 0)
+			(at 210.058 49.022 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25360,7 +25381,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 210.82 50.038 0)
+			(at 205.74 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25369,7 +25390,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 205.74 48.26 0)
+			(at 205.74 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25378,7 +25399,7 @@
 			)
 		)
 		(property "Datasheet" "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL05B104KO5NNN"
-			(at 205.74 48.26 0)
+			(at 205.74 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25387,7 +25408,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 205.74 48.26 0)
+			(at 205.74 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25396,7 +25417,7 @@
 			)
 		)
 		(property "LCSC" "C1525"
-			(at 201.93 49.5301 0)
+			(at 201.93 52.0701 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28054,7 +28075,7 @@
 		(dnp no)
 		(uuid "f0357580-9a34-4bba-bb15-36a946cdaf70")
 		(property "Reference" "C18"
-			(at 208.28 68.072 90)
+			(at 214.63 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28063,7 +28084,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 209.804 69.342 90)
+			(at 210.82 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)

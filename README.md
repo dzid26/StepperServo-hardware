@@ -3,9 +3,9 @@ https://github.com/dzid26/StepperServoCAN
 
 # StepperServo-hardware
 Limits:
-- (1s) 3.3A peak stall current per phase
-- 3.3A RMS combined motor continuous current (both phases commutating with 3.3A peak)
-- 30V supply voltage (suitable for 12V and 24V systems)
+- 3.3A peak stall current per phase for 5sec
+- 3.3A RMS combined motor continuous current for >1min (i.e. rotating under load but not stalled)
+- 32V supply voltage
 
 Features:
 - Intended to drive a stepper motor

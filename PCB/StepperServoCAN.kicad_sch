@@ -7702,6 +7702,14 @@
 		(at 93.218 181.61)
 		(uuid "64853c79-8667-40e8-824b-4bbe6a24c2f3")
 	)
+	(no_connect
+		(at 43.18 30.48)
+		(uuid "d4ce9ff8-f6ae-43f3-bed3-05072cb04d20")
+	)
+	(no_connect
+		(at 30.48 30.48)
+		(uuid "faa80ffb-659b-4f25-85f6-ddc00d6fd30a")
+	)
 	(wire
 		(pts
 			(xy 98.044 74.168) (xy 102.87 74.168)
@@ -9754,16 +9762,6 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 30.48) (xy 43.18 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c7dee0e7-f5be-4983-b2ec-802b8a0c8aa6")
-	)
-	(wire
-		(pts
 			(xy 30.607 92.71) (xy 32.766 92.71)
 		)
 		(stroke
@@ -10423,6 +10421,16 @@
 		)
 		(uuid "06a26967-2679-4534-a12b-215aa0b10802")
 	)
+	(text "severed\ndue to gpio\ncurrent leak"
+		(exclude_from_sim no)
+		(at 36.83 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "15055a7a-3695-401f-aa51-634989f73326")
+	)
 	(text "42mA"
 		(exclude_from_sim no)
 		(at 234.315 97.028 0)
@@ -10693,7 +10701,6 @@
 	)
 	(label "AUX_ON"
 		(at 232.9338 89.9609 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10704,7 +10711,6 @@
 	)
 	(label "R30"
 		(at 86.36 231.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -10715,7 +10721,6 @@
 	)
 	(label "R23"
 		(at 86.36 236.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -10726,7 +10731,6 @@
 	)
 	(label "TLE_DATA_R"
 		(at 39.37 167.64 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.6 0.6)
@@ -10737,7 +10741,6 @@
 	)
 	(label "TLE_DATA_R"
 		(at 19.05 229.87 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.6 0.6)
@@ -10748,7 +10751,6 @@
 	)
 	(label "R30"
 		(at 144.78 241.3 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -10759,7 +10761,6 @@
 	)
 	(label "R30"
 		(at 144.78 231.14 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -10770,7 +10771,6 @@
 	)
 	(label "AUX_ON"
 		(at 144.78 251.46 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10781,7 +10781,6 @@
 	)
 	(label "R23"
 		(at 215.9 83.82 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -10792,7 +10791,6 @@
 	)
 	(label "R30"
 		(at 144.78 238.76 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -10803,7 +10801,6 @@
 	)
 	(label "R30"
 		(at 254 132.08 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -10814,7 +10811,6 @@
 	)
 	(label "R30"
 		(at 86.36 233.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -10825,7 +10821,6 @@
 	)
 	(label "LSS_A_OP-"
 		(at 153.67 107.442 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10836,7 +10831,6 @@
 	)
 	(label "boot0"
 		(at 226.06 30.48 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10847,7 +10841,6 @@
 	)
 	(label "TLE_DATA_R"
 		(at 144.78 248.92 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.6 0.6)
@@ -10858,7 +10851,6 @@
 	)
 	(label "AUX_ON"
 		(at 19.05 232.41 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10869,7 +10861,6 @@
 	)
 	(label "+3.3_Ext"
 		(at 264.16 118.11 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -10880,7 +10871,6 @@
 	)
 	(label "LSS_B_OP-"
 		(at 153.67 142.24 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11686,7 +11676,7 @@
 	)
 	(global_label "DCDC_SHUTDOWN"
 		(shape input)
-		(at 40.64 30.48 180)
+		(at 30.48 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11696,7 +11686,7 @@
 		)
 		(uuid "5e5f95d6-3f64-4fa9-b61d-14dc5ba10b94")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.3867 30.48 0)
+			(at 11.2267 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)

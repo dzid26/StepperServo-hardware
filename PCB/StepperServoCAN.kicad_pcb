@@ -27996,6 +27996,17 @@
 			)
 			(uuid "d75e807a-4352-48b4-ae2d-de7b41cfa465")
 		)
+		(model "../Case/export/StepperServoCAN_v0.4-Case.step"
+			(offset
+				(xyz -45.4 8.1 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "F.Cu")

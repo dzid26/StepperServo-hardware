@@ -71516,7 +71516,7 @@
 	(footprint "Diode_SMD:D_SMC"
 		(layer "F.Cu")
 		(uuid "e78d86c7-12ff-4918-a8bb-2f9a1d99b421")
-		(at 109.77 84.6375 90)
+		(at 109.73 84.6375 90)
 		(descr "Diode SMC (DO-214AB)")
 		(tags "Diode SMC (DO-214AB)")
 		(property "Reference" "D5"

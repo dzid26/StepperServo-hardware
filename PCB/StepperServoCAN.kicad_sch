@@ -28613,7 +28613,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-8_3.0x3.0mm_P0.65mm"
+		(property "Footprint" "Package_SO:VSSOP-8_3x3mm_P0.65mm"
 			(at 38.1 246.38 0)
 			(effects
 				(font

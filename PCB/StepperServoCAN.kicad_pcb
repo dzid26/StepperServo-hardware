@@ -7,6 +7,9 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(rev "v0.5")
+	)
 	(layers
 		(0 "F.Cu" mixed)
 		(4 "In1.Cu" jumper)
@@ -87538,7 +87541,7 @@
 			(justify right)
 		)
 	)
-	(gr_text "StepperServoCAN\nv0.4"
+	(gr_text "StepperServoCAN\n${REVISION}"
 		(at 74.63 98.51 90)
 		(layer "F.SilkS")
 		(uuid "b88ef673-ab1b-40c3-acd6-9e799b7c51b4")
@@ -87747,7 +87750,7 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "StepperServoCAN v0.4"
+	(gr_text "StepperServoCAN ${REVISION}"
 		(at 96.65 105.01 0)
 		(layer "B.SilkS" knockout)
 		(uuid "5c6a0121-9a46-4cce-8e79-87809ff35a8c")

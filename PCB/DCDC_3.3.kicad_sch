@@ -284,157 +284,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:FerriteBead_Small"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "FB"
-				(at 1.905 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "FerriteBead_Small"
-				(at 1.905 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Ferrite bead, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "L ferrite bead inductor filter"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "FerriteBead_Small_0_1"
-				(polyline
-					(pts
-						(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.889) (xy 0 1.2954)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy 0 -0.7874)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "FerriteBead_Small_1_1"
-				(pin passive line
-					(at 0 2.54 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -1783,7 +1632,17 @@
 		)
 		(uuid "3d074004-7c4d-49f5-9d2e-3d2edffd2f12")
 	)
-	(text "Calculate resistors for undervoltage cutout:\nI_{1} = 1uA\nI_{Hyst}=3uA\nV_{Ena} = 1.25V  (1.05...1.38)\n\nAssume typical V_{Ena} = 1.2V:\nR1 = (V_{start} - V_{stop})/I_{Hyst}\nR1 = (7.1V - 6.5) / 3uA = 200kOhm = (more like 100k in real world)\nR2 = V_{Ena} / ((V_{start} - V_{Ena})/R1+I_{1})\nR2_{rounded} = 1.2V / ((7.1V-1.2V)/100kOhm + 1uA) = 20kOhm\n\nThere is a didoe in series\nD1_V{F}_ON = 0.8\nD1_V{F}_OFF = 0.5\nso actual threshold is:\nV_{stop_real} = V_{stop}+D1_V{F}_ON\nV_{start_real} = V_{start}+D1_V{F}_OFF\nV_{stop_real} = 6.5 + 0.8 = 7.3V\nV_{start_real} = 7.1 + 0.4 = 7.5V"
+	(text "1N4148WS can be replaced with schottky to reduce bom.  \n1N5819WS will leak <1mA at high temp which \npushes against internal esd protection of LV2842 \nand as expected results in -0.4V on BATT_Diode"
+		(exclude_from_sim no)
+		(at 103.378 60.452 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3d47bfc9-baa0-41ed-8233-f3324ae80a1a")
+	)
+	(text "Calculate resistors for undervoltage cutout:\nI_{1} = 1uA\nI_{Hyst}=3uA\nV_{Ena} = 1.25V  (1.05...1.38)\n\nAssume typical V_{Ena} = 1.2V:\nR1 = (V_{start} - V_{stop})/I_{Hyst}\nR1 = (11V - 9) / 3uA = 100kOhm // don't care about hysteresis anyway\nR2 = V_{Ena} / ((V_{start} - V_{Ena})/R1+I_{1})\nR2_{rounded} = 1.2V / ((7.1V-1.2V)/100kOhm + 1uA) = 20kOhm\n\nThere is a diode in series\nD1_V{F}_ON = 0.8\nD1_V{F}_OFF = 0.5\nso actual threshold is:\nV_{stop_real} = V_{stop}+D1_V{F}_ON\nV_{start_real} = V_{start}+D1_V{F}_OFF\nV_{stop_real} = 6.5 + 0.8 = 7.3V\nV_{start_real} = 7.1 + 0.4 = 7.5V"
 		(exclude_from_sim no)
 		(at 38.1 165.1 0)
 		(effects
@@ -1960,6 +1819,16 @@
 			(type default)
 		)
 		(uuid "12650479-3014-48be-9183-654cd3cdee61")
+	)
+	(wire
+		(pts
+			(xy 53.34 81.28) (xy 58.42 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ccc1c02-35b7-4d8e-810d-48848de4844e")
 	)
 	(wire
 		(pts
@@ -2896,82 +2765,6 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
 					(reference "D19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:FerriteBead_Small")
-		(at 55.88 81.28 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "508a9bb6-5190-428d-88cd-2fc1c228cbd4")
-		(property "Reference" "FB2"
-			(at 55.245 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "FerriteBead"
-			(at 55.245 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
-			(at 55.88 83.058 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2109180930_Sunlord-GZ1608D601TF_C1002.pdf"
-			(at 55.88 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "This one is 200mA which is way above the limit because at 12V current is 4x smaller"
-			(at 55.88 81.28 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C1002"
-			(at 55.88 81.28 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a1b10eef-5fb0-4fb6-bc53-77a197c1cf89")
-		)
-		(pin "2"
-			(uuid "f81cc4ad-2707-4973-a667-db703eccbde2")
-		)
-		(instances
-			(project "StepperServoCAN"
-				(path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
-					(reference "FB2")
 					(unit 1)
 				)
 			)

@@ -2555,7 +2555,7 @@
 				)
 			)
 		)
-		(property "Value" "100uH 250mA"
+		(property "Value" "22uH 250mA"
 			(at 168.91 81.28 0)
 			(effects
 				(font
@@ -2563,7 +2563,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Sunlord_SWPA3012S"
+		(property "Footprint" "Inductor_SMD:L_Cenker_CKCS252010"
 			(at 168.91 83.82 0)
 			(effects
 				(font
@@ -2572,7 +2572,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810061014_cjiang-Changjiang-Microelectronics-Tech-FNR4030S221MT_C167899.pdf"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8590903698845884416"
 			(at 168.91 83.82 0)
 			(effects
 				(font
@@ -2590,7 +2590,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C167741"
+		(property "LCSC" "C5832391"
 			(at 168.91 83.82 0)
 			(effects
 				(font

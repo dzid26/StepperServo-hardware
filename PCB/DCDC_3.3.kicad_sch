@@ -1358,6 +1358,304 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Transistor_FET:2N7002"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "2N7002"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "N-Channel Switching MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "2N7002_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "2N7002_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_names
@@ -1610,8 +1908,8 @@
 		)
 	)
 	(rectangle
-		(start 35.56 110.744)
-		(end 127 169.672)
+		(start 21.59 110.744)
+		(end 139.7 185.42)
 		(stroke
 			(width 0)
 			(type default)
@@ -1620,6 +1918,36 @@
 			(type none)
 		)
 		(uuid b3710f09-5366-40f6-9ce8-0375d0577c00)
+	)
+	(text "R2"
+		(exclude_from_sim no)
+		(at 112.268 138.684 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "33a33a8f-c252-49df-9b33-ed5cf6c94928")
+	)
+	(text "R3"
+		(exclude_from_sim no)
+		(at 121.92 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "36d64db7-29a5-4d53-ba25-39ac6afba273")
+	)
+	(text "R1"
+		(exclude_from_sim no)
+		(at 105.664 125.476 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3b55ca53-59d9-49a0-944c-40f5b1b2e9db")
 	)
 	(text "(3.3-1.6)/5.6=0.3mA"
 		(exclude_from_sim no)
@@ -1644,7 +1972,7 @@
 	)
 	(text "Calculate resistors for undervoltage cutout:\nI_{1} = 1uA\nI_{Hyst}=3uA\nV_{Ena} = 1.25V  (1.05...1.38)\n\nAssume typical V_{Ena} = 1.2V:\nR1 = (V_{start} - V_{stop})/I_{Hyst}\nR1 = (11V - 9) / 3uA = 100kOhm // don't care about hysteresis anyway\nR2 = V_{Ena} / ((V_{start} - V_{Ena})/R1+I_{1})\nR2_{rounded} = 1.2V / ((7.1V-1.2V)/100kOhm + 1uA) = 20kOhm\n\nThere is a diode in series\nD1_V{F}_ON = 0.8\nD1_V{F}_OFF = 0.5\nso actual threshold is:\nV_{stop_real} = V_{stop}+D1_V{F}_ON\nV_{start_real} = V_{start}+D1_V{F}_OFF\nV_{stop_real} = 6.5 + 0.8 = 7.3V\nV_{start_real} = 7.1 + 0.4 = 7.5V"
 		(exclude_from_sim no)
-		(at 38.1 165.1 0)
+		(at 25.654 176.276 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1666,7 +1994,7 @@
 	)
 	(text "Remove R49 to force always enable"
 		(exclude_from_sim no)
-		(at 101.6 160.02 0)
+		(at 102.616 172.974 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1719,6 +2047,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "56cd00f2-49f7-47a3-b689-e3fd3542eca2")
+	)
+	(junction
+		(at 109.22 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "65875aad-02e2-42f6-99f7-b2d81a017f0f")
 	)
 	(junction
 		(at 83.82 81.28)
@@ -1775,6 +2109,12 @@
 		(uuid "e8d76a41-bc35-48e2-8539-7af677a91c4b")
 	)
 	(junction
+		(at 114.3 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ea187d0f-2946-469e-b24d-bd600f55f927")
+	)
+	(junction
 		(at 71.12 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1812,6 +2152,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.9 138.43) (xy 92.71 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e08a0bd-2fb7-410a-9d3b-7b5dadbf4aca")
+	)
+	(wire
+		(pts
 			(xy 187.96 83.82) (xy 210.82 83.82)
 		)
 		(stroke
@@ -1819,6 +2169,16 @@
 			(type default)
 		)
 		(uuid "12650479-3014-48be-9183-654cd3cdee61")
+	)
+	(wire
+		(pts
+			(xy 100.33 129.54) (xy 100.33 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d92336d-c951-49bb-9261-e2c1cfddfcaa")
 	)
 	(wire
 		(pts
@@ -1859,6 +2219,16 @@
 			(type default)
 		)
 		(uuid "333e6966-7d04-4446-87db-305f27ee2fe1")
+	)
+	(wire
+		(pts
+			(xy 100.33 143.51) (xy 100.33 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f566d65-814e-470c-baab-8678c619a4ad")
 	)
 	(wire
 		(pts
@@ -1922,16 +2292,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 133.35) (xy 109.22 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b53ca57-3af0-4df8-932e-95873593a315")
-	)
-	(wire
-		(pts
 			(xy 210.82 91.44) (xy 210.82 96.52)
 		)
 		(stroke
@@ -1962,6 +2322,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 129.54) (xy 109.22 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73f9858b-888f-420f-b55f-02c3bc8e939e")
+	)
+	(wire
+		(pts
 			(xy 114.3 86.36) (xy 114.3 129.54)
 		)
 		(stroke
@@ -1969,16 +2339,6 @@
 			(type default)
 		)
 		(uuid "7e005868-2d1e-465c-b18d-92dbf2db31af")
-	)
-	(wire
-		(pts
-			(xy 104.14 129.54) (xy 109.22 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82e2fb9f-4084-474d-a7e4-b3d05799c1c6")
 	)
 	(wire
 		(pts
@@ -2042,6 +2402,16 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 129.54) (xy 119.38 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a08eb31c-38df-4f54-ad1a-b8e44dab3aad")
+	)
+	(wire
+		(pts
 			(xy 109.22 129.54) (xy 109.22 128.27)
 		)
 		(stroke
@@ -2082,6 +2452,26 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 147.32) (xy 109.22 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbfdc727-5f45-4195-8ba3-d77676ac1be0")
+	)
+	(wire
+		(pts
+			(xy 109.22 146.05) (xy 109.22 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0068016-fe86-4e76-a7a3-fb44f2dc3b46")
+	)
+	(wire
+		(pts
 			(xy 71.12 81.28) (xy 83.82 81.28)
 		)
 		(stroke
@@ -2089,6 +2479,26 @@
 			(type default)
 		)
 		(uuid "c0e1c1ab-2e4c-4183-94d7-00c8a3e5f2e6")
+	)
+	(wire
+		(pts
+			(xy 100.33 129.54) (xy 109.22 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6c2c1e5-aa38-44cf-bf51-a52dd68bebc9")
+	)
+	(wire
+		(pts
+			(xy 100.33 147.32) (xy 109.22 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6ddf3de-13a0-43e9-a302-f697cccf10df")
 	)
 	(wire
 		(pts
@@ -2102,13 +2512,13 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 148.59) (xy 109.22 151.13)
+			(xy 124.46 129.54) (xy 129.54 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d49f8faa-8d43-4e69-8dca-7d9c400d4e3e")
+		(uuid "ce1c1ebf-bbf1-44de-ad48-b92bb2de5339")
 	)
 	(wire
 		(pts
@@ -2129,6 +2539,17 @@
 			(justify left bottom)
 		)
 		(uuid "f53100e8-baae-46fb-87d7-c8191c1801f5")
+	)
+	(hierarchical_label "3.3V"
+		(shape input)
+		(at 129.54 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0ee97bb8-08e3-430a-a8f3-9ac693b8cc64")
 	)
 	(hierarchical_label "Vin"
 		(shape input)
@@ -2152,9 +2573,9 @@
 		)
 		(uuid "56260ebb-4ff6-4423-a5f6-c209c62398f7")
 	)
-	(hierarchical_label "Enable"
+	(hierarchical_label "~{Enable}"
 		(shape input)
-		(at 104.14 129.54 180)
+		(at 88.9 138.43 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2165,7 +2586,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 109.22 137.16 180)
+		(at 109.22 134.62 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2173,15 +2594,15 @@
 		(dnp no)
 		(uuid "065078f9-b2a4-41a9-ba0e-c3a5fa58f5f3")
 		(property "Reference" "R49"
-			(at 111.125 137.16 90)
+			(at 111.125 134.62 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "20k"
-			(at 109.22 137.16 90)
+		(property "Value" "10k"
+			(at 109.22 134.62 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2189,7 +2610,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 110.998 137.16 90)
+			(at 110.998 134.62 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2198,7 +2619,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 109.22 137.16 0)
+			(at 109.22 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2207,7 +2628,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 109.22 137.16 0)
+			(at 109.22 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2215,8 +2636,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25765"
-			(at 111.125 137.16 0)
+		(property "LCSC" "C25744"
+			(at 111.125 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3236,7 +3657,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 109.22 144.78 180)
+		(at 109.22 142.24 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3244,15 +3665,15 @@
 		(dnp no)
 		(uuid "8b6e4ae5-6382-4648-b1e7-8db8875a0b0c")
 		(property "Reference" "R3"
-			(at 111.76 144.78 90)
+			(at 111.76 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "0"
-			(at 109.22 144.78 90)
+		(property "Value" "2.2k"
+			(at 109.22 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3260,7 +3681,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 110.998 144.78 90)
+			(at 110.998 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3269,7 +3690,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 109.22 144.78 0)
+			(at 109.22 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3278,7 +3699,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 109.22 144.78 0)
+			(at 109.22 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3286,8 +3707,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
-			(at 106.68 145.415 0)
+		(property "LCSC" "C25879"
+			(at 106.68 142.875 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3383,6 +3804,82 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
 					(reference "C39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 121.92 129.54 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "91157c8b-1402-46f7-a041-d193a929709f")
+		(property "Reference" "R40"
+			(at 121.666 127.762 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "51k"
+			(at 121.92 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 121.92 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 121.92 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 121.92 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25794"
+			(at 121.92 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6762c224-4a90-4bca-bbfa-7b9801acd307")
+		)
+		(pin "2"
+			(uuid "7d2bfa37-6142-4604-9382-07022cd945db")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -3667,7 +4164,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 109.22 151.13 0)
+		(at 109.22 148.59 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3675,7 +4172,7 @@
 		(dnp no)
 		(uuid "c10d7a01-e45e-4692-a80f-f1c55be684b9")
 		(property "Reference" "#PWR098"
-			(at 109.22 157.48 0)
+			(at 109.22 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3684,7 +4181,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 110.49 153.67 0)
+			(at 110.49 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3694,7 +4191,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 109.22 151.13 0)
+			(at 109.22 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3703,7 +4200,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 151.13 0)
+			(at 109.22 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3712,7 +4209,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 109.22 151.13 0)
+			(at 109.22 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3945,6 +4442,24 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" "D"
+			(at 62.23 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=A 2=K"
+			(at 62.23 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c8279064-51d4-4d2c-a777-250e19630ceb")
 		)
@@ -4031,6 +4546,90 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
 					(reference "R46")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 97.79 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ff18756e-b0d6-45f4-b37b-58fa386f5673")
+		(property "Reference" "Q4"
+			(at 94.488 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 89.916 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 102.87 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2304140030_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--2N7002_C8545.pdf"
+			(at 97.79 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 97.79 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C8545"
+			(at 97.79 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cf0c7c7d-2390-479a-8e2a-1aac3c5510ad")
+		)
+		(pin "2"
+			(uuid "edbcbcb7-6b93-40ea-a9b9-2d7d1df7229c")
+		)
+		(pin "3"
+			(uuid "ba404327-a883-466e-bf07-9fb7eb5f07b5")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
+					(reference "Q4")
 					(unit 1)
 				)
 			)

@@ -7230,16 +7230,6 @@
 		)
 		(uuid "06a26967-2679-4534-a12b-215aa0b10802")
 	)
-	(text "severed\ndue to gpio\ncurrent leak"
-		(exclude_from_sim no)
-		(at 36.83 30.48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "15055a7a-3695-401f-aa51-634989f73326")
-	)
 	(text "42mA"
 		(exclude_from_sim no)
 		(at 234.315 97.028 0)
@@ -7273,7 +7263,7 @@
 		)
 		(uuid "1d377940-d945-418c-9680-5f68bc2eacfc")
 	)
-	(text "v0.1 PA2=Gnd, PA5=flt, PB2=flt\nv0.2 PA2=Gnd, PA5=flt, PB2=gnd\nv0.3 PA2=Gnd, PA5=Gnd, PB2=gnd\nv0.4 PA2=3.3, PA5=Gnd, PB2=gnd"
+	(text "v0.1 PA2=Gnd, PA5=flt, PB2=flt\nv0.2 PA2=Gnd, PA5=flt, PB2=gnd\nv0.3 PA2=Gnd, PA5=Gnd, PB2=gnd\nv0.4 PA2=3.3, PA5=flt, PB2=gnd"
 		(exclude_from_sim no)
 		(at 248.92 172.72 0)
 		(effects
@@ -8093,14 +8083,6 @@
 	(no_connect
 		(at 93.218 181.61)
 		(uuid "64853c79-8667-40e8-824b-4bbe6a24c2f3")
-	)
-	(no_connect
-		(at 43.18 30.48)
-		(uuid "d4ce9ff8-f6ae-43f3-bed3-05072cb04d20")
-	)
-	(no_connect
-		(at 30.48 30.48)
-		(uuid "faa80ffb-659b-4f25-85f6-ddc00d6fd30a")
 	)
 	(wire
 		(pts
@@ -9801,6 +9783,16 @@
 			(type default)
 		)
 		(uuid "a29f87cb-962a-475a-ae0e-119287544e18")
+	)
+	(wire
+		(pts
+			(xy 38.1 30.48) (xy 43.18 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a36abe02-f278-49f9-9b6f-720b9d4c8112")
 	)
 	(wire
 		(pts
@@ -11779,7 +11771,7 @@
 	)
 	(global_label "DCDC_SHUTDOWN"
 		(shape input)
-		(at 30.48 30.48 180)
+		(at 38.1 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11789,7 +11781,7 @@
 		)
 		(uuid "5e5f95d6-3f64-4fa9-b61d-14dc5ba10b94")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 11.2267 30.48 0)
+			(at 18.8467 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27819,7 +27811,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Pad"
+		(property "Value" "3.3"
 			(at 92.964 18.796 0)
 			(effects
 				(font
@@ -29687,9 +29679,9 @@
 				(justify left)
 			)
 		)
-		(pin "Enable" input
+		(pin "~{Enable}" input
 			(at 43.18 30.48 180)
-			(uuid "3ae3aa59-367a-4556-a2fe-c1d0a394c1cd")
+			(uuid "452d8fa3-59bb-490b-9d0b-9ec3438f46a9")
 			(effects
 				(font
 					(size 1.27 1.27)

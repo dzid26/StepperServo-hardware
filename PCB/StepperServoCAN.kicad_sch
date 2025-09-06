@@ -22210,7 +22210,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 258.318 156.718 90)
 			(effects
 				(font
@@ -22237,7 +22237,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1017"
+		(property "LCSC" "C1002"
 			(at 258.318 154.94 90)
 			(effects
 				(font

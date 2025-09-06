@@ -5262,6 +5262,397 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Power_Protection:TVS3300DRV"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 2.54 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TVS3300DRV"
+				(at 2.54 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+				(at 5.08 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tvs3300.pdf"
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Flat-Clamp Surge Protection Device. 33Vrwm, WSON-6"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "EMI, ESD, TVS protection transient"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "WSON*1EP*2x2mm*P0.65mm*EP1x1.6mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TVS3300DRV_0_0"
+				(rectangle
+					(start -11.43 2.54)
+					(end -5.08 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.255 2.54) (xy -8.255 3.81) (xy 0 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.255 -2.54) (xy -8.255 -3.81) (xy 0 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy -1.778 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "Det &"
+					(at -8.255 0.635 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "Drv"
+					(at -8.255 -1.27 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "TVS3300DRV_0_1"
+				(rectangle
+					(start -12.065 5.08)
+					(end 2.54 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 1.397) (xy -2.286 -1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 0) (xy -5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 1.778) (xy -1.778 -1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -0.889 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.127 -1.27) (xy -1.143 -1.651) (xy -1.143 -0.889) (xy -0.127 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 5.08) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -1.27) (xy -1.778 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TVS3300DRV_1_1"
+				(pin passive line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 7.62 270)
+					(length 2.54)
+					(hide yes)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 7.62 270)
+					(length 2.54)
+					(hide yes)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Sensor_Magnetic:TMAG5170-Q1"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -7365,7 +7756,7 @@
 	)
 	(text "Shottky blocks reverse current (reduces motor friction). \nTVS limits the voltage due to BEMF."
 		(exclude_from_sim no)
-		(at 17.272 62.738 0)
+		(at 17.526 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7673,6 +8064,12 @@
 		(uuid "3ef989f6-adee-4fdd-bbc2-4d042a22ae8e")
 	)
 	(junction
+		(at 100.33 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "43fb8047-74fa-4f11-a913-4c48712da26f")
+	)
+	(junction
 		(at 210.82 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7707,6 +8104,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4b8429ce-1f43-41a1-a85a-6edf6cefc3c3")
+	)
+	(junction
+		(at 74.93 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e04e333-9ea4-46b5-aa31-73227f84cc84")
 	)
 	(junction
 		(at 210.312 140.716)
@@ -8074,12 +8477,6 @@
 		(color 0 0 0 0)
 		(uuid "f355d9ac-e8e1-4dd9-bc14-b7ba3ab6a074")
 	)
-	(junction
-		(at 74.93 56.388)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fbad7e9c-096a-42e1-8e8d-49484c9410da")
-	)
 	(no_connect
 		(at 93.218 181.61)
 		(uuid "64853c79-8667-40e8-824b-4bbe6a24c2f3")
@@ -8276,7 +8673,7 @@
 	)
 	(polyline
 		(pts
-			(xy 130.175 149.352) (xy 130.175 48.514)
+			(xy 130.175 149.352) (xy 130.81 38.1)
 		)
 		(stroke
 			(width 0)
@@ -8346,7 +8743,7 @@
 	)
 	(polyline
 		(pts
-			(xy 130.175 48.514) (xy 15.24 48.514)
+			(xy 130.81 38.1) (xy 15.24 38.1)
 		)
 		(stroke
 			(width 0)
@@ -8496,7 +8893,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.686 56.388) (xy 21.336 56.388)
+			(xy 27.94 49.53) (xy 21.59 49.53)
 		)
 		(stroke
 			(width 0)
@@ -9616,6 +10013,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 49.53) (xy 114.3 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "960177d7-e4d7-4391-92cb-df0ab0d847d5")
+	)
+	(wire
+		(pts
 			(xy 138.43 171.45) (xy 129.54 171.45)
 		)
 		(stroke
@@ -9726,7 +10133,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.306 56.388) (xy 74.93 56.388)
+			(xy 35.56 49.53) (xy 74.93 49.53)
 		)
 		(stroke
 			(width 0)
@@ -10046,13 +10453,23 @@
 	)
 	(polyline
 		(pts
-			(xy 15.24 48.514) (xy 15.24 149.352)
+			(xy 15.24 38.1) (xy 15.24 149.352)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "babd81c6-a8e9-402c-bc0f-89178d4456a3")
+	)
+	(wire
+		(pts
+			(xy 74.93 49.53) (xy 100.33 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bce48bb1-77da-4288-ab07-83637d94366b")
 	)
 	(wire
 		(pts
@@ -10343,16 +10760,6 @@
 			(type default)
 		)
 		(uuid "d86c48b0-d0ab-4da0-a022-f9bf7b9e5598")
-	)
-	(wire
-		(pts
-			(xy 74.93 56.388) (xy 91.948 56.388)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d957859a-c1e0-4b04-bb8d-bb5fd49d327d")
 	)
 	(polyline
 		(pts
@@ -12322,7 +12729,7 @@
 	)
 	(global_label "VMOT"
 		(shape input)
-		(at 91.948 56.388 0)
+		(at 114.3 49.53 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12332,7 +12739,7 @@
 		)
 		(uuid "cd48785a-d85a-4e15-975c-db96648c68d3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 113.538 75.438 0)
+			(at 135.89 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16830,7 +17237,7 @@
 	)
 	(symbol
 		(lib_id "Diode:B140-E3")
-		(at 31.496 56.388 180)
+		(at 31.75 49.53 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16838,7 +17245,7 @@
 		(dnp no)
 		(uuid "33dfdf30-1951-476a-bf66-a6e8a18dc1de")
 		(property "Reference" "D3"
-			(at 31.75 51.308 0)
+			(at 32.004 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16846,7 +17253,7 @@
 			)
 		)
 		(property "Value" "SS54LB"
-			(at 31.75 53.848 0)
+			(at 32.004 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16854,7 +17261,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 31.496 51.943 0)
+			(at 31.75 45.085 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16863,7 +17270,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810192041_MDD-Microdiode-Electronics--SS54_C22452.pdf"
-			(at 31.496 56.388 0)
+			(at 31.75 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16872,7 +17279,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 31.496 56.388 0)
+			(at 31.75 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16881,7 +17288,7 @@
 			)
 		)
 		(property "LCSC" "C7450527"
-			(at 31.496 56.388 0)
+			(at 31.75 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18615,7 +19022,7 @@
 	)
 	(symbol
 		(lib_id "Diode:SM6T30A")
-		(at 74.93 60.198 270)
+		(at 74.93 53.34 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18624,7 +19031,7 @@
 		(fields_autoplaced yes)
 		(uuid "53f76e3b-9091-4406-9947-0627d404f91b")
 		(property "Reference" "D5"
-			(at 77.978 58.9279 90)
+			(at 77.978 52.0699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18633,7 +19040,7 @@
 			)
 		)
 		(property "Value" "SMCJ28CA"
-			(at 77.978 61.4679 90)
+			(at 77.978 54.6099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18642,7 +19049,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SMC"
-			(at 69.85 60.198 0)
+			(at 69.85 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18651,7 +19058,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2312221742_hongjiacheng-SMCJ28CA_C19077606.pdf"
-			(at 74.93 58.928 0)
+			(at 74.93 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18660,7 +19067,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.93 60.198 0)
+			(at 74.93 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18669,7 +19076,7 @@
 			)
 		)
 		(property "LCSC" "C19077606"
-			(at 74.93 60.198 0)
+			(at 74.93 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18678,7 +19085,7 @@
 			)
 		)
 		(property "Note" "Unidirectional could be slightly stronger, but bi was cheaper to assemble. Doesn't matter."
-			(at 74.93 60.198 90)
+			(at 74.93 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19266,6 +19673,72 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 100.33 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5fde89bc-89ea-4b5b-998a-b6a5748b635d")
+		(property "Reference" "#PWR0105"
+			(at 100.33 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f124b80c-14ea-40a0-bf7b-5138df368e17")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -25291,7 +25764,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 74.93 64.008 0)
+		(at 74.93 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25299,7 +25772,7 @@
 		(dnp no)
 		(uuid "c76e5cd7-77a1-4763-9f8c-b1206c1daa0c")
 		(property "Reference" "#PWR029"
-			(at 74.93 70.358 0)
+			(at 74.93 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25308,7 +25781,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 71.12 65.278 0)
+			(at 71.12 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25317,7 +25790,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 64.008 0)
+			(at 74.93 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25326,7 +25799,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 64.008 0)
+			(at 74.93 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25335,7 +25808,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.93 64.008 0)
+			(at 74.93 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27730,7 +28203,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 21.336 56.388 0)
+		(at 21.59 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -27738,7 +28211,7 @@
 		(dnp no)
 		(uuid "e8448a55-ac53-4760-a427-a61830f818be")
 		(property "Reference" "#PWR023"
-			(at 21.336 60.198 0)
+			(at 21.59 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27747,7 +28220,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 21.336 52.578 0)
+			(at 21.59 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27755,7 +28228,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 21.336 56.388 0)
+			(at 21.59 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27764,7 +28237,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 21.336 56.388 0)
+			(at 21.59 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27773,7 +28246,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 21.336 56.388 0)
+			(at 21.59 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28974,6 +29447,100 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Power_Protection:TVS3300DRV")
+		(at 100.33 57.15 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(uuid "f85f1d3f-10df-4e52-b367-2db084dd1d27")
+		(property "Reference" "U10"
+			(at 116.84 61.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TVS3300DRV"
+			(at 116.84 63.754 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+			(at 95.25 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tvs3300.pdf"
+			(at 102.87 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Flat-Clamp Surge Protection Device. 33Vrwm, WSON-6"
+			(at 100.33 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2863624"
+			(at 100.33 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "b2a74b0d-55db-4921-87ac-cf77677cede7")
+		)
+		(pin "4"
+			(uuid "a212bdf4-2e23-4850-8ef8-c1c3a2789445")
+		)
+		(pin "5"
+			(uuid "a3ed643b-2784-45d6-a1c8-73cca3cde701")
+		)
+		(pin "1"
+			(uuid "f07a321c-c13b-4d2c-b742-81396ce1017b")
+		)
+		(pin "2"
+			(uuid "54c8eb1a-d692-4db9-800f-719362640aa7")
+		)
+		(pin "3"
+			(uuid "09ae64fb-15a0-4935-a5a1-6f20d2c3e588")
+		)
+		(pin "7"
+			(uuid "50d583b9-c56e-48ff-a8b0-1c2d8e474b49")
+		)
+		(instances
+			(project ""
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "U10")
 					(unit 1)
 				)
 			)

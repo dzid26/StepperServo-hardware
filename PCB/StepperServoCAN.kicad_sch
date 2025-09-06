@@ -29460,7 +29460,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "f85f1d3f-10df-4e52-b367-2db084dd1d27")
 		(property "Reference" "U10"
 			(at 116.84 61.214 0)
@@ -29480,7 +29480,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+		(property "Footprint" "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm_ThermalVias"
 			(at 95.25 66.04 0)
 			(effects
 				(font

@@ -8004,6 +8004,12 @@
 		(uuid "2be6d7fc-d881-4f16-b948-126cc12f5eef")
 	)
 	(junction
+		(at 137.16 231.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2c239403-0ce2-43be-8df8-c72f4fe3aacc")
+	)
+	(junction
 		(at 44.45 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8032,6 +8038,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "33de5e21-04b7-48d1-a2b8-ee519f1a11e2")
+	)
+	(junction
+		(at 151.13 231.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "355a8e7e-f321-44d6-ad4c-55e5771bd776")
 	)
 	(junction
 		(at 200.914 23.876)
@@ -8196,6 +8208,12 @@
 		(uuid "666548df-979f-4900-a1df-fa9d470f6f50")
 	)
 	(junction
+		(at 88.9 231.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6765c25f-a1ab-4f63-91dc-bde920602edb")
+	)
+	(junction
 		(at 167.894 18.796)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8230,6 +8248,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6fa23ecc-18b4-4b5e-be25-0cea3ba879ca")
+	)
+	(junction
+		(at 151.13 238.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "720230be-de69-40f6-bb05-821552f27bd1")
 	)
 	(junction
 		(at 264.922 144.78)
@@ -9053,6 +9077,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 238.76) (xy 151.13 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a784e1e-b993-470d-aee5-01234665a27b")
+	)
+	(wire
+		(pts
 			(xy 256.54 117.856) (xy 244.094 117.856)
 		)
 		(stroke
@@ -9253,16 +9287,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 233.68) (xy 88.9 233.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f6c8ece-b030-417e-90ff-ce0b409ff6c9")
-	)
-	(wire
-		(pts
 			(xy 138.43 189.23) (xy 129.54 189.23)
 		)
 		(stroke
@@ -9313,6 +9337,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 241.3) (xy 151.13 238.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "545cd19c-46d8-427c-a455-dcf715890d26")
+	)
+	(wire
+		(pts
 			(xy 91.186 129.54) (xy 103.886 129.54)
 		)
 		(stroke
@@ -9340,16 +9374,6 @@
 			(type default)
 		)
 		(uuid "55a6b774-89f1-402a-89cc-5b4c528b86aa")
-	)
-	(wire
-		(pts
-			(xy 86.36 231.14) (xy 88.9 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "56c8ed95-dafa-4902-9da4-8bccc7cde668")
 	)
 	(wire
 		(pts
@@ -9620,6 +9644,16 @@
 			(type default)
 		)
 		(uuid "6d51b0e2-351e-46d5-bdfb-9a3e3a29421c")
+	)
+	(wire
+		(pts
+			(xy 88.9 231.14) (xy 88.9 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6da7c604-6824-4187-98be-fc3c47c88b2d")
 	)
 	(polyline
 		(pts
@@ -10003,6 +10037,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.9 231.14) (xy 137.16 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95b13ce8-1159-4792-9384-7c876837c968")
+	)
+	(wire
+		(pts
 			(xy 39.37 170.18) (xy 39.37 171.45)
 		)
 		(stroke
@@ -10303,7 +10347,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 231.14) (xy 137.16 231.14)
+			(xy 151.13 231.14) (xy 137.16 231.14)
 		)
 		(stroke
 			(width 0)
@@ -10773,7 +10817,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 241.3) (xy 137.16 241.3)
+			(xy 137.16 241.3) (xy 151.13 241.3)
 		)
 		(stroke
 			(width 0)
@@ -10883,7 +10927,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 238.76) (xy 137.16 238.76)
+			(xy 137.16 238.76) (xy 151.13 238.76)
 		)
 		(stroke
 			(width 0)
@@ -11211,16 +11255,6 @@
 		)
 		(uuid "475dbe78-ffad-4831-93e2-34cc97616a38")
 	)
-	(label "R30"
-		(at 86.36 231.14 0)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-			(justify left bottom)
-		)
-		(uuid "4bb9a49b-fd71-4c85-ae3b-7533afc62e14")
-	)
 	(label "R23"
 		(at 86.36 236.22 0)
 		(effects
@@ -11251,26 +11285,6 @@
 		)
 		(uuid "5dc983f9-b799-429e-b2f1-1d78f67e3826")
 	)
-	(label "R30"
-		(at 144.78 241.3 180)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-			(justify right bottom)
-		)
-		(uuid "6c761a4e-2b1b-4dbf-83b6-035bacfdae7f")
-	)
-	(label "R30"
-		(at 144.78 231.14 180)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-			(justify right bottom)
-		)
-		(uuid "73cb03a0-5eb1-4213-a489-85c60f63f8e9")
-	)
 	(label "AUX_ON"
 		(at 144.78 251.46 180)
 		(effects
@@ -11290,36 +11304,6 @@
 			(justify left bottom)
 		)
 		(uuid "a2823f00-7082-45fc-bfe7-350c8d7b55f6")
-	)
-	(label "R30"
-		(at 144.78 238.76 180)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-			(justify right bottom)
-		)
-		(uuid "ae2924ea-5de6-4e2f-bba7-6fe3cbf92dda")
-	)
-	(label "R30"
-		(at 254 132.08 0)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-			(justify left bottom)
-		)
-		(uuid "b7990323-32aa-4ca3-8c38-b5893e51e35c")
-	)
-	(label "R30"
-		(at 86.36 233.68 0)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-			(justify left bottom)
-		)
-		(uuid "b94481ee-98f6-4a06-94d3-5fd4a41fcfd4")
 	)
 	(label "LSS_A_OP-"
 		(at 153.67 107.442 180)
@@ -23783,6 +23767,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 154.94 231.14 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a53ce7d5-9e32-4703-ba27-5271a0a8c2fa")
+		(property "Reference" "R41"
+			(at 155.575 233.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 154.94 231.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 154.94 229.362 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25741"
+			(at 155.575 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7d78fa23-8a0a-4902-8be9-e2c8813bdb24")
+		)
+		(pin "2"
+			(uuid "fbdb4e8b-5431-43db-b5d7-6620ac6f0886")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "R41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 271.78 144.78 270)
 		(unit 1)
@@ -24584,6 +24644,73 @@
 			(project "StepperServoCAN"
 				(path "/92dad13e-412a-43d4-9260-9087579302b1"
 					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 158.75 231.14 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b34961a4-d885-40a5-8620-d7025d3912cf")
+		(property "Reference" "#PWR0106"
+			(at 165.1 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 163.83 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 158.75 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 158.75 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ca6f95ff-0f3b-4833-9a40-d2a562884734")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1"
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)

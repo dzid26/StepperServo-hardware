@@ -26524,7 +26524,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589785200399327232"
 			(at 160.02 185.42 0)
 			(effects
 				(font
@@ -26533,7 +26533,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SMTWE2025MTJ"
+			(at 160.02 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2928178"
 			(at 160.02 185.42 0)
 			(effects
 				(font
@@ -29710,7 +29719,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589785200399327232"
 			(at 160.02 175.26 0)
 			(effects
 				(font
@@ -29719,7 +29728,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SMTWE2025MTJ"
+			(at 160.02 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2928178"
 			(at 160.02 175.26 0)
 			(effects
 				(font

@@ -87231,18 +87231,6 @@
 			)
 		)
 	)
-	(gr_text "JLCJLCJLCJLC"
-		(at 110.88 118.39 0)
-		(layer "B.SilkS" knockout)
-		(uuid "024eceac-ac2d-4657-b734-6c090bc20c57")
-		(effects
-			(font
-				(size 1.016 1)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
 	(gr_text "-------------"
 		(at 92 94.4 180)
 		(layer "B.SilkS" knockout)

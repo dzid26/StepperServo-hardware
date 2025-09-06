@@ -22301,7 +22301,7 @@
 				(hide yes)
 			)
 		)
-		(property "FT Rotation Offset" "90"
+		(property "FT Rotation Offset" "-90"
 			(at 39.37 165.1 0)
 			(effects
 				(font

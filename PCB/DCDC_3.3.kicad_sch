@@ -1929,18 +1929,6 @@
 		)
 		(uuid "069c7fb1-be25-4f4b-b795-ac3b943d4ad3")
 	)
-	(text "todo:\nadd 56k Mosfet pull down."
-		(exclude_from_sim no)
-		(at 80.264 147.828 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 255 1)
-			)
-			(justify left)
-		)
-		(uuid "0d16a92b-1048-4f64-ae78-132529888143")
-	)
 	(text "R2"
 		(exclude_from_sim no)
 		(at 112.268 138.684 0)
@@ -2078,6 +2066,12 @@
 		(uuid "1cf2a44b-09de-4e6e-84db-581b4daae36d")
 	)
 	(junction
+		(at 82.55 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "249f9b26-b9fd-4c84-ad77-6ae0490f3544")
+	)
+	(junction
 		(at 182.88 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2090,22 +2084,28 @@
 		(uuid "32d9e279-2c69-4cbd-a46c-43c403c191cd")
 	)
 	(junction
+		(at 109.22 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "53e2b996-51fd-46d5-bc66-a180a39a6be4")
+	)
+	(junction
 		(at 177.8 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "56cd00f2-49f7-47a3-b689-e3fd3542eca2")
 	)
 	(junction
-		(at 109.22 147.32)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "65875aad-02e2-42f6-99f7-b2d81a017f0f")
-	)
-	(junction
 		(at 83.82 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7f9c4130-387c-4944-9250-d2c239c27ec5")
+	)
+	(junction
+		(at 90.17 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9e42214e-d5dd-4960-ba35-ee66f39f523b")
 	)
 	(junction
 		(at 162.56 83.82)
@@ -2217,7 +2217,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 138.43) (xy 82.55 138.43)
+			(xy 76.2 138.43) (xy 82.55 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2287,7 +2287,17 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 143.51) (xy 90.17 147.32)
+			(xy 109.22 146.05) (xy 109.22 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bf0c428-0359-412e-8d17-f290d4cd3259")
+	)
+	(wire
+		(pts
+			(xy 90.17 143.51) (xy 90.17 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2394,6 +2404,16 @@
 			(type default)
 		)
 		(uuid "73f9858b-888f-420f-b55f-02c3bc8e939e")
+	)
+	(wire
+		(pts
+			(xy 82.55 146.05) (xy 90.17 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76a493ae-e5af-4f81-bb28-f47e5f8fbdd5")
 	)
 	(wire
 		(pts
@@ -2517,26 +2537,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 147.32) (xy 109.22 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bbfdc727-5f45-4195-8ba3-d77676ac1be0")
-	)
-	(wire
-		(pts
-			(xy 109.22 146.05) (xy 109.22 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0068016-fe86-4e76-a7a3-fb44f2dc3b46")
-	)
-	(wire
-		(pts
 			(xy 71.12 81.28) (xy 83.82 81.28)
 		)
 		(stroke
@@ -2547,7 +2547,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 147.32) (xy 109.22 147.32)
+			(xy 90.17 146.05) (xy 109.22 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2640,7 +2640,7 @@
 	)
 	(hierarchical_label "~{Enable}"
 		(shape input)
-		(at 78.74 138.43 180)
+		(at 76.2 138.43 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3797,6 +3797,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 82.55 142.24 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8ec3a58a-dc0e-44d1-b445-889ad78d5c3f")
+		(property "Reference" "R50"
+			(at 80.01 141.986 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "56k"
+			(at 82.55 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 84.328 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 82.55 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 82.55 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25796"
+			(at 84.455 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b17ad95-9dca-490e-9c14-33da18690cd0")
+		)
+		(pin "2"
+			(uuid "9432e2e0-e881-45cf-b942-72f8984be863")
+		)
+		(instances
+			(project "StepperServoCAN"
+				(path "/92dad13e-412a-43d4-9260-9087579302b1/82f027ad-2d00-453d-ab1c-0ba3b5cb1ef7"
+					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 177.8 86.36 0)
 		(unit 1)
@@ -4635,7 +4711,7 @@
 			)
 		)
 		(property "Value" "2N7002"
-			(at 79.756 141.732 0)
+			(at 80.264 133.858 0)
 			(effects
 				(font
 					(size 1.27 1.27)

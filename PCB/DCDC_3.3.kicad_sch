@@ -1949,19 +1949,6 @@
 		)
 		(uuid "36d64db7-29a5-4d53-ba25-39ac6afba273")
 	)
-	(text "severed\n- still inactive"
-		(exclude_from_sim no)
-		(at 92.71 132.334 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-				(color 255 0 255 1)
-			)
-			(justify left)
-		)
-		(uuid "3947eba1-e20c-4794-9edb-a21614043269")
-	)
 	(text "R1"
 		(exclude_from_sim no)
 		(at 105.664 125.476 0)
@@ -2047,18 +2034,6 @@
 		)
 		(uuid "cfbd4d25-4ccb-4965-91fe-e555aee17572")
 	)
-	(text "todo:\nR3+R49 = 8.2k+4.7k;"
-		(exclude_from_sim no)
-		(at 115.062 144.272 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 255 1)
-			)
-			(justify left)
-		)
-		(uuid "f8a766e2-69e4-45b2-87e4-a99230bace28")
-	)
 	(junction
 		(at 210.82 83.82)
 		(diameter 0)
@@ -2066,7 +2041,7 @@
 		(uuid "1cf2a44b-09de-4e6e-84db-581b4daae36d")
 	)
 	(junction
-		(at 82.55 138.43)
+		(at 92.71 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "249f9b26-b9fd-4c84-ad77-6ae0490f3544")
@@ -2102,7 +2077,7 @@
 		(uuid "7f9c4130-387c-4944-9250-d2c239c27ec5")
 	)
 	(junction
-		(at 90.17 146.05)
+		(at 100.33 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9e42214e-d5dd-4960-ba35-ee66f39f523b")
@@ -2167,14 +2142,6 @@
 		(color 0 0 0 0)
 		(uuid "f797db33-80a9-4cd5-82a6-1b91a17ad698")
 	)
-	(no_connect
-		(at 102.87 129.54)
-		(uuid "6867ccdc-c18a-46f9-9118-d603c3b5c4b6")
-	)
-	(no_connect
-		(at 99.06 129.54)
-		(uuid "8f98731f-d85c-4746-abc5-525bb30e19df")
-	)
 	(wire
 		(pts
 			(xy 83.82 81.28) (xy 93.98 81.28)
@@ -2207,17 +2174,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 129.54) (xy 109.22 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0db1b73d-02e0-4b0c-8dff-33e30d06e5e7")
-	)
-	(wire
-		(pts
-			(xy 76.2 138.43) (xy 82.55 138.43)
+			(xy 86.36 138.43) (xy 92.71 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2237,7 +2194,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 129.54) (xy 90.17 133.35)
+			(xy 100.33 129.54) (xy 100.33 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2297,7 +2254,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 143.51) (xy 90.17 146.05)
+			(xy 100.33 143.51) (xy 100.33 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2407,7 +2364,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 146.05) (xy 90.17 146.05)
+			(xy 92.71 146.05) (xy 100.33 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2547,7 +2504,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 146.05) (xy 109.22 146.05)
+			(xy 100.33 146.05) (xy 109.22 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2577,7 +2534,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 129.54) (xy 99.06 129.54)
+			(xy 100.33 129.54) (xy 109.22 129.54)
 		)
 		(stroke
 			(width 0)
@@ -2640,7 +2597,7 @@
 	)
 	(hierarchical_label "~{Enable}"
 		(shape input)
-		(at 76.2 138.43 180)
+		(at 86.36 138.43 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2666,7 +2623,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "8.2k"
 			(at 109.22 134.62 90)
 			(effects
 				(font
@@ -2701,7 +2658,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C25924"
 			(at 111.125 134.62 0)
 			(effects
 				(font
@@ -3727,7 +3684,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "8b6e4ae5-6382-4648-b1e7-8db8875a0b0c")
 		(property "Reference" "R3"
 			(at 111.76 142.24 90)
@@ -3737,7 +3694,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2k"
+		(property "Value" "4.7k"
 			(at 109.22 142.24 90)
 			(effects
 				(font
@@ -3772,7 +3729,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25879"
+		(property "LCSC" "C25900"
 			(at 106.68 142.875 0)
 			(effects
 				(font
@@ -3798,7 +3755,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 82.55 142.24 180)
+		(at 92.71 142.24 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3806,7 +3763,7 @@
 		(dnp no)
 		(uuid "8ec3a58a-dc0e-44d1-b445-889ad78d5c3f")
 		(property "Reference" "R50"
-			(at 80.01 141.986 90)
+			(at 90.17 141.986 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3814,7 +3771,7 @@
 			)
 		)
 		(property "Value" "56k"
-			(at 82.55 142.24 90)
+			(at 92.71 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3822,7 +3779,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 84.328 142.24 90)
+			(at 94.488 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3831,7 +3788,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 82.55 142.24 0)
+			(at 92.71 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3840,7 +3797,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 82.55 142.24 0)
+			(at 92.71 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3849,7 +3806,7 @@
 			)
 		)
 		(property "LCSC" "C25796"
-			(at 84.455 142.24 0)
+			(at 94.615 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3967,7 +3924,7 @@
 				)
 			)
 		)
-		(property "Value" "51k"
+		(property "Value" "56k"
 			(at 121.92 129.54 90)
 			(effects
 				(font
@@ -4002,7 +3959,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25794"
+		(property "LCSC" "C25796"
 			(at 121.92 132.08 0)
 			(effects
 				(font
@@ -4694,7 +4651,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:2N7002")
-		(at 87.63 138.43 0)
+		(at 97.79 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4702,7 +4659,7 @@
 		(dnp no)
 		(uuid "ff18756e-b0d6-45f4-b37b-58fa386f5673")
 		(property "Reference" "Q4"
-			(at 84.328 135.89 0)
+			(at 94.488 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4711,7 +4668,7 @@
 			)
 		)
 		(property "Value" "2N7002"
-			(at 80.264 133.858 0)
+			(at 90.424 133.858 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4720,7 +4677,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 92.71 140.335 0)
+			(at 102.87 140.335 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4731,7 +4688,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2304140030_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--2N7002_C8545.pdf"
-			(at 87.63 138.43 0)
+			(at 97.79 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4741,7 +4698,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 87.63 138.43 0)
+			(at 97.79 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4750,7 +4707,7 @@
 			)
 		)
 		(property "LCSC" "C8545"
-			(at 87.63 138.43 0)
+			(at 97.79 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)

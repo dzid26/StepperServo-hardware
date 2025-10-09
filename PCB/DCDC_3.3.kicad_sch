@@ -1919,6 +1919,28 @@
 		)
 		(uuid b3710f09-5366-40f6-9ce8-0375d0577c00)
 	)
+	(text "provides\nextra hysteresis"
+		(exclude_from_sim no)
+		(at 129.032 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "069c7fb1-be25-4f4b-b795-ac3b943d4ad3")
+	)
+	(text "todo:\nadd 56k Mosfet pull down."
+		(exclude_from_sim no)
+		(at 80.264 147.828 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 255 1)
+			)
+			(justify left)
+		)
+		(uuid "0d16a92b-1048-4f64-ae78-132529888143")
+	)
 	(text "R2"
 		(exclude_from_sim no)
 		(at 112.268 138.684 0)
@@ -1938,6 +1960,19 @@
 			)
 		)
 		(uuid "36d64db7-29a5-4d53-ba25-39ac6afba273")
+	)
+	(text "severed\n- still inactive"
+		(exclude_from_sim no)
+		(at 92.71 132.334 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+				(color 255 0 255 1)
+			)
+			(justify left)
+		)
+		(uuid "3947eba1-e20c-4794-9edb-a21614043269")
 	)
 	(text "R1"
 		(exclude_from_sim no)
@@ -1970,9 +2005,9 @@
 		)
 		(uuid "3d47bfc9-baa0-41ed-8233-f3324ae80a1a")
 	)
-	(text "Calculate resistors for undervoltage cutout:\nI_{1} = 1uA\nI_{Hyst}=3uA\nV_{Ena} = 1.25V  (1.05...1.38)\n\nAssume typical V_{Ena} = 1.2V:\nR1 = (V_{start} - V_{stop})/I_{Hyst}\nR1 = (11V - 9) / 3uA = 100kOhm // don't care about hysteresis anyway\nR2 = V_{Ena} / ((V_{start} - V_{Ena})/R1+I_{1})\nR2_{rounded} = 1.2V / ((7.1V-1.2V)/100kOhm + 1uA) = 20kOhm\n\nThere is a diode in series\nD1_V{F}_ON = 0.8\nD1_V{F}_OFF = 0.5\nso actual threshold is:\nV_{stop_real} = V_{stop}+D1_V{F}_ON\nV_{start_real} = V_{start}+D1_V{F}_OFF\nV_{stop_real} = 6.5 + 0.8 = 7.3V\nV_{start_real} = 7.1 + 0.4 = 7.5V"
+	(text "Calculate resistors for undervoltage cutout:\nI_{1} = 1uA\nI_{Hyst}=3uA\nV_{Ena} = 1.25V  (1.05...1.38)\nThere is a diode in series\nD1_V{F}_ON = 0.8\nD1_V{F}_OFF = 0.5\n\nAssume typical V_{Ena} = 1.2V:\nR1 = (V_{start} - V_{stop} - D1_V{F}_ON)/I_{Hyst}\nR1 = (11V - 10) / 3uA = 1 MOhm, but assume 100kOhm and add hysteresis from the output\nR2 = V_{Ena} / ((V_{start}-D1_V{F}_OFF - V_{Ena})/R1+I_{1})\nR2_{rounded} = 1.2V / ((12V-0.5V-1.2V)/100kOhm + 1uA) = 11.4kOhm\n\nNeeds to be tuned in real world"
 		(exclude_from_sim no)
-		(at 25.654 176.276 0)
+		(at 23.876 182.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1992,9 +2027,9 @@
 		)
 		(uuid "8b0c5e47-8114-4dde-9e82-1e181b4f0645")
 	)
-	(text "Remove R49 to force always enable"
+	(text "Remove R3 to force always enable"
 		(exclude_from_sim no)
-		(at 102.616 172.974 0)
+		(at 113.792 156.972 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2023,6 +2058,18 @@
 			(justify left bottom)
 		)
 		(uuid "cfbd4d25-4ccb-4965-91fe-e555aee17572")
+	)
+	(text "todo:\nR3+R49 = 8.2k+4.7k;"
+		(exclude_from_sim no)
+		(at 115.062 144.272 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 255 1)
+			)
+			(justify left)
+		)
+		(uuid "f8a766e2-69e4-45b2-87e4-a99230bace28")
 	)
 	(junction
 		(at 210.82 83.82)
@@ -2120,6 +2167,14 @@
 		(color 0 0 0 0)
 		(uuid "f797db33-80a9-4cd5-82a6-1b91a17ad698")
 	)
+	(no_connect
+		(at 102.87 129.54)
+		(uuid "6867ccdc-c18a-46f9-9118-d603c3b5c4b6")
+	)
+	(no_connect
+		(at 99.06 129.54)
+		(uuid "8f98731f-d85c-4746-abc5-525bb30e19df")
+	)
 	(wire
 		(pts
 			(xy 83.82 81.28) (xy 93.98 81.28)
@@ -2152,7 +2207,17 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 138.43) (xy 92.71 138.43)
+			(xy 102.87 129.54) (xy 109.22 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0db1b73d-02e0-4b0c-8dff-33e30d06e5e7")
+	)
+	(wire
+		(pts
+			(xy 78.74 138.43) (xy 82.55 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2172,7 +2237,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 129.54) (xy 100.33 133.35)
+			(xy 90.17 129.54) (xy 90.17 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2222,7 +2287,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 143.51) (xy 100.33 147.32)
+			(xy 90.17 143.51) (xy 90.17 147.32)
 		)
 		(stroke
 			(width 0)
@@ -2482,17 +2547,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 129.54) (xy 109.22 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6c2c1e5-aa38-44cf-bf51-a52dd68bebc9")
-	)
-	(wire
-		(pts
-			(xy 100.33 147.32) (xy 109.22 147.32)
+			(xy 90.17 147.32) (xy 109.22 147.32)
 		)
 		(stroke
 			(width 0)
@@ -2519,6 +2574,16 @@
 			(type default)
 		)
 		(uuid "ce1c1ebf-bbf1-44de-ad48-b92bb2de5339")
+	)
+	(wire
+		(pts
+			(xy 90.17 129.54) (xy 99.06 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d487b009-a77b-415d-9f8e-249988753c5c")
 	)
 	(wire
 		(pts
@@ -2575,7 +2640,7 @@
 	)
 	(hierarchical_label "~{Enable}"
 		(shape input)
-		(at 88.9 138.43 180)
+		(at 78.74 138.43 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3662,7 +3727,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "8b6e4ae5-6382-4648-b1e7-8db8875a0b0c")
 		(property "Reference" "R3"
 			(at 111.76 142.24 90)
@@ -4553,7 +4618,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:2N7002")
-		(at 97.79 138.43 0)
+		(at 87.63 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4561,7 +4626,7 @@
 		(dnp no)
 		(uuid "ff18756e-b0d6-45f4-b37b-58fa386f5673")
 		(property "Reference" "Q4"
-			(at 94.488 135.89 0)
+			(at 84.328 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4570,7 +4635,7 @@
 			)
 		)
 		(property "Value" "2N7002"
-			(at 89.916 141.732 0)
+			(at 79.756 141.732 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4579,7 +4644,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 102.87 140.335 0)
+			(at 92.71 140.335 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4590,7 +4655,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2304140030_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--2N7002_C8545.pdf"
-			(at 97.79 138.43 0)
+			(at 87.63 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4600,7 +4665,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 97.79 138.43 0)
+			(at 87.63 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4609,7 +4674,7 @@
 			)
 		)
 		(property "LCSC" "C8545"
-			(at 97.79 138.43 0)
+			(at 87.63 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)

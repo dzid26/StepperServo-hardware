@@ -7667,7 +7667,7 @@
 		)
 		(uuid "1d377940-d945-418c-9680-5f68bc2eacfc")
 	)
-	(text "v0.1 PA2=Gnd, PA5=flt, PB2=flt\nv0.2 PA2=Gnd, PA5=flt, PB2=gnd\nv0.3 PA2=Gnd, PA5=Gnd, PB2=gnd\nv0.4 PA2=3.3, PA5=flt, PB2=gnd"
+	(text "v0.1 PA2=Gnd, PA5=flt, PB2=flt\nv0.2 PA2=Gnd, PA5=flt, PB2=gnd\nv0.3 PA2=Gnd, PA5=Gnd, PB2=gnd\nv0.4 PA2=3.3, PA5=flt, PB2=gnd\nv0.5 PA2=3.3, PA5=gnd, PB2=gnd"
 		(exclude_from_sim no)
 		(at 248.92 172.72 0)
 		(effects

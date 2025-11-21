@@ -13,11 +13,11 @@ Features:
 - Magnetic angle sensor (can be turned off during sleep)
 - CANbus transceiver with standby mode
 - Debug port for flashing and configuration with ESD protection
-- Low-side current, V_mot and V_Bat, PCB temperature measurments
+- [Low-side](https://github.com/dzid26/StepperServoCAN/pull/38) current, V_mot and V_Bat, PCB temperature measurements
 - Reverse polarity protection and swapped connectors protection; ESD protections on inputs
 
-- Optional Enable port with Break interrupt capability for additional safety
-- Optional expansion port for connecting UART/I2C/PWM device or a sensor
+- Optional Enable port with [Break](https://github.com/dzid26/StepperServoCAN/pull/37) interrupt capability for additional safety
+- Optional expansion port for connecting UART/I2C/PWM device or a sensor (0.4A max)
 - Optional solder jumper pads, e.g. for motor identification
 
 

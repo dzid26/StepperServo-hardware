@@ -2976,7 +2976,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Cenker_CKCS252010"
+		(property "Footprint" "Inductor_SMD:L_Changjiang_FTC252010S"
 			(at 168.91 83.82 0)
 			(effects
 				(font
@@ -4457,7 +4457,7 @@
 				)
 			)
 		)
-		(property "Value" "1N5819WS"
+		(property "Value" "DSK34"
 			(at 62.23 78.105 0)
 			(effects
 				(font
@@ -4465,7 +4465,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 62.23 76.835 0)
 			(effects
 				(font
@@ -4474,7 +4474,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602990844832202752"
 			(at 62.23 81.28 0)
 			(effects
 				(font

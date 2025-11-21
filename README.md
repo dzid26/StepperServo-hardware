@@ -17,7 +17,7 @@ Features:
 - Reverse polarity protection and swapped connectors protection; ESD protections on inputs
 
 - Optional Enable port with [Break](https://github.com/dzid26/StepperServoCAN/pull/37) interrupt capability for additional safety
-- Optional expansion port for connecting UART/I2C/PWM device or a sensor (0.4A max)
+- Optional expansion port for connecting UART/I2C/PWM device or a sensor (0.4A max, or 1A for v0.6)
 - Optional solder jumper pads, e.g. for motor identification
 
 

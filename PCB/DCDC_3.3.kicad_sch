@@ -2002,7 +2002,7 @@
 		)
 		(uuid "8b0c5e47-8114-4dde-9e82-1e181b4f0645")
 	)
-	(text "Remove R3 to force always enable"
+	(text "Removed R3 to force always enable"
 		(exclude_from_sim no)
 		(at 113.792 156.972 0)
 		(effects
@@ -3684,7 +3684,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "8b6e4ae5-6382-4648-b1e7-8db8875a0b0c")
 		(property "Reference" "R3"
 			(at 111.76 142.24 90)

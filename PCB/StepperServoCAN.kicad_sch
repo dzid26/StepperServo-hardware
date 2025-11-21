@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "StepperServoCAN")
-		(rev "0.5")
+		(rev "0.6")
 		(company "RetroPilot")
 		(comment 1 "Licensed under CERN-OHL-S v2")
 	)

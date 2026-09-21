@@ -3593,7 +3593,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "2.1Mhz"
 			(at 137.16 83.82 0)
 			(effects
 				(font
@@ -4492,7 +4492,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C191023"
+		(property "LCSC" "C7502709"
 			(at 62.5475 74.295 0)
 			(effects
 				(font

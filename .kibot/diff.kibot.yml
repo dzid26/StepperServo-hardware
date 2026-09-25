@@ -1,14 +1,18 @@
 outputs:
   - name: 'diff_pcb'
-    comment: "visual PCB diff vs default branch (red/green overlay PDF)"
+    comment: "visual PCB diff vs previous commit (red/green overlay PDF)"
     type: diff
-    dir: diff
+    dir: diff/commit
     options:
       # [string='HEAD'] Reference to compare against. A git branch/tag/hash when old_type is git.
       # The base commit is injected from CI via `kibot -E KIBOT_DIFF_OLD=...`
       # (@VAR@ is KiBot's preprocessor replacement), so this file never
       # hardcodes a branch name or assumes one.
       old: '@KIBOT_DIFF_OLD@'
+      # Explicit filename: the default (%i-based) name is identical for the
+      # commit and tag pairs (both are `diff_pcb`), which would collide when
+      # flattened into the release assets.
+      output: 'diff_commit_pcb.%x'
       # [git,file,output,multivar='git'] How to interpret the `old` name.
       old_type: 'git'
       # [string|list(string)=''] File to compare, blank means the current PCB/SCH.
@@ -30,11 +34,50 @@ outputs:
       - 'Edge.Cuts'
 
   - name: 'diff_sch'
-    comment: "visual schematic diff vs default branch (red/green overlay PDF)"
+    comment: "visual schematic diff vs previous commit (red/green overlay PDF)"
     type: diff
-    dir: diff
+    dir: diff/commit
     options:
       old: '@KIBOT_DIFF_OLD@'
+      output: 'diff_commit_sch.%x'
+      old_type: 'git'
+      new: 'HEAD'
+      new_type: 'git'
+      diff_mode: 'red_green'
+      dpi: 150
+      only_different: true
+      # [boolean=true] Compare the PCB, false compares the schematic.
+      pcb: false
+
+  - name: 'diff_tag_pcb'
+    comment: "visual PCB diff vs last hardware tag (red/green overlay PDF)"
+    type: diff
+    dir: diff/tag
+    options:
+      # The tag name is injected from CI via `kibot -E KIBOT_DIFF_TAG=...`
+      # (resolved at runtime with `git describe`, never hardcoded).
+      old: '@KIBOT_DIFF_TAG@'
+      output: 'diff_tag_pcb.%x'
+      old_type: 'git'
+      new: 'HEAD'
+      new_type: 'git'
+      diff_mode: 'red_green'
+      dpi: 150
+      only_different: true
+    layers:
+      - 'F.Cu'
+      - 'B.Cu'
+      - 'F.SilkS'
+      - 'B.SilkS'
+      - 'Edge.Cuts'
+
+  - name: 'diff_tag_sch'
+    comment: "visual schematic diff vs last hardware tag (red/green overlay PDF)"
+    type: diff
+    dir: diff/tag
+    options:
+      old: '@KIBOT_DIFF_TAG@'
+      output: 'diff_tag_sch.%x'
       old_type: 'git'
       new: 'HEAD'
       new_type: 'git'

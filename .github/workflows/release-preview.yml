@@ -83,11 +83,33 @@ jobs:
           kibot -E KIBOT_DIFF_OLD=${{ steps.diffbase.outputs.base }} \
             -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             diff_pcb diff_sch
+      - name: resolve tag diff base
+        id: difftag
+        run: |
+          # Last hardware tag reachable from HEAD. The `v[0-9]*` pattern keeps
+          # CI-owned tags (preview) and legacy oddballs (PCB#2, ProtoPCB#1)
+          # out. Fails cleanly when no such tag exists -> tag diff is skipped.
+          git fetch --tags --force origin 2>/dev/null || true
+          tag="$(git describe --tags --abbrev=0 --match 'v[0-9]*' HEAD 2>/dev/null || true)"
+          if [ -z "$tag" ]; then
+            echo "No matching hardware tag found; tag diff will be skipped."
+          else
+            echo "Tag diff base: $tag ($(git rev-parse --short "$tag")) vs $GITHUB_SHA"
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+      - name: run kibot (visual diff vs last hardware tag)
+        if: steps.difftag.outputs.tag != ''
+        # Same tolerance as the commit diff: empty diffs exit non-zero.
+        continue-on-error: true
+        run: |
+          kibot -E KIBOT_DIFF_TAG=${{ steps.difftag.outputs.tag }} \
+            -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
+            diff_tag_pcb diff_tag_sch
       - name: collect release files
         run: |
           mkdir -p release-assets
           cp ./docs/*.pdf release-assets/
-          cp ./diff/*.pdf release-assets/ 2>/dev/null || true
+          cp ./diff/commit/*.pdf ./diff/tag/*.pdf release-assets/ 2>/dev/null || echo "no diff PDFs (empty diffs skipped)"
           cp ./docs/bom/*.html release-assets/ 2>/dev/null || true
           ls -la release-assets/
       - name: recreate preview prerelease

@@ -1939,16 +1939,6 @@
 		)
 		(uuid "33a33a8f-c252-49df-9b33-ed5cf6c94928")
 	)
-	(text "R3"
-		(exclude_from_sim no)
-		(at 121.92 132.08 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "36d64db7-29a5-4d53-ba25-39ac6afba273")
-	)
 	(text "severed\n- still inactive"
 		(exclude_from_sim no)
 		(at 92.71 132.334 0)
@@ -2015,7 +2005,7 @@
 		)
 		(uuid "8b0c5e47-8114-4dde-9e82-1e181b4f0645")
 	)
-	(text "Remove R3 to force always enable"
+	(text "Removed R3 to force always enable"
 		(exclude_from_sim no)
 		(at 113.792 156.972 0)
 		(effects

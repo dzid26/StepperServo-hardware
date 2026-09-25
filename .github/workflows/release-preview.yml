@@ -1,20 +1,24 @@
 # Preview prerelease with the latest KiBot outputs (PDFs + visual diffs).
 #
-# On every push to the default branch (StepperServoCAN) this rebuilds the
+# On every push to the default branch this rebuilds the
 # documentation/diff outputs and RECREATES the `preview` prerelease pinned to
 # the new commit, replacing all assets so it always reflects the latest state.
 # Delete+recreate (via the gh CLI, no third-party action) guarantees the tag
 # moves and no stale assets survive. Published releases/tags (e.g. v0.5) are
 # never touched; the preview snapshot lives only on the `preview` tag and is
 # marked prerelease (never "Latest").
+#
+# Default-branch agnostic: `on.push.branches` cannot use contexts/expressions
+# (GitHub requires literals there), so there is intentionally NO branch filter
+# below. The job-level `if:` guard restricts publishing to pushes on the
+# default branch. Pushes to other branches produce a skipped run, never a
+# release.
 
 name: Preview Release
 
 on:
   workflow_dispatch:
   push:
-    branches:
-      - StepperServoCAN
     paths:
       - "PCB/*.kicad_sch"
       - "PCB/*.kicad_pcb"
@@ -31,25 +35,59 @@ env:
 permissions:
   contents: write
 
+# A rolling publisher must never publish stale results over fresh ones: if two
+# pushes race, cancel the older run so the last writer wins deterministically.
+concurrency:
+  group: preview-release
+  cancel-in-progress: true
+
 jobs:
   build-and-release:
+    # Publish only from the default branch. `github.event.repository.default_branch`
+    # is present on push/workflow_dispatch payloads; on any other branch (or a
+    # manual run from one) the whole job is skipped and no release is touched.
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-24.04
     container:
       image: ghcr.io/inti-cmnb/kicad10_auto:latest
     steps:
       - uses: actions/checkout@v5
         with:
-          # Full history: the KiBot `diff` outputs compare against the
-          # origin/StepperServoCAN ref, which needs more than a shallow clone.
+          # Full history: the KiBot `diff` outputs compare against the default
+          # branch ref, which needs more than a shallow clone.
           fetch-depth: 0
-      - name: run kibot (docs + visual diff)
+      - name: resolve diff base
+        id: diffbase
+        run: |
+          # The visual diff must compare the pushed commit against its parent.
+          # (Comparing against the default-branch head would compare the commit
+          # against itself, which yields zero diffs and makes KiBot fail.)
+          # `before` is the pre-push head; absent on manual runs (empty) and
+          # all-zeros on branch creation, so fall back to HEAD~1 then.
+          base="${{ github.event.before }}"
+          if ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+            base="HEAD~1"
+          fi
+          echo "base=$base" >> "$GITHUB_OUTPUT"
+          echo "Diff base: $base vs $GITHUB_SHA"
+      - name: run kibot (docs)
         run: |
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
-            ibom.html schematic.pdf board_top.pdf board_bottom.pdf diff_pcb diff_sch
+            ibom.html schematic.pdf board_top.pdf board_bottom.pdf
+      - name: run kibot (visual diff vs previous commit)
+        # Tolerated: an empty diff (e.g. design untouched by this push) makes
+        # KiBot exit non-zero by design, and diffs are informational — docs are
+        # the release priority. The log still records the outcome.
+        continue-on-error: true
+        run: |
+          kibot -E KIBOT_DIFF_OLD=${{ steps.diffbase.outputs.base }} \
+            -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
+            diff_pcb diff_sch
       - name: collect release files
         run: |
           mkdir -p release-assets
-          cp ./docs/*.pdf ./diff/*.pdf release-assets/
+          cp ./docs/*.pdf release-assets/
+          cp ./diff/*.pdf release-assets/ 2>/dev/null || true
           cp ./docs/bom/*.html release-assets/ 2>/dev/null || true
           ls -la release-assets/
       - name: recreate preview prerelease
@@ -62,6 +100,6 @@ jobs:
           gh release create "$preview_tag" \
             --prerelease \
             --title "Preview KiBot build (${GITHUB_SHA::7})" \
-            --notes "Automatically rebuilt KiBot outputs for ${GITHUB_SHA}. Preview snapshot of the StepperServoCAN branch — superseded on every push." \
+            --notes "Automatically rebuilt KiBot outputs for ${GITHUB_SHA}. Preview snapshot of the ${{ github.ref_name }} branch — superseded on every push." \
             --target "$GITHUB_SHA" \
             release-assets/*

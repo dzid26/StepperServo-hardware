@@ -1982,7 +1982,7 @@
 		)
 		(uuid "8b0c5e47-8114-4dde-9e82-1e181b4f0645")
 	)
-	(text "Removed R3 to force always enable"
+	(text "Remove R3 to force always enable"
 		(exclude_from_sim no)
 		(at 113.792 156.972 0)
 		(effects
@@ -2134,16 +2134,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 138.43) (xy 92.71 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e08a0bd-2fb7-410a-9d3b-7b5dadbf4aca")
-	)
-	(wire
-		(pts
 			(xy 187.96 83.82) (xy 210.82 83.82)
 		)
 		(stroke
@@ -2291,6 +2281,16 @@
 			(type default)
 		)
 		(uuid "6a47241b-bbd4-474a-a74d-fbf6cc43c70a")
+	)
+	(wire
+		(pts
+			(xy 78.74 138.43) (xy 92.71 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c5606ac-dffc-4e85-b895-9c0ebb5ff748")
 	)
 	(wire
 		(pts
@@ -2567,7 +2567,7 @@
 	)
 	(hierarchical_label "~{Enable}"
 		(shape input)
-		(at 86.36 138.43 180)
+		(at 78.74 138.43 180)
 		(effects
 			(font
 				(size 1.27 1.27)

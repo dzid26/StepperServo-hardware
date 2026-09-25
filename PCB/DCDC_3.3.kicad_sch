@@ -1960,16 +1960,6 @@
 		)
 		(uuid "3d074004-7c4d-49f5-9d2e-3d2edffd2f12")
 	)
-	(text "1N4148WS can be replaced with schottky to reduce bom.  \n1N5819WS will leak <1mA at high temp which \npushes against internal esd protection of LV2842 \nand as expected results in -0.4V on BATT_Diode"
-		(exclude_from_sim no)
-		(at 103.378 60.452 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "3d47bfc9-baa0-41ed-8233-f3324ae80a1a")
-	)
 	(text "Calculate resistors for undervoltage cutout:\nI_{1} = 1uA\nI_{Hyst}=3uA\nV_{Ena} = 1.25V  (1.05...1.38)\nThere is a diode in series\nD1_V{F}_ON = 0.8\nD1_V{F}_OFF = 0.5\n\nAssume typical V_{Ena} = 1.2V:\nR1 = (V_{start} - V_{stop} - D1_V{F}_ON)/I_{Hyst}\nR1 = (11V - 10) / 3uA = 1 MOhm, but assume 100kOhm and add hysteresis from the output\nR2 = V_{Ena} / ((V_{start}-D1_V{F}_OFF - V_{Ena})/R1+I_{1})\nR2_{rounded} = 1.2V / ((12V-0.5V-1.2V)/100kOhm + 1uA) = 11.4kOhm\n\nNeeds to be tuned in real world"
 		(exclude_from_sim no)
 		(at 23.876 182.88 0)
@@ -2043,12 +2033,6 @@
 		(uuid "25dbbc93-bf8a-4212-8456-6900f6820c36")
 	)
 	(junction
-		(at 66.04 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "32d9e279-2c69-4cbd-a46c-43c403c191cd")
-	)
-	(junction
 		(at 109.22 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2071,6 +2055,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9e42214e-d5dd-4960-ba35-ee66f39f523b")
+	)
+	(junction
+		(at 109.22 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a1b6ac68-0cff-4ba6-99d9-471eaad0490e")
 	)
 	(junction
 		(at 162.56 83.82)
@@ -2134,16 +2124,6 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 81.28) (xy 93.98 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "02f5b196-8a1a-46e2-9542-dfc3da73d0e9")
-	)
-	(wire
-		(pts
 			(xy 147.32 86.36) (xy 147.32 96.52)
 		)
 		(stroke
@@ -2151,16 +2131,6 @@
 			(type default)
 		)
 		(uuid "06523418-00f9-47dc-993a-55bd3a6f297c")
-	)
-	(wire
-		(pts
-			(xy 109.22 114.3) (xy 109.22 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0bbd1587-a5ff-4423-b848-5e1603c51478")
 	)
 	(wire
 		(pts
@@ -2264,7 +2234,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 114.3) (xy 66.04 81.28)
+			(xy 109.22 81.28) (xy 109.22 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2324,16 +2294,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 114.3) (xy 109.22 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f95e94b-2eb8-41b9-abbc-388d1176c2c7")
-	)
-	(wire
-		(pts
 			(xy 175.26 83.82) (xy 177.8 83.82)
 		)
 		(stroke
@@ -2341,6 +2301,16 @@
 			(type default)
 		)
 		(uuid "73870b9c-5099-475e-9f2d-d29e5b40ae33")
+	)
+	(wire
+		(pts
+			(xy 109.22 81.28) (xy 127 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73d1c35b-2ec8-4c4f-90c2-5462287364ee")
 	)
 	(wire
 		(pts
@@ -2384,6 +2354,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 81.28) (xy 83.82 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85e19597-aff4-4435-b55e-3b1c6fbf8cd8")
+	)
+	(wire
+		(pts
 			(xy 182.88 83.82) (xy 187.96 83.82)
 		)
 		(stroke
@@ -2424,7 +2404,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 81.28) (xy 127 81.28)
+			(xy 93.98 81.28) (xy 109.22 81.28)
 		)
 		(stroke
 			(width 0)
@@ -2474,16 +2454,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 81.28) (xy 71.12 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b126b2dc-7863-401a-b41b-c28ef7d20c5b")
-	)
-	(wire
-		(pts
 			(xy 71.12 81.28) (xy 83.82 81.28)
 		)
 		(stroke
@@ -2491,6 +2461,16 @@
 			(type default)
 		)
 		(uuid "c0e1c1ab-2e4c-4183-94d7-00c8a3e5f2e6")
+	)
+	(wire
+		(pts
+			(xy 71.12 81.28) (xy 66.04 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c101294b-af81-46d9-ae98-d72de2a247b3")
 	)
 	(wire
 		(pts
@@ -2912,7 +2892,7 @@
 				)
 			)
 		)
-		(property "Value" "1N5819WS"
+		(property "Value" "DSK34"
 			(at 156.21 88.265 90)
 			(effects
 				(font
@@ -2920,7 +2900,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 158.115 87.63 0)
 			(effects
 				(font
@@ -2929,7 +2909,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602990844832202752"
 			(at 162.56 87.63 0)
 			(effects
 				(font
@@ -2938,7 +2918,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SOD-123FL Needs 2A for short cuircuit scenario"
 			(at 162.56 87.63 0)
 			(effects
 				(font
@@ -2947,7 +2927,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C191023"
+		(property "LCSC" "C7502709"
 			(at 155.575 87.3125 0)
 			(effects
 				(font
@@ -2988,7 +2968,7 @@
 				)
 			)
 		)
-		(property "Value" "22uH 250mA"
+		(property "Value" "22uH"
 			(at 168.91 81.28 0)
 			(effects
 				(font
@@ -4477,7 +4457,7 @@
 				)
 			)
 		)
-		(property "Value" "1N4148WS"
+		(property "Value" "1N5819WS"
 			(at 62.23 78.105 0)
 			(effects
 				(font
@@ -4494,7 +4474,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810101110_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--1N4148WS_C2128.pdf"
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 			(at 62.23 81.28 0)
 			(effects
 				(font
@@ -4512,7 +4492,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2128"
+		(property "LCSC" "C191023"
 			(at 62.5475 74.295 0)
 			(effects
 				(font

@@ -1,0 +1,42 @@
+outputs:
+  - name: 'diff_pcb'
+    comment: "visual PCB diff vs origin/StepperServoCAN (red/green overlay PDF)"
+    type: diff
+    dir: diff
+    options:
+      # [string='HEAD'] Reference to compare against. A git branch/tag/hash when old_type is git.
+      old: 'origin/StepperServoCAN'
+      # [git,file,output,multivar='git'] How to interpret the `old` name.
+      old_type: 'git'
+      # [string|list(string)=''] File to compare, blank means the current PCB/SCH.
+      # 'HEAD' = the checked-out commit, equivalent to current in a clean CI tree.
+      new: 'HEAD'
+      # [git,file,output,multivar,current='current'] How to interpret the `new` name.
+      new_type: 'git'
+      # [red_green,stats,2color='red_green'] Added stuff green, removed red.
+      diff_mode: 'red_green'
+      # [number=72..600] Resolution (Dots Per Inch) for the diff images.
+      dpi: 150
+      # [boolean=false] Only include layers/pages with differences in the output PDF.
+      only_different: true
+    layers:
+      - 'F.Cu'
+      - 'B.Cu'
+      - 'F.SilkS'
+      - 'B.SilkS'
+      - 'Edge.Cuts'
+
+  - name: 'diff_sch'
+    comment: "visual schematic diff vs origin/StepperServoCAN (red/green overlay PDF)"
+    type: diff
+    dir: diff
+    options:
+      old: 'origin/StepperServoCAN'
+      old_type: 'git'
+      new: 'HEAD'
+      new_type: 'git'
+      diff_mode: 'red_green'
+      dpi: 150
+      only_different: true
+      # [boolean=true] Compare the PCB, false compares the schematic.
+      pcb: false

@@ -1,0 +1,67 @@
+# Preview prerelease with the latest KiBot outputs (PDFs + visual diffs).
+#
+# On every push to the default branch (StepperServoCAN) this rebuilds the
+# documentation/diff outputs and RECREATES the `preview` prerelease pinned to
+# the new commit, replacing all assets so it always reflects the latest state.
+# Delete+recreate (via the gh CLI, no third-party action) guarantees the tag
+# moves and no stale assets survive. Published releases/tags (e.g. v0.5) are
+# never touched; the preview snapshot lives only on the `preview` tag and is
+# marked prerelease (never "Latest").
+
+name: Preview Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - StepperServoCAN
+    paths:
+      - "PCB/*.kicad_sch"
+      - "PCB/*.kicad_pcb"
+      - "PCB/*.kicad_pro"
+      - "**/*kibot.yml"
+      - ".github/workflows/release-preview.yml"
+
+env:
+  schema: "PCB/StepperServoCAN.kicad_sch"
+  board: "PCB/StepperServoCAN.kicad_pcb"
+  dir: .
+  preview_tag: preview
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-24.04
+    container:
+      image: ghcr.io/inti-cmnb/kicad10_auto:latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Full history: the KiBot `diff` outputs compare against the
+          # origin/StepperServoCAN ref, which needs more than a shallow clone.
+          fetch-depth: 0
+      - name: run kibot (docs + visual diff)
+        run: |
+          kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
+            ibom.html schematic.pdf board_top.pdf board_bottom.pdf diff_pcb diff_sch
+      - name: collect release files
+        run: |
+          mkdir -p release-assets
+          cp ./docs/*.pdf ./diff/*.pdf release-assets/
+          cp ./docs/bom/*.html release-assets/ 2>/dev/null || true
+          ls -la release-assets/
+      - name: recreate preview prerelease
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Delete the previous preview snapshot (release + tag) so the tag
+          # moves to this commit and replaced assets never go stale.
+          gh release delete "$preview_tag" --cleanup-tag --yes || true
+          gh release create "$preview_tag" \
+            --prerelease \
+            --title "Preview KiBot build (${GITHUB_SHA::7})" \
+            --notes "Automatically rebuilt KiBot outputs for ${GITHUB_SHA}. Preview snapshot of the StepperServoCAN branch — superseded on every push." \
+            --target "$GITHUB_SHA" \
+            release-assets/*

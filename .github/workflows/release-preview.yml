@@ -109,17 +109,9 @@ jobs:
         run: |
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             ibom.html schematic.pdf board_top.pdf board_bottom.pdf model.step
-      - name: run kibot (populated board renders for the release page)
+      - name: run kibot (raytraced 3D board renders)
         # Best-effort: renders must never block the docs release. The release
         # body only embeds images that were actually produced (see notes step).
-        continue-on-error: true
-        run: |
-          kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
-            preview_top_png preview_bottom_png
-      - name: run kibot (raytraced 3D board renders)
-        # Best-effort like the 2D renders, plus needs the 3D-model install
-        # above and can be slow in software. The body prefers these and falls
-        # back to the 2D pcbdraw PNGs when absent.
         continue-on-error: true
         run: |
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
@@ -195,7 +187,6 @@ jobs:
           cp ./diff/commit/*.pdf ./diff/tag/*.pdf release-assets/ 2>/dev/null || echo "no diff PDFs (empty diffs skipped)"
           cp ./docs/bom/*.html release-assets/ 2>/dev/null || true
           cp ./cad/*.step release-assets/ 2>/dev/null || echo "no STEP file"
-          cp ./img/preview/*.png release-assets/ 2>/dev/null || echo "no 2D render PNGs"
           cp ./img/preview3d/*.png release-assets/ 2>/dev/null || echo "no 3D render PNGs"
           ls -la release-assets/
       - name: upload build artifacts
@@ -247,43 +238,38 @@ jobs:
           repo="https://github.com/${{ github.repository }}"
           tag="$(cat meta/tag.txt 2>/dev/null || true)"
           {
-            echo "Rolling snapshot of the \`${{ github.ref_name }}\` branch, rebuilt on every push."
-            echo ""
-            if [ -n "$tag" ]; then
-              echo "Built from [latest commit]($repo/commit/${GITHUB_SHA}), since release tag [$tag]($repo/releases/tag/$tag)."
-            else
-              echo "Built from [latest commit]($repo/commit/${GITHUB_SHA})."
-            fi
+            echo "Rolling snapshot of the \`${{ github.ref_name }}\` branch, rebuilt on every push from [latest commit]($repo/commit/${GITHUB_SHA})."
             echo ""
             echo "## Board"
-            if [ -f release-assets/StepperServoCAN-3d-top.png ]; then
-              echo "![board 3D top]($base/StepperServoCAN-3d-top.png)"
-              [ -f release-assets/StepperServoCAN-3d-bottom.png ] && echo "![board 3D bottom]($base/StepperServoCAN-3d-bottom.png)"
-            else
-              [ -f release-assets/StepperServoCAN-pcbdraw-flat-top.png ] && echo "![board flat top]($base/StepperServoCAN-pcbdraw-flat-top.png)"
-              [ -f release-assets/StepperServoCAN-pcbdraw-flat-bottom.png ] && echo "![board flat bottom]($base/StepperServoCAN-pcbdraw-flat-bottom.png)"
-            fi
+            [ -f release-assets/StepperServoCAN-3d-top.png ] && echo "![board 3D top]($base/StepperServoCAN-3d-top.png)"
+            [ -f release-assets/StepperServoCAN-3d-bottom-ortho.png ] && echo "![board 3D bottom, orthographic]($base/StepperServoCAN-3d-bottom-ortho.png)"
             echo ""
             [ -f meta/highlights.md ] && cat meta/highlights.md && echo ""
             echo "## Files"
+            [ -f release-assets/StepperServoCAN-schematic.pdf ] && echo "- StepperServoCAN-schematic.pdf – full schematic PDF"
             for f in release-assets/*; do
               n="$(basename "$f")"
               case "$n" in
-                *-schematic.pdf)      echo "- [Schematic]($base/$n) – full schematic PDF" ;;
-                *-board_top.pdf)      echo "- [Board top]($base/$n) – fabrication layout print, top" ;;
-                *-board_bottom.pdf)   echo "- [Board bottom]($base/$n) – fabrication layout print, bottom" ;;
-                diff_commit-*.pdf)    echo "- [Diff vs latest design change]($base/$n) – red = removed, green = added" ;;
-                diff_tag-*.pdf)       echo "- [Diff vs last release tag]($base/$n) – red = removed, green = added" ;;
-                *.step)               echo "- [3D model]($base/$n) – STEP assembly for CAD/enclosures" ;;
-                *-ibom.html)          echo "- [Interactive BOM]($base/$n) – searchable assembly map (download + open in browser)" ;;
-                *-3d-top.png|*-3d-bottom.png)
-                                      ;; # already embedded above, don't repeat as links
-                *-pcbdraw-flat-top.png)
-                                      echo "- [Flat render, top (pcbdraw)]($base/$n) – 2D populated board view" ;;
-                *-pcbdraw-flat-bottom.png)
-                                      echo "- [Flat render, bottom (pcbdraw)]($base/$n) – 2D populated board view" ;;
-                *.png)                echo "- [$n]($base/$n) – board render" ;;
-                *)                    echo "- [$n]($base/$n)" ;;
+                StepperServoCAN-schematic.pdf) ;; # listed first above
+                *-board_top.pdf)      echo "- $n – fabrication layout print, top" ;;
+                *-board_bottom.pdf)   echo "- $n – fabrication layout print, bottom" ;;
+                diff_commit-*.pdf)
+                  body="${n#diff_commit-}"; body="${body%.pdf}"
+                  side="${body##*_}"; body="${body%_*}"
+                  [ "$side" = "pcb" ] && side="PCB" || side="schematic"
+                  base_sha="${body#*-}"
+                  echo "- $n – diff vs latest design change ($side) against [$base_sha]($repo/commit/$base_sha), red = removed, green = added" ;;
+                diff_tag-*.pdf)
+                  body="${n#diff_tag-}"; body="${body%.pdf}"
+                  side="${body##*_}"; body="${body%_*}"
+                  [ "$side" = "pcb" ] && side="PCB" || side="schematic"
+                  rest="${body#*-}"
+                  base_sha="${rest%%-*}"; tag="${rest#*-}"
+                  echo "- $n – diff vs last release tag [$tag]($repo/releases/tag/$tag) ($side) against [$base_sha]($repo/commit/$base_sha), red = removed, green = added" ;;
+                *.step)               echo "- $n – STEP assembly for CAD/enclosures" ;;
+                *-ibom.html)          echo "- $n – searchable assembly map (download + open in browser)" ;;
+                *.png)                ;; # renders already embedded above, don't repeat
+                *)                    echo "- $n" ;;
               esac
             done
           } > release-notes.md

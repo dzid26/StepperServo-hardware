@@ -26,9 +26,13 @@ outputs:
     dir: img/preview3d
     options:
       view: bottom
-      output: '%f-3d-bottom.%x'
+      output: '%f-3d-bottom-ortho.%x'
       format: 'png'
       ray_tracing: true
       transparent_background: true
+      # Flat projection for the bottom view (no perspective): cleaner for
+      # inspection and pairs well with the perspective hero shot on top.
+      # Only the bottom view uses it; top stays perspective.
+      orthographic: true
       width: 1280
       height: 720

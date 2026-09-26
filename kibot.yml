@@ -53,8 +53,6 @@ import:
   - file: .kibot/fabrications.kibot.yml
 # visual diff vs default branch
   - file: .kibot/diff.kibot.yml
-# populated board renders for the preview release page
-  - file: .kibot/preview_img.kibot.yml
 # raytraced 3D renders for the preview release page
   - file: .kibot/preview_3d.kibot.yml
 # img

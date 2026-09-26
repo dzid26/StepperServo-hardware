@@ -11,9 +11,10 @@ outputs:
       old: '@KIBOT_DIFF_OLD_PCB@'
       # Explicit filename: the default (%i-based) name is identical for the
       # commit and tag pairs, which would collide when flattened into the
-      # release assets. The short base SHA tells the reviewer what this is
-      # compared against.
-      output: 'diff_commit-@KIBOT_DIFF_OLD_PCB_SHORT@_pcb.%x'
+      # release assets. Both revisions included (base short SHA = design state
+      # before its latest change, new short SHA = HEAD), e.g.
+      # diff_commit-cd41e62-99804f7_pcb.pdf. Self-explanatory after download.
+      output: 'diff_commit-@KIBOT_DIFF_OLD_PCB_SHORT@-@KIBOT_DIFF_NEW_SHORT@_pcb.%x'
       # [git,file,output,multivar='git'] How to interpret the `old` name.
       old_type: 'git'
       # [string|list(string)=''] File to compare, blank means the current PCB/SCH.
@@ -40,7 +41,7 @@ outputs:
     dir: diff/commit
     options:
       old: '@KIBOT_DIFF_OLD_SCH@'
-      output: 'diff_commit-@KIBOT_DIFF_OLD_SCH_SHORT@_sch.%x'
+      output: 'diff_commit-@KIBOT_DIFF_OLD_SCH_SHORT@-@KIBOT_DIFF_NEW_SHORT@_sch.%x'
       old_type: 'git'
       new: 'HEAD'
       new_type: 'git'
@@ -61,7 +62,9 @@ outputs:
       # Tag name embedded in the filename (e.g. diff_tag-v0.5_pcb.pdf).
       # Tag refs like v0.5 are filename-safe; KiBot also sanitizes expanded
       # names, so exotic tag characters can't break the output.
-      output: 'diff_tag-@KIBOT_DIFF_TAG@_pcb.%x'
+      # Both revisions included: tag base commit + HEAD, e.g.
+      # diff_tag-v0.5-19463cc-99804f7_pcb.pdf.
+      output: 'diff_tag-@KIBOT_DIFF_TAG@-@KIBOT_DIFF_TAG_BASE_SHORT@-@KIBOT_DIFF_NEW_SHORT@_pcb.%x'
       old_type: 'git'
       new: 'HEAD'
       new_type: 'git'
@@ -81,7 +84,7 @@ outputs:
     dir: diff/tag
     options:
       old: '@KIBOT_DIFF_TAG@'
-      output: 'diff_tag-@KIBOT_DIFF_TAG@_sch.%x'
+      output: 'diff_tag-@KIBOT_DIFF_TAG@-@KIBOT_DIFF_TAG_BASE_SHORT@-@KIBOT_DIFF_NEW_SHORT@_sch.%x'
       old_type: 'git'
       new: 'HEAD'
       new_type: 'git'

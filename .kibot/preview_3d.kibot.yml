@@ -12,6 +12,9 @@ outputs:
       format: 'png'
       # *Enable the ray tracing. Much better result, but slow
       ray_tracing: true
+      # Transparent background (kicad-cli `--background transparent`).
+      # Only meaningful for PNGs; the board floats without a floor.
+      transparent_background: true
       # Image width (approx.)
       width: 1280
       # Image height (approx.)
@@ -26,5 +29,6 @@ outputs:
       output: '%f-3d-bottom.%x'
       format: 'png'
       ray_tracing: true
+      transparent_background: true
       width: 1280
       height: 720

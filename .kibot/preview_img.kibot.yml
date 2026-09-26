@@ -19,7 +19,7 @@ outputs:
       # [boolean=false] do not make holes transparent
       no_drillholes: false
       # [string='%f-%i%v.%x'] name for the generated file. Affected by global options
-      output: '%f-preview-top.%x'
+      output: '%f-pcbdraw-flat-top.%x'
       # [boolean=false] show placeholder for missing components
       placeholder: false
       # Components to draw: 'all' renders every fitted component body, which is
@@ -47,7 +47,7 @@ outputs:
       libs: []
       mirror: false
       no_drillholes: false
-      output: '%f-preview-bottom.%x'
+      output: '%f-pcbdraw-flat-bottom.%x'
       placeholder: false
       show_components: all
       style: 'jlcpcb-green-hasl'

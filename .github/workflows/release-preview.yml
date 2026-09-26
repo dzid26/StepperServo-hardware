@@ -103,6 +103,8 @@ jobs:
           echo "pcb_short=$pcb_short" >> "$GITHUB_OUTPUT"
           echo "sch_base=$sch_base" >> "$GITHUB_OUTPUT"
           echo "sch_short=$sch_short" >> "$GITHUB_OUTPUT"
+          # HEAD short SHA goes into both diff filenames ("compared to" revision).
+          echo "new_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
       - name: run kibot (docs + STEP)
         run: |
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
@@ -132,6 +134,7 @@ jobs:
                 -E KIBOT_DIFF_OLD_PCB_SHORT=${{ steps.diffbase.outputs.pcb_short }} \
                 -E KIBOT_DIFF_OLD_SCH=${{ steps.diffbase.outputs.sch_base }} \
                 -E KIBOT_DIFF_OLD_SCH_SHORT=${{ steps.diffbase.outputs.sch_short }} \
+                -E KIBOT_DIFF_NEW_SHORT=${{ steps.diffbase.outputs.new_short }} \
             -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             diff_pcb diff_sch
       - name: resolve tag diff base
@@ -148,6 +151,16 @@ jobs:
             echo "Tag diff base: $tag ($(git rev-parse --short "$tag")) vs $GITHUB_SHA"
           fi
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          # Persist for the release job (steps contexts don't cross jobs).
+          mkdir -p meta
+          printf '%s' "$tag" > meta/tag.txt
+          # Tag's own commit short SHA for the filename (tag name alone doesn't
+          # say which commit it points at; tags can be moved).
+          if [ -n "$tag" ]; then
+            echo "tag_base_short=$(git rev-parse --short "$tag^{commit}")" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag_base_short=" >> "$GITHUB_OUTPUT"
+          fi
       - name: write highlights since last hardware tag
         run: |
           # Changelog fragment for the release body, generated where the full
@@ -171,6 +184,8 @@ jobs:
         continue-on-error: true
         run: |
           kibot -E KIBOT_DIFF_TAG=${{ steps.difftag.outputs.tag }} \
+                -E KIBOT_DIFF_TAG_BASE_SHORT=${{ steps.difftag.outputs.tag_base_short }} \
+                -E KIBOT_DIFF_NEW_SHORT=${{ steps.diffbase.outputs.new_short }} \
             -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             diff_tag_pcb diff_tag_sch
       - name: collect release files
@@ -194,7 +209,7 @@ jobs:
         with:
           name: preview-meta
           if-no-files-found: error
-          path: meta/highlights.md
+          path: meta/
 
   release:
     # Same default-branch guard as `build` (a manual dispatch off-default must
@@ -229,18 +244,24 @@ jobs:
           # from files actually present, so the page never shows broken
           # pictures or dead links.
           base="https://github.com/${{ github.repository }}/releases/download/preview"
+          repo="https://github.com/${{ github.repository }}"
+          tag="$(cat meta/tag.txt 2>/dev/null || true)"
           {
-            echo "# StepperServoCAN hardware preview — ${GITHUB_SHA::7}"
+            echo "Rolling snapshot of the \`${{ github.ref_name }}\` branch, rebuilt on every push."
             echo ""
-            echo "Rolling snapshot of the \`${{ github.ref_name }}\` branch, rebuilt by CI on every push. Prerelease, never marked Latest."
+            if [ -n "$tag" ]; then
+              echo "Built from [latest commit]($repo/commit/${GITHUB_SHA}), since release tag [$tag]($repo/releases/tag/$tag)."
+            else
+              echo "Built from [latest commit]($repo/commit/${GITHUB_SHA})."
+            fi
             echo ""
             echo "## Board"
             if [ -f release-assets/StepperServoCAN-3d-top.png ]; then
               echo "![board 3D top]($base/StepperServoCAN-3d-top.png)"
               [ -f release-assets/StepperServoCAN-3d-bottom.png ] && echo "![board 3D bottom]($base/StepperServoCAN-3d-bottom.png)"
             else
-              [ -f release-assets/StepperServoCAN-preview-top.png ] && echo "![board top]($base/StepperServoCAN-preview-top.png)"
-              [ -f release-assets/StepperServoCAN-preview-bottom.png ] && echo "![board bottom]($base/StepperServoCAN-preview-bottom.png)"
+              [ -f release-assets/StepperServoCAN-pcbdraw-flat-top.png ] && echo "![board flat top]($base/StepperServoCAN-pcbdraw-flat-top.png)"
+              [ -f release-assets/StepperServoCAN-pcbdraw-flat-bottom.png ] && echo "![board flat bottom]($base/StepperServoCAN-pcbdraw-flat-bottom.png)"
             fi
             echo ""
             [ -f meta/highlights.md ] && cat meta/highlights.md && echo ""
@@ -249,12 +270,18 @@ jobs:
               n="$(basename "$f")"
               case "$n" in
                 *-schematic.pdf)      echo "- [Schematic]($base/$n) – full schematic PDF" ;;
-                *-board_top.pdf)      echo "- [Board top]($base/$n) – fabrication print, top" ;;
-                *-board_bottom.pdf)   echo "- [Board bottom]($base/$n) – fabrication print, bottom" ;;
+                *-board_top.pdf)      echo "- [Board top]($base/$n) – fabrication layout print, top" ;;
+                *-board_bottom.pdf)   echo "- [Board bottom]($base/$n) – fabrication layout print, bottom" ;;
                 diff_commit-*.pdf)    echo "- [Diff vs latest design change]($base/$n) – red = removed, green = added" ;;
                 diff_tag-*.pdf)       echo "- [Diff vs last release tag]($base/$n) – red = removed, green = added" ;;
                 *.step)               echo "- [3D model]($base/$n) – STEP assembly for CAD/enclosures" ;;
                 *-ibom.html)          echo "- [Interactive BOM]($base/$n) – searchable assembly map (download + open in browser)" ;;
+                *-3d-top.png|*-3d-bottom.png)
+                                      ;; # already embedded above, don't repeat as links
+                *-pcbdraw-flat-top.png)
+                                      echo "- [Flat render, top (pcbdraw)]($base/$n) – 2D populated board view" ;;
+                *-pcbdraw-flat-bottom.png)
+                                      echo "- [Flat render, bottom (pcbdraw)]($base/$n) – 2D populated board view" ;;
                 *.png)                echo "- [$n]($base/$n) – board render" ;;
                 *)                    echo "- [$n]($base/$n)" ;;
               esac
@@ -270,7 +297,7 @@ jobs:
           gh release delete "$preview_tag" --cleanup-tag --yes || true
           gh release create "$preview_tag" \
             --prerelease \
-            --title "Preview KiBot build (${GITHUB_SHA::7})" \
+            --title "StepperServoCAN hardware preview build - latest" \
             --notes-file release-notes.md \
             --target "$GITHUB_SHA" \
             release-assets/*

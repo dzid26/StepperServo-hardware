@@ -26,9 +26,6 @@ outputs:
       # [boolean=false] show placeholder for missing components
       placeholder: false
       # [dict|None] replacements for PCB references using components (lib:component)
-      remap:
-      # [list(string)|string=none] [none,all] list of components to draw, can be also a string for none or all.
-      # The default is none
       show_components: none
       # [string|dict] PCB style (colors). An internal name, the name of a JSON file or the style options
       style: 'jlcpcb-green-hasl'
@@ -66,9 +63,6 @@ outputs:
       # [boolean=false] show placeholder for missing components
       placeholder: false
       # [dict|None] replacements for PCB references using components (lib:component)
-      remap:
-      # [list(string)|string=none] [none,all] list of components to draw, can be also a string for none or all.
-      # The default is none
       show_components: none
       # [string|dict] PCB style (colors). An internal name, the name of a JSON file or the style options
       style: 'jlcpcb-green-hasl'

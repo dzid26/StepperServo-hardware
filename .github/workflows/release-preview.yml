@@ -1,0 +1,151 @@
+# Preview prerelease with the latest KiBot outputs (PDFs, visual diffs,
+# populated board renders, STEP model).
+#
+# On every push to the default branch this rebuilds the
+# documentation/diff/render outputs and RECREATES the `preview` prerelease pinned to
+# the new commit, replacing all assets so it always reflects the latest state.
+# Delete+recreate (via the gh CLI, no third-party action) guarantees the tag
+# moves and no stale assets survive. Published releases/tags (e.g. v0.5) are
+# never touched; the preview snapshot lives only on the `preview` tag and is
+# marked prerelease (never "Latest").
+#
+# Default-branch agnostic: `on.push.branches` cannot use contexts/expressions
+# (GitHub requires literals there), so there is intentionally NO branch filter
+# below. The job-level `if:` guard restricts publishing to pushes on the
+# default branch. Pushes to other branches produce a skipped run, never a
+# release.
+
+name: Preview Release
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "PCB/*.kicad_sch"
+      - "PCB/*.kicad_pcb"
+      - "PCB/*.kicad_pro"
+      - "**/*kibot.yml"
+      - ".github/workflows/release-preview.yml"
+
+env:
+  schema: "PCB/StepperServoCAN.kicad_sch"
+  board: "PCB/StepperServoCAN.kicad_pcb"
+  dir: .
+  preview_tag: preview
+
+permissions:
+  contents: write
+
+# A rolling publisher must never publish stale results over fresh ones: if two
+# pushes race, cancel the older run so the last writer wins deterministically.
+concurrency:
+  group: preview-release
+  cancel-in-progress: true
+
+jobs:
+  build-and-release:
+    # Publish only from the default branch. `github.event.repository.default_branch`
+    # is present on push/workflow_dispatch payloads; on any other branch (or a
+    # manual run from one) the whole job is skipped and no release is touched.
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-24.04
+    container:
+      image: ghcr.io/inti-cmnb/kicad10_auto:latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Full history: the KiBot `diff` outputs compare against the default
+          # branch ref, which needs more than a shallow clone.
+          fetch-depth: 0
+      - name: resolve diff base
+        id: diffbase
+        run: |
+          # The visual diff must compare the pushed commit against its parent.
+          # (Comparing against the default-branch head would compare the commit
+          # against itself, which yields zero diffs and makes KiBot fail.)
+          # `before` is the pre-push head; absent on manual runs (empty) and
+          # all-zeros on branch creation, so fall back to HEAD~1 then.
+          base="${{ github.event.before }}"
+          if ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+            base="HEAD~1"
+          fi
+          echo "base=$base" >> "$GITHUB_OUTPUT"
+          echo "Diff base: $base vs $GITHUB_SHA"
+      - name: run kibot (docs + STEP)
+        run: |
+          kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
+            ibom.html schematic.pdf board_top.pdf board_bottom.pdf model.step
+      - name: run kibot (populated board renders for the release page)
+        # Best-effort: renders must never block the docs release. The release
+        # body only embeds images that were actually produced (see notes step).
+        continue-on-error: true
+        run: |
+          kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
+            preview_top_png preview_bottom_png
+      - name: run kibot (visual diff vs previous commit)
+        # Tolerated: an empty diff (e.g. design untouched by this push) makes
+        # KiBot exit non-zero by design, and diffs are informational — docs are
+        # the release priority. The log still records the outcome.
+        continue-on-error: true
+        run: |
+          kibot -E KIBOT_DIFF_OLD=${{ steps.diffbase.outputs.base }} \
+            -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
+            diff_pcb diff_sch
+      - name: resolve tag diff base
+        id: difftag
+        run: |
+          # Last hardware tag reachable from HEAD. The `v[0-9]*` pattern keeps
+          # CI-owned tags (preview) and legacy oddballs (PCB#2, ProtoPCB#1)
+          # out. Fails cleanly when no such tag exists -> tag diff is skipped.
+          git fetch --tags --force origin 2>/dev/null || true
+          tag="$(git describe --tags --abbrev=0 --match 'v[0-9]*' HEAD 2>/dev/null || true)"
+          if [ -z "$tag" ]; then
+            echo "No matching hardware tag found; tag diff will be skipped."
+          else
+            echo "Tag diff base: $tag ($(git rev-parse --short "$tag")) vs $GITHUB_SHA"
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+      - name: run kibot (visual diff vs last hardware tag)
+        if: steps.difftag.outputs.tag != ''
+        # Same tolerance as the commit diff: empty diffs exit non-zero.
+        continue-on-error: true
+        run: |
+          kibot -E KIBOT_DIFF_TAG=${{ steps.difftag.outputs.tag }} \
+            -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
+            diff_tag_pcb diff_tag_sch
+      - name: collect release files
+        run: |
+          mkdir -p release-assets
+          cp ./docs/*.pdf release-assets/
+          cp ./diff/commit/*.pdf ./diff/tag/*.pdf release-assets/ 2>/dev/null || echo "no diff PDFs (empty diffs skipped)"
+          cp ./docs/bom/*.html release-assets/ 2>/dev/null || true
+          cp ./cad/*.step release-assets/ 2>/dev/null || echo "no STEP file"
+          cp ./img/preview/*.png release-assets/ 2>/dev/null || echo "no render PNGs"
+          ls -la release-assets/
+      - name: build release notes
+        run: |
+          # Asset URLs are stable across recreations (fixed `preview` tag), so
+          # the body can link them before upload. Only embed images that were
+          # actually produced, so the page never shows broken pictures.
+          {
+            echo "Automatically rebuilt KiBot outputs for ${GITHUB_SHA}. Preview snapshot of the ${{ github.ref_name }} branch — superseded on every push."
+            echo ""
+            echo "## Board renders"
+            base="https://github.com/${{ github.repository }}/releases/download/preview"
+            [ -f img/preview/StepperServoCAN-preview-top.png ] && echo "![board top]($base/StepperServoCAN-preview-top.png)"
+            [ -f img/preview/StepperServoCAN-preview-bottom.png ] && echo "![board bottom]($base/StepperServoCAN-preview-bottom.png)"
+          } > release-notes.md
+          cat release-notes.md
+      - name: recreate preview prerelease
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Delete the previous preview snapshot (release + tag) so the tag
+          # moves to this commit and replaced assets never go stale.
+          gh release delete "$preview_tag" --cleanup-tag --yes || true
+          gh release create "$preview_tag" \
+            --prerelease \
+            --title "Preview KiBot build (${GITHUB_SHA::7})" \
+            --notes-file release-notes.md \
+            --target "$GITHUB_SHA" \
+            release-assets/*

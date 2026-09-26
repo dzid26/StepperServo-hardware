@@ -1,0 +1,56 @@
+outputs:
+  - name: 'preview_top_png'
+    comment: "populated board render, top side (PNG) for the preview release page"
+    type: pcbdraw
+    dir: img/preview
+    options:
+      # [boolean=false] render the bottom side of the board (default is top side)
+      bottom: false
+      # [number=300] [10,1200] dots per inch (resolution) of the generated image
+      dpi: 300
+      # [string='svg'] [svg,png,jpg] output format. Only used if no `output` is specified
+      format: 'png'
+      # [list(string)=[]] list of components to highlight
+      highlight: []
+      # [list(string)=[]] list of libraries
+      libs: []
+      # [boolean=false] mirror the board
+      mirror: false
+      # [boolean=false] do not make holes transparent
+      no_drillholes: false
+      # [string='%f-%i%v.%x'] name for the generated file. Affected by global options
+      output: '%f-preview-top.%x'
+      # [boolean=false] show placeholder for missing components
+      placeholder: false
+      # Components to draw: 'all' renders every fitted component body, which is
+      # what makes this a *populated* board view (the bare-board look comes
+      # from 'none').
+      show_components: all
+      # [string|dict] PCB style (colors). An internal name, the name of a JSON file or the style options
+      style: 'jlcpcb-green-hasl'
+      # [string=''] Board variant to apply
+      variant: ''
+      # [boolean=false] render V-CUTS on the Cmts.User layer
+      vcuts: false
+      # [string='visible'] [visible,all,none] using visible only the warnings about components in the visible side are generated
+      warnings: 'none'
+
+  - name: 'preview_bottom_png'
+    comment: "populated board render, bottom side (PNG) for the preview release page"
+    type: pcbdraw
+    dir: img/preview
+    options:
+      bottom: true
+      dpi: 300
+      format: 'png'
+      highlight: []
+      libs: []
+      mirror: false
+      no_drillholes: false
+      output: '%f-preview-bottom.%x'
+      placeholder: false
+      show_components: all
+      style: 'jlcpcb-green-hasl'
+      variant: ''
+      vcuts: false
+      warnings: 'none'

@@ -27,36 +27,36 @@ env:
 jobs:
 # checks
   ERC:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     container:
-      image: ghcr.io/inti-cmnb/kicad7_auto:latest
+      image: ghcr.io/inti-cmnb/kicad10_auto:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: run kibot
         run: | 
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_drc -v -i
   DRC:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     container:
-      image: ghcr.io/inti-cmnb/kicad7_auto:latest
+      image: ghcr.io/inti-cmnb/kicad10_auto:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: run kibot
         run: | 
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc -v -i
 # documentation
   docs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [ERC]
     container:
-      image: ghcr.io/inti-cmnb/kicad7_auto:latest
+      image: ghcr.io/inti-cmnb/kicad10_auto:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: run kibot
         run: | 
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             ibom.html octopart.csv schematic.pdf schematic.svg board_top.pdf board_bottom.pdf
-      - uses: actions/upload-artifact@v3.1.1
+      - uses: actions/upload-artifact@v6
         if: ${{success()}}
         with:
           name: ${{github.event.repository.name}}_docs
@@ -67,17 +67,17 @@ jobs:
             !${{env.dir}}/**/*.log
 # fabrications
   gerbers:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [DRC]
     container:
-      image: ghcr.io/inti-cmnb/kicad7_auto:latest
+      image: ghcr.io/inti-cmnb/kicad10_auto:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: run kibot
         run: |
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             gerbers.gbr drills.gbr drills.drl pickandplace.csv bom.csv
-      - uses: actions/upload-artifact@v3.1.1
+      - uses: actions/upload-artifact@v6
         if: ${{success()}}
         with:
           name: ${{github.event.repository.name}}_gerbers
@@ -88,17 +88,17 @@ jobs:
             !${{env.dir}}/**/*.log
 # cad
   cad:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [DRC]
     container:
-      image: ghcr.io/inti-cmnb/kicad7_auto:latest
+      image: ghcr.io/inti-cmnb/kicad10_auto:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: run kibot
         run: | 
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             model.step openboardview.brd autocad.dxf
-      - uses: actions/upload-artifact@v3.1.1
+      - uses: actions/upload-artifact@v6
         if: ${{success()}}
         with:
           name: ${{github.event.repository.name}}_cad
@@ -109,17 +109,17 @@ jobs:
             !${{env.dir}}/**/*.log
 # images
   render:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [DRC]
     container:
-      image: ghcr.io/inti-cmnb/kicad7_auto:latest
+      image: ghcr.io/inti-cmnb/kicad10_auto:latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - name: run kibot
         run: | 
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
           'hasl green svg top' 'hasl green svg bottom'
-      - uses: actions/upload-artifact@v3.1.1
+      - uses: actions/upload-artifact@v6
         if: ${{success()}}
         with:
           name: ${{github.event.repository.name}}_img

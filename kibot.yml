@@ -51,6 +51,8 @@ import:
   - file: .kibot/gerbers_jlcpcb.kibot.yml
   - file: .kibot/drills.kibot.yml
   - file: .kibot/fabrications.kibot.yml
+# visual diff vs default branch
+  - file: .kibot/diff.kibot.yml
 # img
   - file: .kibot/render.kibot.yml
   # - file: .kibot/plot.kibot.yml

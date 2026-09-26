@@ -246,30 +246,30 @@ jobs:
             echo ""
             [ -f meta/highlights.md ] && cat meta/highlights.md && echo ""
             echo "## Files"
-            [ -f release-assets/StepperServoCAN-schematic.pdf ] && echo "- StepperServoCAN-schematic.pdf – full schematic PDF"
+            [ -f release-assets/StepperServoCAN-schematic.pdf ] && echo "- [StepperServoCAN-schematic.pdf]($base/StepperServoCAN-schematic.pdf) – full schematic PDF"
             for f in release-assets/*; do
               n="$(basename "$f")"
               case "$n" in
                 StepperServoCAN-schematic.pdf) ;; # listed first above
-                *-board_top.pdf)      echo "- $n – fabrication layout print, top" ;;
-                *-board_bottom.pdf)   echo "- $n – fabrication layout print, bottom" ;;
+                *-board_top.pdf)      echo "- [$n]($base/$n) – fabrication layout print, top" ;;
+                *-board_bottom.pdf)   echo "- [$n]($base/$n) – fabrication layout print, bottom" ;;
                 diff_commit-*.pdf)
                   body="${n#diff_commit-}"; body="${body%.pdf}"
                   side="${body##*_}"; body="${body%_*}"
                   [ "$side" = "pcb" ] && side="PCB" || side="schematic"
                   base_sha="${body#*-}"
-                  echo "- $n – diff vs latest design change ($side) against [$base_sha]($repo/commit/$base_sha), red = removed, green = added" ;;
+                  echo "- [$n]($base/$n) – diff vs latest design change ($side) against [$base_sha]($repo/commit/$base_sha), red = removed, green = added" ;;
                 diff_tag-*.pdf)
                   body="${n#diff_tag-}"; body="${body%.pdf}"
                   side="${body##*_}"; body="${body%_*}"
                   [ "$side" = "pcb" ] && side="PCB" || side="schematic"
                   rest="${body#*-}"
                   base_sha="${rest%%-*}"; tag="${rest#*-}"
-                  echo "- $n – diff vs last release tag [$tag]($repo/releases/tag/$tag) ($side) against [$base_sha]($repo/commit/$base_sha), red = removed, green = added" ;;
-                *.step)               echo "- $n – STEP assembly for CAD/enclosures" ;;
-                *-ibom.html)          echo "- $n – searchable assembly map (download + open in browser)" ;;
+                  echo "- [$n]($base/$n) – diff vs last release tag [$tag]($repo/releases/tag/$tag) ($side) against [$base_sha]($repo/commit/$base_sha), red = removed, green = added" ;;
+                *.step)               echo "- [$n]($base/$n) – STEP assembly for CAD/enclosures" ;;
+                *-ibom.html)          echo "- [$n]($base/$n) – searchable assembly map (download + open in browser)" ;;
                 *.png)                ;; # renders already embedded above, don't repeat
-                *)                    echo "- $n" ;;
+                *)                    echo "- [$n]($base/$n)" ;;
               esac
             done
           } > release-notes.md

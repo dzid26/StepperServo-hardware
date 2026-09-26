@@ -62,20 +62,47 @@ jobs:
           # Full history: the KiBot `diff` outputs compare against the previous
           # commit / tag refs, which needs more than a shallow clone.
           fetch-depth: 0
-      - name: resolve diff base
+      - name: install KiCad 3D models (for 3D renders + STEP bodies)
+        # Best-effort: the image ships no kicad-packages3d, so raytraced
+        # renders and STEP exports would come out board-only. A few hundred
+        # MB download, only on default-branch release runs. If it fails the
+        # renders still run, just without component bodies.
+        continue-on-error: true
+        run: |
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends kicad-packages3d
+      - name: resolve design diff bases
         id: diffbase
         run: |
-          # The visual diff must compare the pushed commit against its parent.
-          # (Comparing against the default-branch head would compare the commit
-          # against itself, which yields zero diffs and makes KiBot fail.)
-          # `before` is the pre-push head; absent on manual runs (empty) and
-          # all-zeros on branch creation, so fall back to HEAD~1 then.
-          base="${{ github.event.before }}"
-          if ! git cat-file -e "$base^{commit}" 2>/dev/null; then
-            base="HEAD~1"
-          fi
-          echo "base=$base" >> "$GITHUB_OUTPUT"
-          echo "Diff base: $base vs $GITHUB_SHA"
+          # Per file, find the most recent commit touching it, and diff HEAD
+          # against that commit's PARENT. Semantics: the base is the design
+          # state before its latest change, so the diff always shows the most
+          # recent design change to that file (non-empty unless the change is
+          # render-neutral). Using HEAD itself as base would compare the file
+          # against itself and always fail; using the push range would show
+          # nothing on CI-only pushes. PCB and schematic resolve independently
+          # (either may be untouched for long stretches).
+          # Falls back to empty (that file's diff is skipped) when unresolvable.
+          resolve_one() {
+            last="$(git log -1 --format=%H HEAD -- $1)"
+            base=""
+            short=""
+            if [ -n "$last" ] && base="$(git rev-parse --verify --quiet "$last^" 2>/dev/null)"; then
+              short="$(git rev-parse --short "$base")"
+            fi
+            echo "design last touched by $last, diff base $base ($short) for $1" >&2
+            echo "$base $short"
+          }
+          read pcb_base pcb_short <<EOF
+          $(resolve_one "PCB/StepperServoCAN.kicad_pcb")
+          EOF
+          read sch_base sch_short <<EOF
+          $(resolve_one "PCB/*.kicad_sch")
+          EOF
+          echo "pcb_base=$pcb_base" >> "$GITHUB_OUTPUT"
+          echo "pcb_short=$pcb_short" >> "$GITHUB_OUTPUT"
+          echo "sch_base=$sch_base" >> "$GITHUB_OUTPUT"
+          echo "sch_short=$sch_short" >> "$GITHUB_OUTPUT"
       - name: run kibot (docs + STEP)
         run: |
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
@@ -87,13 +114,24 @@ jobs:
         run: |
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             preview_top_png preview_bottom_png
-      - name: run kibot (visual diff vs previous commit)
-        # Tolerated: an empty diff (e.g. design untouched by this push) makes
+      - name: run kibot (raytraced 3D board renders)
+        # Best-effort like the 2D renders, plus needs the 3D-model install
+        # above and can be slow in software. The body prefers these and falls
+        # back to the 2D pcbdraw PNGs when absent.
+        continue-on-error: true
+        run: |
+          kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
+            preview_3d_top preview_3d_bottom
+      - name: run kibot (visual diff of latest design change, per file)
+        # Tolerated: a render-neutral change (or unresolvable base) makes
         # KiBot exit non-zero by design, and diffs are informational — docs are
         # the release priority. The log still records the outcome.
         continue-on-error: true
         run: |
-          kibot -E KIBOT_DIFF_OLD=${{ steps.diffbase.outputs.base }} \
+          kibot -E KIBOT_DIFF_OLD_PCB=${{ steps.diffbase.outputs.pcb_base }} \
+                -E KIBOT_DIFF_OLD_PCB_SHORT=${{ steps.diffbase.outputs.pcb_short }} \
+                -E KIBOT_DIFF_OLD_SCH=${{ steps.diffbase.outputs.sch_base }} \
+                -E KIBOT_DIFF_OLD_SCH_SHORT=${{ steps.diffbase.outputs.sch_short }} \
             -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             diff_pcb diff_sch
       - name: resolve tag diff base
@@ -110,6 +148,23 @@ jobs:
             echo "Tag diff base: $tag ($(git rev-parse --short "$tag")) vs $GITHUB_SHA"
           fi
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
+      - name: write highlights since last hardware tag
+        run: |
+          # Changelog fragment for the release body, generated where the full
+          # history exists. Capped so one huge push can't flood the page.
+          mkdir -p meta
+          tag="${{ steps.difftag.outputs.tag }}"
+          if [ -n "$tag" ]; then
+            {
+              echo "## Highlights since \`$tag\`"
+              git log "$tag"..HEAD --pretty=format:'- %s (%h)' -- PCB/ | head -30
+              echo ""
+            } > meta/highlights.md
+          else
+            echo "## Highlights" > meta/highlights.md
+            echo "_First preview — no prior hardware tag to compare._" >> meta/highlights.md
+          fi
+          cat meta/highlights.md
       - name: run kibot (visual diff vs last hardware tag)
         if: steps.difftag.outputs.tag != ''
         # Same tolerance as the commit diff: empty diffs exit non-zero.
@@ -125,7 +180,8 @@ jobs:
           cp ./diff/commit/*.pdf ./diff/tag/*.pdf release-assets/ 2>/dev/null || echo "no diff PDFs (empty diffs skipped)"
           cp ./docs/bom/*.html release-assets/ 2>/dev/null || true
           cp ./cad/*.step release-assets/ 2>/dev/null || echo "no STEP file"
-          cp ./img/preview/*.png release-assets/ 2>/dev/null || echo "no render PNGs"
+          cp ./img/preview/*.png release-assets/ 2>/dev/null || echo "no 2D render PNGs"
+          cp ./img/preview3d/*.png release-assets/ 2>/dev/null || echo "no 3D render PNGs"
           ls -la release-assets/
       - name: upload build artifacts
         uses: actions/upload-artifact@v6
@@ -133,6 +189,12 @@ jobs:
           name: preview-assets
           if-no-files-found: error
           path: release-assets/
+      - name: upload release metadata
+        uses: actions/upload-artifact@v6
+        with:
+          name: preview-meta
+          if-no-files-found: error
+          path: meta/highlights.md
 
   release:
     # Same default-branch guard as `build` (a manual dispatch off-default must
@@ -152,18 +214,51 @@ jobs:
         with:
           name: preview-assets
           path: release-assets
+      - uses: actions/download-artifact@v6
+        with:
+          name: preview-assets
+          path: release-assets
+      - uses: actions/download-artifact@v6
+        with:
+          name: preview-meta
+          path: meta
       - name: build release notes
         run: |
           # Asset URLs are stable across recreations (fixed `preview` tag), so
-          # the body can link them before upload. Only embed images that were
-          # actually produced, so the page never shows broken pictures.
+          # the body can link them before upload. Every section is generated
+          # from files actually present, so the page never shows broken
+          # pictures or dead links.
+          base="https://github.com/${{ github.repository }}/releases/download/preview"
           {
-            echo "Automatically rebuilt KiBot outputs for ${GITHUB_SHA}. Preview snapshot of the ${{ github.ref_name }} branch — superseded on every push."
+            echo "# StepperServoCAN hardware preview — ${GITHUB_SHA::7}"
             echo ""
-            echo "## Board renders"
-            base="https://github.com/${{ github.repository }}/releases/download/preview"
-            [ -f release-assets/StepperServoCAN-preview-top.png ] && echo "![board top]($base/StepperServoCAN-preview-top.png)"
-            [ -f release-assets/StepperServoCAN-preview-bottom.png ] && echo "![board bottom]($base/StepperServoCAN-preview-bottom.png)"
+            echo "Rolling snapshot of the \`${{ github.ref_name }}\` branch, rebuilt by CI on every push. Prerelease, never marked Latest."
+            echo ""
+            echo "## Board"
+            if [ -f release-assets/StepperServoCAN-3d-top.png ]; then
+              echo "![board 3D top]($base/StepperServoCAN-3d-top.png)"
+              [ -f release-assets/StepperServoCAN-3d-bottom.png ] && echo "![board 3D bottom]($base/StepperServoCAN-3d-bottom.png)"
+            else
+              [ -f release-assets/StepperServoCAN-preview-top.png ] && echo "![board top]($base/StepperServoCAN-preview-top.png)"
+              [ -f release-assets/StepperServoCAN-preview-bottom.png ] && echo "![board bottom]($base/StepperServoCAN-preview-bottom.png)"
+            fi
+            echo ""
+            [ -f meta/highlights.md ] && cat meta/highlights.md && echo ""
+            echo "## Files"
+            for f in release-assets/*; do
+              n="$(basename "$f")"
+              case "$n" in
+                *-schematic.pdf)      echo "- [Schematic]($base/$n) – full schematic PDF" ;;
+                *-board_top.pdf)      echo "- [Board top]($base/$n) – fabrication print, top" ;;
+                *-board_bottom.pdf)   echo "- [Board bottom]($base/$n) – fabrication print, bottom" ;;
+                diff_commit-*.pdf)    echo "- [Diff vs latest design change]($base/$n) – red = removed, green = added" ;;
+                diff_tag-*.pdf)       echo "- [Diff vs last release tag]($base/$n) – red = removed, green = added" ;;
+                *.step)               echo "- [3D model]($base/$n) – STEP assembly for CAD/enclosures" ;;
+                *-ibom.html)          echo "- [Interactive BOM]($base/$n) – searchable assembly map (download + open in browser)" ;;
+                *.png)                echo "- [$n]($base/$n) – board render" ;;
+                *)                    echo "- [$n]($base/$n)" ;;
+              esac
+            done
           } > release-notes.md
           cat release-notes.md
       - name: recreate preview prerelease

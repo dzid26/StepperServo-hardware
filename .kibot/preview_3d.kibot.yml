@@ -1,0 +1,30 @@
+outputs:
+  - name: 'preview_3d_top'
+    comment: "raytraced 3D board view from top (PNG) for the preview release page"
+    type: render_3d
+    dir: img/preview3d
+    options:
+      # [top,bottom,front,rear,right,left,z,x,y] Point of view
+      view: top
+      # *Name for the generated image file (%i='$VIEW' %x='png'/'jpg')
+      output: '%f-3d-top.%x'
+      # [png,jpg] Output format
+      format: 'png'
+      # *Enable the ray tracing. Much better result, but slow
+      ray_tracing: true
+      # Image width (approx.)
+      width: 1280
+      # Image height (approx.)
+      height: 720
+
+  - name: 'preview_3d_bottom'
+    comment: "raytraced 3D board view from bottom (PNG) for the preview release page"
+    type: render_3d
+    dir: img/preview3d
+    options:
+      view: bottom
+      output: '%f-3d-bottom.%x'
+      format: 'png'
+      ray_tracing: true
+      width: 1280
+      height: 720

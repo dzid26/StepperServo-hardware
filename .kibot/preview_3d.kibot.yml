@@ -1,0 +1,42 @@
+outputs:
+  - name: 'preview_3d_top'
+    comment: "raytraced 3D board view from top (PNG) for the preview release page"
+    type: render_3d
+    dir: img/preview3d
+    options:
+      # [top,bottom,front,rear,right,left,z,x,y] Point of view
+      view: top
+      # *Name for the generated image file (%i='$VIEW' %x='png'/'jpg')
+      output: '%f-3d-top.%x'
+      # [png,jpg] Output format
+      format: 'png'
+      # *Enable the ray tracing. Much better result, but slow
+      ray_tracing: true
+      # Transparent background (kicad-cli `--background transparent`).
+      # Only meaningful for PNGs; the board floats without a floor.
+      transparent_background: true
+      # Image width (approx.)
+      width: 1280
+      # Image height (approx.)
+      height: 720
+
+  - name: 'preview_3d_bottom'
+    comment: "raytraced 3D board view from bottom (PNG, orthographic) for the preview release page"
+    type: render_3d
+    dir: img/preview3d
+    options:
+      view: bottom
+      output: '%f-3d-bottom-ortho.%x'
+      format: 'png'
+      # Ray tracing restored (shadows): the flat `--quality basic` render
+      # left large white silk areas featureless against the white release
+      # page. Prior raytraced setting per 0888845 (`ray_tracing: true`);
+      # flattened to `false` in 1e30e06 — user prefers shadows.
+      ray_tracing: true
+      transparent_background: true
+      # Flat projection for the bottom view (no perspective): cleaner for
+      # inspection and pairs well with the perspective hero shot on top.
+      # Only the bottom view uses it; top stays perspective.
+      orthographic: true
+      width: 1280
+      height: 720

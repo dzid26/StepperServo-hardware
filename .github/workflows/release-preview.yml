@@ -1,19 +1,29 @@
 # Preview prerelease with the latest KiBot outputs (PDFs, visual diffs,
 # populated board renders, STEP model).
 #
-# On every push to the default branch this rebuilds the
-# documentation/diff/render outputs and RECREATES the `preview` prerelease pinned to
-# the new commit, replacing all assets so it always reflects the latest state.
-# Delete+recreate (via the gh CLI, no third-party action) guarantees the tag
-# moves and no stale assets survive. Published releases/tags (e.g. v0.5) are
-# never touched; the preview snapshot lives only on the `preview` tag and is
-# marked prerelease (never "Latest").
+# On every push to the default branch this rebuilds the outputs and RECREATES
+# the `preview` prerelease pinned to the new commit, replacing all assets so
+# it always reflects the latest state. Delete+recreate (via the gh CLI, no
+# third-party action) guarantees the tag moves and no stale assets survive.
+# Published releases/tags (e.g. v0.5) are never touched; the preview snapshot
+# lives only on the `preview` tag and is marked prerelease (never "Latest").
 #
 # Default-branch agnostic: `on.push.branches` cannot use contexts/expressions
 # (GitHub requires literals there), so there is intentionally NO branch filter
-# below. The job-level `if:` guard restricts publishing to pushes on the
-# default branch. Pushes to other branches produce a skipped run, never a
+# below. The job-level `if:` guards restrict publishing to pushes on the
+# default branch. Pushes to other branches produce skipped runs, never a
 # release.
+#
+# Two jobs by necessity, not choice:
+# - `build` runs in the kicad10_auto container (has KiCad/KiBot, but NO gh CLI,
+#   and its steps run under `sh`, so no bash-isms either).
+# - `release` runs on the hosted runner, which has the gh CLI and bash, and
+#   receives the files via an artifact. Keep all gh/file-glob logic there.
+# - `publish-pages` deploys the static viewer (iframes/images/target=_blank
+#   all work there — your page, your rules) via the modern GitHub Actions
+#   Pages deployment (atomic, no gh-pages branch to manage). One-time manual
+#   setup: repo Settings > Pages > Source "GitHub Actions". Until enabled,
+#   the deploy step fails tolerantly and the release is unaffected.
 
 name: Preview Release
 
@@ -43,7 +53,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-release:
+  build:
     # Publish only from the default branch. `github.event.repository.default_branch`
     # is present on push/workflow_dispatch payloads; on any other branch (or a
     # manual run from one) the whole job is skipped and no release is touched.
@@ -54,43 +64,177 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          # Full history: the KiBot `diff` outputs compare against the default
-          # branch ref, which needs more than a shallow clone.
+          # Full history: the KiBot `diff` outputs compare against the previous
+          # commit / tag refs, which needs more than a shallow clone.
           fetch-depth: 0
-      - name: resolve diff base
+      - name: install KiCad 3D models + PDF rasterizer (one apt run)
+        # Best-effort: the image ships neither kicad-packages3d (raytraced
+        # renders and STEP exports would come out board-only) nor
+        # poppler-utils (schematic PNGs for the release body are rastered
+        # from the schematic PDF with pdftoppm). One `apt-get update` + one
+        # install covers both; a few hundred MB, only on default-branch
+        # release runs. If it fails the pipeline still runs, just with
+        # reduced renders.
+        continue-on-error: true
+        run: |
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends kicad-packages3d poppler-utils
+      - name: resolve design diff bases
         id: diffbase
         run: |
-          # The visual diff must compare the pushed commit against its parent.
-          # (Comparing against the default-branch head would compare the commit
-          # against itself, which yields zero diffs and makes KiBot fail.)
-          # `before` is the pre-push head; absent on manual runs (empty) and
-          # all-zeros on branch creation, so fall back to HEAD~1 then.
-          base="${{ github.event.before }}"
-          if ! git cat-file -e "$base^{commit}" 2>/dev/null; then
-            base="HEAD~1"
-          fi
-          echo "base=$base" >> "$GITHUB_OUTPUT"
-          echo "Diff base: $base vs $GITHUB_SHA"
+          # Per file, find the most recent commit touching it, and diff HEAD
+          # against that commit's PARENT. Semantics: the base is the design
+          # state before its latest change, so the diff always shows the most
+          # recent design change to that file (non-empty unless the change is
+          # render-neutral). Using HEAD itself as base would compare the file
+          # against itself and always fail; using the push range would show
+          # nothing on CI-only pushes. PCB and schematic resolve independently
+          # (either may be untouched for long stretches).
+          # The change commit itself (H) names the pair and caption; its parent
+          # (H^) is the actual diff base. Diff content is therefore diff(H^,
+          # HEAD), identical for the file to diff(H^, H) since nothing after H
+          # touched it.
+          # Falls back to empty (that file's diff is skipped) when unresolvable.
+          resolve_one() {
+            last="$(git log -1 --format=%H HEAD -- $1)"
+            base=""
+            short=""
+            lastshort=""
+            if [ -n "$last" ]; then
+              lastshort="$(git rev-parse --short "$last")"
+              if base="$(git rev-parse --verify --quiet "$last^" 2>/dev/null)"; then
+                short="$(git rev-parse --short "$base")"
+              fi
+            fi
+            echo "design last touched by $last ($lastshort), diff base $base ($short) for $1" >&2
+            echo "$base $short $last $lastshort"
+          }
+          read pcb_base pcb_short pcb_chg pcb_chg_short <<EOF
+          $(resolve_one "PCB/StepperServoCAN.kicad_pcb")
+          EOF
+          read sch_base sch_short sch_chg sch_chg_short <<EOF
+          $(resolve_one "PCB/*.kicad_sch")
+          EOF
+          echo "pcb_base=$pcb_base" >> "$GITHUB_OUTPUT"
+          echo "pcb_short=$pcb_short" >> "$GITHUB_OUTPUT"
+          echo "pcb_chg=$pcb_chg" >> "$GITHUB_OUTPUT"
+          echo "pcb_chg_short=$pcb_chg_short" >> "$GITHUB_OUTPUT"
+          echo "sch_base=$sch_base" >> "$GITHUB_OUTPUT"
+          echo "sch_short=$sch_short" >> "$GITHUB_OUTPUT"
+          echo "sch_chg=$sch_chg" >> "$GITHUB_OUTPUT"
+          echo "sch_chg_short=$sch_chg_short" >> "$GITHUB_OUTPUT"
+          # HEAD short SHA goes into the tag diff filenames ("compared to" revision).
+          echo "new_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
       - name: run kibot (docs + STEP)
         run: |
           kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
             ibom.html schematic.pdf board_top.pdf board_bottom.pdf model.step
-      - name: run kibot (populated board renders for the release page)
-        # Best-effort: renders must never block the docs release. The release
-        # body only embeds images that were actually produced (see notes step).
+      - name: merge board top+bottom into single two-page PDF
+        # The pages stay generated by the working frameless pdf_pcb_print
+        # outputs (never pcb_print) — this only concatenates them, top
+        # first, losslessly with ghostscript (already a container
+        # dependency) into StepperServoCAN-board.pdf and drops the parts.
+        # Best-effort: if the merge fails the separate pages still ship
+        # (the release body and index list whichever is present).
+        run: |
+          if [ -f ./docs/StepperServoCAN-board_top.pdf ] && [ -f ./docs/StepperServoCAN-board_bottom.pdf ] && command -v gs >/dev/null 2>&1; then
+            if gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./docs/StepperServoCAN-board.pdf ./docs/StepperServoCAN-board_top.pdf ./docs/StepperServoCAN-board_bottom.pdf; then
+              rm -f ./docs/StepperServoCAN-board_top.pdf ./docs/StepperServoCAN-board_bottom.pdf
+              echo "merged board top+bottom into StepperServoCAN-board.pdf"
+            else
+              echo "board merge failed; shipping top/bottom separately"
+              rm -f ./docs/StepperServoCAN-board.pdf
+            fi
+          else
+            echo "board merge skipped (missing parts or no gs); shipping top/bottom separately"
+          fi
+          ls -la ./docs/*.pdf
+      - name: render schematic PNGs from PDF (for inline release-body images)
+        # GitHub does not render SVG release assets inline, so SVGs are gone
+        # from this pipeline entirely. KiCad cannot export schematic PNGs
+        # directly (sch export is PDF/SVG/DXF/HPGL/PS only), so each page of
+        # the already-generated schematic PDF is rastered with poppler's
+        # pdftoppm at 300 dpi — one PNG per sheet, no vector intermediate,
+        # no filename-mangling (no spaces). Best-effort: without pdftoppm
+        # the body falls back to a plain PDF link, docs are never blocked.
         continue-on-error: true
         run: |
-          kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
-            preview_top_png preview_bottom_png
-      - name: run kibot (visual diff vs previous commit)
-        # Tolerated: an empty diff (e.g. design untouched by this push) makes
-        # KiBot exit non-zero by design, and diffs are informational — docs are
-        # the release priority. The log still records the outcome.
+          # ./img may not exist yet: the docs run no longer produces any
+          # img/ output (the schematic SVG is gone), and the 3D renders run
+          # later — without this, pdftoppm fails with "Could not write image".
+          mkdir -p ./img
+          if command -v pdftoppm >/dev/null 2>&1 && [ -f ./docs/StepperServoCAN-schematic.pdf ]; then
+            pdftoppm -png -r 300 ./docs/StepperServoCAN-schematic.pdf ./img/StepperServoCAN-schematic \
+              && echo "schematic pages rastered" || echo "schematic raster failed"
+          else
+            echo "no pdftoppm or no schematic PDF; release body falls back to PDF link"
+          fi
+          ls -la ./img/ 2>/dev/null || true
+      - name: run kibot (raytraced 3D board renders)
+        # Best-effort: renders must never block the docs release. One
+        # invocation renders both views sequentially in a single process:
+        # two concurrent KiBot runs on one worktree race (intermittent
+        # `Error loading PCB file ... Corrupted?`, exit 17), and a missing
+        # bottom PNG would also skip the single-light re-render below.
+        # The run skips the update_xml preflight (shared-worktree write,
+        # already done by the docs run and unread by renders). The release
+        # body only embeds images that were actually produced (see notes).
         continue-on-error: true
         run: |
-          kibot -E KIBOT_DIFF_OLD=${{ steps.diffbase.outputs.base }} \
-            -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
-            diff_pcb diff_sch
+          kibot -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc,update_xml -v \
+            preview_3d_top preview_3d_bottom
+      - name: re-render bottom with a single light source
+        # KiBot render_3d exposes no lighting knobs (upstream `# TODO: --light*`
+        # in kibot/out_render_3d.py `kicad_cli_cmd`), and KiBot's own default
+        # all-lights bottom render comes out with inverted-looking colors
+        # (white mask, green markings) instead of the design's green mask +
+        # white silk. So the bottom PNG is re-rendered directly with
+        # kicad-cli, reusing KiBot's own `_kibot_preset` (written into
+        # 3d_viewer.json by the render step above on this same container
+        # filesystem) with the same quality/background/framing, but a single
+        # light source facing the viewed side:
+        # `kicad-cli pcb render --side bottom --quality high --background
+        # transparent --preset _kibot_preset --light-top 0 --light-side 0
+        # --light-camera 0 --light-bottom 1` (+ matching 1296x736 size).
+        # Zone refill first: `kicad-cli pcb render` draws the board exactly
+        # as stored and offers no refill flag (unlike the export/drc
+        # subcommands' --check-zones/--refill-zones). The committed board
+        # carries no filled polygons, and this design keeps a full-board
+        # fill zone on B.SilkS — rendered as stored it comes out as hollow
+        # outlines instead of solid white. KiBot's own renders don't need
+        # this (its check_zone_fills preflight fills zones in-memory), but
+        # this raw kicad-cli call bypasses KiBot, so the rebuild happens
+        # here, into a throwaway copy next to the board (same project
+        # context): the worktree board stays untouched, so the later diff
+        # steps see a clean tree.
+        # Best-effort like the renders above: any failure keeps KiBot's PNG.
+        continue-on-error: true
+        run: |
+          board_in="${{ env.board }}"
+          if python3 -c "import pcbnew,sys; b=pcbnew.LoadBoard(sys.argv[1]); pcbnew.ZONE_FILLER(b).Fill(b.Zones()); pcbnew.SaveBoard(sys.argv[2],b)" \
+              "${{ env.board }}" ./PCB/.render-filled-tmp.kicad_pcb; then
+            echo "zones refilled for render"
+            board_in="./PCB/.render-filled-tmp.kicad_pcb"
+          else
+            echo "zone refill failed; rendering board as stored"
+          fi
+          if command -v kicad-cli >/dev/null 2>&1 && [ -f ./img/preview3d/StepperServoCAN-3d-bottom-ortho.png ]; then
+            if kicad-cli pcb render \
+              --output ./img/preview3d/StepperServoCAN-3d-bottom-ortho.png \
+              --width 1296 --height 736 \
+              --side bottom --background transparent \
+              --quality high --preset _kibot_preset \
+              --light-top 0 --light-side 0 --light-camera 0 --light-bottom 1 \
+              "$board_in"; then
+              echo "bottom re-rendered with single (bottom) light source"
+            else
+              echo "single-light re-render failed; keeping KiBot bottom render"
+            fi
+          else
+            echo "kicad-cli or KiBot bottom PNG missing; keeping KiBot bottom render"
+          fi
+          rm -f ./PCB/.render-filled-tmp.kicad_pcb
+          ls -la ./img/preview3d/ 2>/dev/null || true
       - name: resolve tag diff base
         id: difftag
         run: |
@@ -105,14 +249,162 @@ jobs:
             echo "Tag diff base: $tag ($(git rev-parse --short "$tag")) vs $GITHUB_SHA"
           fi
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
-      - name: run kibot (visual diff vs last hardware tag)
-        if: steps.difftag.outputs.tag != ''
-        # Same tolerance as the commit diff: empty diffs exit non-zero.
+          # Persist for the release job (steps contexts don't cross jobs).
+          mkdir -p meta
+          printf '%s' "$tag" > meta/tag.txt
+          # Tag's own commit short SHA for the filename (tag name alone doesn't
+          # say which commit it points at; tags can be moved).
+          if [ -n "$tag" ]; then
+            echo "tag_base_short=$(git rev-parse --short "$tag^{commit}")" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag_base_short=" >> "$GITHUB_OUTPUT"
+          fi
+      - name: write highlights since last hardware tag
+        run: |
+          # Changelog fragment for the release body, generated where the full
+          # history exists. Capped so one huge push can't flood the page.
+          mkdir -p meta
+          tag="${{ steps.difftag.outputs.tag }}"
+          if [ -n "$tag" ]; then
+            {
+              echo "## Highlights since \`$tag\`"
+              git log "$tag"..HEAD --pretty=format:'- %s (%h)' -- PCB/ | head -30
+              echo ""
+            } > meta/highlights.md
+          else
+            echo "## Highlights" > meta/highlights.md
+            echo "_First preview — no prior hardware tag to compare._" >> meta/highlights.md
+          fi
+          cat meta/highlights.md
+      - name: run kibot (visual diffs, latest change + last tag, in parallel)
+        # Tolerated: a render-neutral change (or unresolvable base) makes
+        # KiBot exit non-zero by design, and diffs are informational — docs are
+        # the release priority. Each pair runs in the background; both exit
+        # codes are collected and logged, and the script always ends 0, so a
+        # gappy diff can never fail the build (plus continue-on-error below).
         continue-on-error: true
         run: |
-          kibot -E KIBOT_DIFF_TAG=${{ steps.difftag.outputs.tag }} \
-            -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
-            diff_tag_pcb diff_tag_sch
+          # The commit pair and the tag pair render disjoint outputs
+          # (disjoint filenames inside diff/commit vs diff/tag) with per-run
+          # temp/cache dirs (KiBot/kicad-diff mkdtemp), so they run
+          # concurrently with shell `&` + `wait`: wall time drops from the
+          # sum of both pairs to the slower one. Separate jobs would each
+          # re-pay the ~45 s container-image pull, a net loss - hence
+          # background jobs here.
+          # The PCB is diffed one single-layer output at a time (see the
+          # page-order note in .kibot/diff.kibot.yml); the parts are merged
+          # into one ordered PDF by the step below, so the per-layer outputs
+          # stay sequential inside each kibot call (no concurrent KiBot runs
+          # on one worktree beyond the two pairs).
+          # The only shared-worktree write across kibot runs is the
+          # update_xml preflight target, already generated by the earlier
+          # docs run and unread by the diff outputs, so both runs skip it
+          # (-s update_xml, a registered preflight name like run_erc).
+          # What remains shared is concurrent git/KiCad reads, which are safe.
+          tag_pid=""
+          kibot -E KIBOT_DIFF_OLD_PCB=${{ steps.diffbase.outputs.pcb_base }} \
+                -E KIBOT_DIFF_OLD_PCB_SHORT=${{ steps.diffbase.outputs.pcb_short }} \
+                -E KIBOT_DIFF_CHG_PCB_SHORT=${{ steps.diffbase.outputs.pcb_chg_short }} \
+                -E KIBOT_DIFF_OLD_SCH=${{ steps.diffbase.outputs.sch_base }} \
+                -E KIBOT_DIFF_OLD_SCH_SHORT=${{ steps.diffbase.outputs.sch_short }} \
+                -E KIBOT_DIFF_CHG_SCH_SHORT=${{ steps.diffbase.outputs.sch_chg_short }} \
+              -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc,update_xml -v \
+              diff_pcb_fcu diff_pcb_in1 diff_pcb_in2 diff_pcb_bcu \
+                diff_pcb_fsilk diff_pcb_bsilk diff_pcb_edge diff_sch & commit_pid=$!
+          if [ -n "${{ steps.difftag.outputs.tag }}" ]; then
+            kibot -E KIBOT_DIFF_TAG=${{ steps.difftag.outputs.tag }} \
+                  -E KIBOT_DIFF_TAG_BASE_SHORT=${{ steps.difftag.outputs.tag_base_short }} \
+                  -E KIBOT_DIFF_NEW_SHORT=${{ steps.diffbase.outputs.new_short }} \
+              -c kibot.yml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc,update_xml -v \
+              diff_tag_pcb_fcu diff_tag_pcb_in1 diff_tag_pcb_in2 diff_tag_pcb_bcu \
+                diff_tag_pcb_fsilk diff_tag_pcb_bsilk diff_tag_pcb_edge diff_tag_sch & tag_pid=$!
+          else
+            echo "no hardware tag; tag diff skipped"
+          fi
+          wait "$commit_pid"; commit_rc=$?
+          tag_rc=0
+          if [ -n "$tag_pid" ]; then
+            wait "$tag_pid"; tag_rc=$?
+          fi
+          echo "diff pairs exit: commit=$commit_rc tag=$tag_rc (non-zero is tolerated, diffs are best-effort)"
+      - name: merge per-layer diffs into ordered PDFs
+        # kicad-diff emits each diff output's pages sorted by KiCad layer ID,
+        # not in the config `layers:` order (see the page-order note in
+        # .kibot/diff.kibot.yml), so the PCB is diffed one layer at a time
+        # and the single-page parts are concatenated here in stack-up order:
+        # F.Cu, In1.Cu, In2.Cu, B.Cu, F.SilkS, B.SilkS, Edge.Cuts.
+        # `only_different: true` still drops unchanged layers: an unchanged
+        # layer's part is a 1-page "No diff" placeholder (640x480pt) which is
+        # skipped by page size (real diff pages are the board bbox rastered
+        # at 300 dpi, thousands of points wide). Parts are removed after a
+        # successful merge so only the merged PDF (historic asset name) ships.
+        # Best-effort like the diff step above: never fails the build.
+        continue-on-error: true
+        run: |
+          merge_one() {
+            dir=$1; gp=$2
+            kept=""; parts=""; first=""
+            for suf in F_Cu In1_Cu In2_Cu B_Cu F_SilkS B_SilkS Edge_Cuts; do
+              part=""
+              for cand in "$dir"/$gp-pcb-"$suf".pdf; do
+                if [ -f "$cand" ]; then part=$cand; break; fi
+              done
+              if [ -z "$part" ]; then
+                echo "no part for layer $suf ($gp) - diff missing or skipped"
+                continue
+              fi
+              if [ -z "$first" ]; then first=$part; fi
+              parts="$parts $part"
+              # pdfinfo page-size line format varies by poppler version:
+              # "Page 1 size: 3508 x 2481 pts" (new) vs "Page size: 640 x
+              # 480 pts" (old, as shipped in the container image) - so match
+              # the "W x H pts" triple instead of fixed field numbers (which
+              # silently yield garbage like w=x h=pts and drop every page).
+              sizeline=$(pdfinfo "$part" | grep 'pts' | head -n 1)
+              echo "$part: $sizeline"
+              set -- $(printf '%s' "$sizeline" | sed -n 's/.* \([0-9][0-9.]*\) x \([0-9][0-9.]*\) pts.*/\1 \2/p')
+              w=${1%.*}; h=${2%.*}
+              if [ -z "$w" ] || [ -z "$h" ]; then
+                echo "$part: size unreadable, keeping (fail-open)"
+                kept="$kept $part"
+              elif [ "$w" -gt 1000 ] && [ "$h" -gt 1000 ]; then
+                echo "$part: ${w}x${h}pt, keeping"
+                kept="$kept $part"
+              else
+                echo "$part: ${w}x${h}pt, unchanged layer, dropping No-diff placeholder"
+              fi
+            done
+            if [ -z "$first" ]; then
+              echo "no parts for $gp in $dir, nothing to merge (tolerated)"
+              return 0
+            fi
+            merged=$(printf '%s' "$first" | sed 's/-pcb-[A-Za-z0-9_][A-Za-z0-9_]*\.pdf$/-pcb.pdf/')
+            if [ -n "$kept" ]; then
+              # shellcheck disable=SC2086 (deliberate word-splitting of $kept)
+              if pdfunite $kept "$merged"; then
+                echo "merged $merged"
+              else
+                echo "merge failed for $merged; leaving parts"
+                return 0
+              fi
+            else
+              echo "all layers unchanged for $gp, no merged PDF (tolerated)"
+            fi
+            # Parts never ship: the merged PDF keeps the historic asset name.
+            # shellcheck disable=SC2086 (deliberate word-splitting of $parts)
+            rm -f $parts
+          }
+          if command -v pdfunite >/dev/null 2>&1 && command -v pdfinfo >/dev/null 2>&1; then
+            merge_one ./diff/commit 'diff_commit-*'
+            if [ -n "${{ steps.difftag.outputs.tag }}" ]; then
+              merge_one ./diff/tag 'diff_tag-*'
+            else
+              echo "no hardware tag; tag merge skipped"
+            fi
+          else
+            echo "no pdfunite/pdfinfo (poppler install failed?); shipping per-layer parts as-is"
+          fi
+          ls -la ./diff/commit/ ./diff/tag/ 2>/dev/null || true
       - name: collect release files
         run: |
           mkdir -p release-assets
@@ -120,20 +412,135 @@ jobs:
           cp ./diff/commit/*.pdf ./diff/tag/*.pdf release-assets/ 2>/dev/null || echo "no diff PDFs (empty diffs skipped)"
           cp ./docs/bom/*.html release-assets/ 2>/dev/null || true
           cp ./cad/*.step release-assets/ 2>/dev/null || echo "no STEP file"
-          cp ./img/preview/*.png release-assets/ 2>/dev/null || echo "no render PNGs"
-          ls -la release-assets/
+          cp ./img/preview3d/*.png release-assets/ 2>/dev/null || echo "no 3D render PNGs"
+          # Schematic pages as PNGs rastered from the PDF (one per sheet, in
+          # PDF page order): all of them ship — the body embeds each one and
+          # the Pages viewer shows them too. No SVGs anywhere in this pipe.
+          cp ./img/StepperServoCAN-schematic-*.png release-assets/ 2>/dev/null || echo "no schematic PNGs"
+          mkdir -p meta
+          : > meta/schematics.txt
+          for f in ./img/StepperServoCAN-schematic-*.png; do
+            [ -e "$f" ] || continue
+            basename "$f" >> meta/schematics.txt
+          done
+          # PDF page order (root sheet first) is already the display order.
+          echo "--- schematics.txt ---"; cat meta/schematics.txt
+          ls -la release-assets/ img/ 2>/dev/null || true
+      - name: upload build artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: preview-assets
+          if-no-files-found: error
+          path: release-assets/
+      - name: upload release metadata
+        uses: actions/upload-artifact@v6
+        with:
+          name: preview-meta
+          if-no-files-found: error
+          path: meta/
+
+  release:
+    # Same default-branch guard as `build` (a manual dispatch off-default must
+    # not publish either).
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    needs: [build]
+    # Hosted runner on purpose: the gh CLI (and bash) live here, not in the
+    # KiCad container image.
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Shallow is fine here: tag/release operations go through the API,
+          # git is only needed so gh can discover the repository.
+          fetch-depth: 1
+      - uses: actions/download-artifact@v6
+        with:
+          name: preview-assets
+          path: release-assets
+      - uses: actions/download-artifact@v6
+        with:
+          name: preview-meta
+          path: meta
       - name: build release notes
         run: |
           # Asset URLs are stable across recreations (fixed `preview` tag), so
-          # the body can link them before upload. Only embed images that were
-          # actually produced, so the page never shows broken pictures.
+          # the body can link them before upload. Every section is generated
+          # from files actually present, so the page never shows broken
+          # pictures or dead links.
+          base="https://github.com/${{ github.repository }}/releases/download/preview"
+          repo="https://github.com/${{ github.repository }}"
+          tag="$(cat meta/tag.txt 2>/dev/null || true)"
+          owner="${GITHUB_REPOSITORY%%/*}"; repo_name="${GITHUB_REPOSITORY##*/}"
+          pages_url="https://$owner.github.io/$repo_name/"
           {
-            echo "Automatically rebuilt KiBot outputs for ${GITHUB_SHA}. Preview snapshot of the ${{ github.ref_name }} branch — superseded on every push."
+            echo "Rolling snapshot of the \`${{ github.ref_name }}\` branch, rebuilt on every push from [latest commit]($repo/commit/${GITHUB_SHA})."
             echo ""
-            echo "## Board renders"
-            base="https://github.com/${{ github.repository }}/releases/download/preview"
-            [ -f img/preview/StepperServoCAN-preview-top.png ] && echo "![board top]($base/StepperServoCAN-preview-top.png)"
-            [ -f img/preview/StepperServoCAN-preview-bottom.png ] && echo "![board bottom]($base/StepperServoCAN-preview-bottom.png)"
+            echo "## Board"
+            [ -f release-assets/StepperServoCAN-3d-top.png ] && echo "![board 3D top]($base/StepperServoCAN-3d-top.png)"
+            [ -f release-assets/StepperServoCAN-3d-bottom-ortho.png ] && echo "![board 3D bottom, orthographic]($base/StepperServoCAN-3d-bottom-ortho.png)"
+            echo ""
+            echo "## Schematic"
+            sch_pdf=""; [ -f release-assets/StepperServoCAN-schematic.pdf ] && sch_pdf="$base/StepperServoCAN-schematic.pdf"
+            if [ -s meta/schematics.txt ]; then
+              # One PNG per schematic sheet, stacked vertically in PDF page
+              # order (root sheet first, as rastered). Each links to the full
+              # schematic PDF. Filenames carry no spaces, so asset URLs need
+              # no mangling — but the list is still read line-by-line, never
+              # word-split.
+              while IFS= read -r f; do
+                [ -n "$f" ] || continue
+                [ -f "release-assets/$f" ] || continue
+                href="${sch_pdf:-$base/$f}"
+                echo "<a href=\"$href\"><img src=\"$base/$f\" alt=\"$f\"></a>"
+                echo ""
+              done < meta/schematics.txt
+            elif [ -n "$sch_pdf" ]; then
+              echo "[Full schematic PDF]($sch_pdf)."
+              echo ""
+            fi
+            [ -f meta/highlights.md ] && cat meta/highlights.md && echo ""
+            echo "## Files"
+            [ -f release-assets/StepperServoCAN-schematic.pdf ] && echo "- [StepperServoCAN-schematic.pdf]($base/StepperServoCAN-schematic.pdf) – full schematic PDF"
+            for f in release-assets/*; do
+              n="$(basename "$f")"
+              case "$n" in
+                StepperServoCAN-schematic.pdf) ;; # listed first above
+                # Single two-page board PDF (top = page 1, bottom = page 2):
+                # both familiar labels point at it via page anchors. The
+                # separate top/bottom cases below only serve the merge-failed
+                # fallback, when the parts ship instead.
+                *-board.pdf)          echo "- [Board layout – top (PDF)]($base/$n#page=1)"; echo "- [Board layout – bottom (PDF)]($base/$n#page=2)" ;;
+                *-board_top.pdf)      echo "- [$n]($base/$n) – fabrication layout print, top" ;;
+                *-board_bottom.pdf)   echo "- [$n]($base/$n) – fabrication layout print, bottom" ;;
+                diff_commit-*.pdf|diff_tag-*.pdf) ;; # diffs get their own ordered pass below
+                *.step)               echo "- [$n]($base/$n) – STEP assembly for CAD/enclosures" ;;
+                *-ibom.html)          echo "- [$n]($base/$n) – searchable assembly map" ;;
+                *.png)                ;; # renders + schematics already embedded above, don't repeat
+                *)                    echo "- [$n]($base/$n)" ;;
+              esac
+            done
+            # Design diffs: PCB before schematic within each pair. A plain
+            # glob can't order them — the embedded change-commit SHAs sort
+            # PCB/SCH either way when the two files last changed apart
+            # (per-file diff bases), e.g. sch 46e281e sorting before pcb
+            # d38ae0f. Same filenames, wording and relative placement
+            # (after the schematic files) as the generic pass above.
+            for f in release-assets/diff_commit-*-pcb.pdf release-assets/diff_commit-*-sch.pdf release-assets/diff_tag-*-pcb.pdf release-assets/diff_tag-*-sch.pdf; do
+              [ -e "$f" ] || continue
+              n="$(basename "$f")"
+              case "$n" in
+                diff_commit-*.pdf)
+                  body="${n#diff_commit-}"; body="${body%.pdf}"; body="${body%-pcb}"; body="${body%-sch}"
+                  chg_sha="${body%%-*}"
+                  echo "- [Diff]($base/$n) vs latest design change $chg_sha – red = removed, green = added" ;;
+                diff_tag-*.pdf)
+                  body="${n#diff_tag-}"; body="${body%.pdf}"; body="${body%-pcb}"; body="${body%-sch}"
+                  rest="${body#*-}"; tag="${rest#*-}"
+                  echo "- [Diff]($base/$n) vs last release tag $tag – red = removed, green = added" ;;
+              esac
+            done
+            echo ""
+            echo "View it in the browser, no downloads needed: [$pages_url]($pages_url)."
           } > release-notes.md
           cat release-notes.md
       - name: recreate preview prerelease
@@ -145,7 +552,95 @@ jobs:
           gh release delete "$preview_tag" --cleanup-tag --yes || true
           gh release create "$preview_tag" \
             --prerelease \
-            --title "Preview KiBot build (${GITHUB_SHA::7})" \
+            --title "StepperServoCAN hardware preview build - latest" \
             --notes-file release-notes.md \
             --target "$GITHUB_SHA" \
             release-assets/*
+
+  publish-pages:
+    # Same default-branch guard (a manual dispatch off-default must not publish).
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    needs: [build]
+    # Modern GitHub Actions Pages deployment: atomic, versioned, no branch to
+    # manage. Requires repo Settings > Pages > Source "GitHub Actions" (once).
+    # Until then the deploy step fails tolerantly; the release is unaffected.
+    # Permissions follow the official static-site template.
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Official recommendation: never cancel a Pages deployment mid-flight.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v6
+        with:
+          name: preview-assets
+          path: site
+      - uses: actions/download-artifact@v6
+        with:
+          name: preview-meta
+          path: meta
+      - name: build viewer page
+        run: |
+          # Compact hub: a header, a link list to every document (PDFs open
+          # inline in the browser, so links suffice — no wall of iframes),
+          # and the images inline. Images are the only thing that scrolls.
+          # Only files actually present are linked/embedded (no dead links).
+          cd site
+          {
+            echo '<!doctype html>'
+            echo '<html lang="en">'
+            echo '<head><meta charset="utf-8">'
+            echo '<meta name="viewport" content="width=device-width, initial-scale=1">'
+            echo '<title>StepperServoCAN hardware preview</title>'
+            echo '<style>body{font-family:system-ui,sans-serif;margin:0 auto;max-width:70rem;padding:0 clamp(0.5rem,3vw,2rem)}img{width:100%;height:auto;display:block}ul.docs li{margin:0.3rem 0}</style>'
+            echo '</head><body>'
+            echo '<h1>StepperServoCAN hardware preview</h1>'
+            echo "<p>Rolling snapshot of the <code>${{ github.ref_name }}</code> branch, commit <code>${GITHUB_SHA}</code>. Source: <a href=\"https://github.com/${{ github.repository }}/releases/tag/preview\">preview prerelease</a>.</p>"
+            echo '<h2>Documents</h2><ul class="docs">'
+            [ -f StepperServoCAN-schematic.pdf ] && echo '<li><a href="StepperServoCAN-schematic.pdf" rel="noopener">Schematic (PDF)</a></li>'
+            [ -f StepperServoCAN-board.pdf ] && echo '<li><a href="StepperServoCAN-board.pdf#page=1" rel="noopener">Board layout – top (PDF)</a></li>'
+            [ -f StepperServoCAN-board.pdf ] && echo '<li><a href="StepperServoCAN-board.pdf#page=2" rel="noopener">Board layout – bottom (PDF)</a></li>'
+            [ -f StepperServoCAN-board_top.pdf ] && echo '<li><a href="StepperServoCAN-board_top.pdf" rel="noopener">Board layout – top (PDF)</a></li>'
+            [ -f StepperServoCAN-board_bottom.pdf ] && echo '<li><a href="StepperServoCAN-board_bottom.pdf" rel="noopener">Board layout – bottom (PDF)</a></li>'
+            # Commit and tag pairs alike, PCB before schematic within each
+            # pair (glob order alone can't do this — see the release-body
+            # ## Files pass for why the SHAs sort either way).
+            for f in diff_commit-*-pcb.pdf diff_commit-*-sch.pdf diff_tag-*-pcb.pdf diff_tag-*-sch.pdf; do
+              [ -e "$f" ] || continue
+              u="$(printf '%s' "$f" | sed 's/ /%20/g')"
+              echo "<li><a href=\"$u\" rel=\"noopener\">$f</a></li>"
+            done
+            [ -f StepperServoCAN-ibom.html ] && echo '<li><a href="StepperServoCAN-ibom.html" rel="noopener">Interactive BOM</a></li>'
+            [ -f StepperServoCAN.step ] && echo '<li><a href="StepperServoCAN.step" rel="noopener">STEP model</a></li>'
+            echo '</ul>'
+            echo '<h2>Images</h2>'
+            [ -f StepperServoCAN-3d-top.png ] && echo '<a href="StepperServoCAN-3d-top.png" rel="noopener"><img src="StepperServoCAN-3d-top.png" alt="board 3D top"></a>'
+            [ -f StepperServoCAN-3d-bottom-ortho.png ] && echo '<a href="StepperServoCAN-3d-bottom-ortho.png" rel="noopener"><img src="StepperServoCAN-3d-bottom-ortho.png" alt="board 3D bottom"></a>'
+            # Schematic pages inline, in PDF page order (same list the release
+            # body uses), as PNG <img> — no SVGs in this pipeline.
+            if [ -s ../meta/schematics.txt ]; then
+              while IFS= read -r f; do
+                [ -n "$f" ] || continue
+                [ -f "$f" ] || continue
+                echo "<a href=\"$f\" rel=\"noopener\"><img src=\"$f\" alt=\"$f\" loading=\"lazy\"></a>"
+              done < ../meta/schematics.txt
+            fi
+            echo '</body></html>'
+          } > index.html
+          ls -la
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+      - name: deploy to Pages
+        id: deployment
+        # Best-effort: Pages hiccups (e.g. source not yet switched to
+        # "GitHub Actions") must never fail the release pipeline.
+        continue-on-error: true
+        uses: actions/deploy-pages@v4

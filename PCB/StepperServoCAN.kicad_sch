@@ -18871,8 +18871,19 @@
 				)
 			)
 		)
-		(property "LCSC" "C161861"
+		(property "LCSC" "C54582908"
 			(at 218.186 120.1419 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Alternative" "C161861"
+			(at 215.646 120.142 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28451,8 +28462,19 @@
 				)
 			)
 		)
-		(property "LCSC" "C161861"
+		(property "LCSC" "C54582908"
 			(at 271.78 109.4739 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Alternative" "C161861"
+			(at 269.24 109.474 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32956,8 +32978,19 @@
 				)
 			)
 		)
-		(property "LCSC" "C161861"
+		(property "LCSC" "C54582908"
 			(at 213.36 107.4419 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Alternative" "C161861"
+			(at 210.82 107.442 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
